@@ -8,14 +8,34 @@ permissions:
   contents: read
 jobs:
   verify:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check exact source provenance and label manual diagnostics
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          DEPLOY_RUN_SHA: ${{ github.event.workflow_run.head_sha }}
+          DEPLOY_RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          actual_sha="$(git rev-parse HEAD)"
+          if [ "$EVENT_NAME" = workflow_run ]; then
+            test "${#DEPLOY_RUN_SHA}" -eq 40
+            test "$actual_sha" = "$DEPLOY_RUN_SHA"
+            echo "Checking public URLs after successful Simple Static Deploy run ${DEPLOY_RUN_ID}, source ${DEPLOY_RUN_SHA}"
+            echo "::notice::Source bound to triggering workflow; CDN freshness and other publishers require separate evidence."
+          else
+            echo "::notice::Manual live GET diagnostic only; no matching deployment provenance or release certification."
+          fi
       - name: Read-only five-language guide publication checks
         run: node scripts/test-field-evidence-release.cjs out --live

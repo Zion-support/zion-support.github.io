@@ -2,7 +2,7 @@
 
 const METADATA = {
   title: 'Free AI Discovery | Zion Tech Group',
-  description: 'Free online AI discovery to map your opportunity. No commitment, fast results, and tailored recommendations from Zion Tech Group.',
+  description: 'Free online AI discovery to map your opportunity. No commitment, tailored recommendations from Zion Tech Group.',
 };
 
 export default function DiscoveryPage() {
@@ -19,7 +19,8 @@ export default function DiscoveryPage() {
               Free <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI discovery</span> for your business
             </h1>
             <p className="text-slate-400 text-lg leading-relaxed mb-8">
-              Map your AI opportunity online in minutes. We review your use case, risks, and quick wins — then share a clear, business-ready recommendation.
+              Map your AI opportunity, review your use case and risks, and get a clear, business-ready
+              recommendation — free, online, no commitment.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="/contact" className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium transition-all shadow-lg shadow-emerald-500/20">
@@ -49,6 +50,20 @@ export default function DiscoveryPage() {
               <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Trust signals — fact-only, no unverified capacity claims */}
+      <section className="container-page py-8 border-y border-slate-800/60">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <p className="text-sm text-slate-400">
+            Free, online, no commitment, no credit card. Results shared with you and commercial@ziontechgroup.com.
+          </p>
+          <div className="flex flex-wrap gap-3 text-xs text-slate-500">
+            <span className="px-3 py-1 rounded-full bg-slate-900/60 border border-slate-800/60">IT &amp; AI teams</span>
+            <span className="px-3 py-1 rounded-full bg-slate-900/60 border border-slate-800/60">Digital services</span>
+            <span className="px-3 py-1 rounded-full bg-slate-900/60 border border-slate-800/60">GEO-ready content</span>
+          </div>
         </div>
       </section>
 

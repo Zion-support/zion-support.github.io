@@ -20,31 +20,16 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages-deploy
-  cancel-in-progress: false
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-      - name: Guard main ref
-        run: |
-          set -euo pipefail
-          echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME}"
-          if [ "${GITHUB_REF}" != "refs/heads/main" ]; then
-            echo "::error::Simple Static Deploy is pinned to main only (got ${GITHUB_REF}). Re-run with Use workflow from = main."
-            exit 1
-          fi
-      - name: Prepare pages
-        run: bash scripts/prepare-pages-out.sh
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
-      - uses: actions/deploy-pages@v4
-      # Post-deploy live curl skipped: runners often block egress and probes flake.
-      # The prepare-pages-out money-path gate above is the durable Pay RED guard.
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/canonical-pages.yml
+  validate-production:
+    needs: deploy
+    if: ${{ github.ref == 'refs/heads/main' && needs.deploy.result == 'success' && needs.deploy.outputs.source_sha == github.sha }}
+    permissions:
+      contents: read
+    uses: ./.github/workflows/ai-production-deploy-validation.yml
+    with:
+      source_sha: ${{ needs.deploy.outputs.source_sha }}

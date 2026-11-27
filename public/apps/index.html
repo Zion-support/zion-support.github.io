@@ -14,13 +14,42 @@
 h2{margin:0 0 8px;font-size:1.1rem}.muted{color:var(--muted)}
 .btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 12px;border-radius:999px;font-weight:700}
 </style>
+<style id="catalog-planning-styles">
+.catalog-selected,.catalog-planning{margin:2rem 0;padding:1.5rem 0;border-top:1px solid #334155}
+.catalog-selected h2,.catalog-planning h2{font-size:clamp(1.5rem,3vw,2rem);line-height:1.25;color:#fff}
+.catalog-selected .path{display:block;padding:1.5rem 0;border-bottom:1px solid #334155}
+.catalog-selected .path-heading{display:flex;gap:1rem;align-items:center}
+.catalog-selected .path-heading h3{font-size:1.2rem;margin:.5rem 0 1rem}
+.catalog-selected .path-heading span{color:#c4b5fd;font-size:.875rem}
+.catalog-selected .cards,.catalog-planning .catalog-guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1rem}
+.catalog-selected .resource,.catalog-guide-card{display:flex;flex-direction:column;align-items:start;min-width:0;padding:1.25rem;border:1px solid #334155;border-radius:.75rem;background:#101c2f}
+.catalog-selected .resource h4,.catalog-guide-card h3{margin:.5rem 0 .75rem;font-size:1.1875rem;line-height:1.35;color:#fff}
+.catalog-selected .resource p,.catalog-planning p{font-size:1rem;line-height:1.65;color:#cbd5e1}
+.catalog-selected .resource .kind{font-size:.875rem;color:#c4b5fd}
+.catalog-selected .resource a,.catalog-guide-card a{margin-top:auto;padding-top:.5rem;font-size:1rem;color:#a5f3fc;text-underline-offset:.25rem}
+.catalog-planning .catalog-next-links,.catalog-language-nav{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;line-height:1.6}
+.catalog-language-nav a,.catalog-next-links a{font-size:1rem;color:#a5f3fc}
+.catalog-language-nav [aria-current="page"]{text-decoration:underline;text-underline-offset:.3rem}
+.catalog-planning a:focus-visible,.catalog-selected a:focus-visible,.catalog-language-nav a:focus-visible{outline:3px solid #a5f3fc;outline-offset:4px}
+</style>
 </head>
 <body>
 <div class="wrap">
-<p><a href="/">Zion Tech Group</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Free Discovery</a></p>
+<p><a href="/">Zion Tech Group</a> · <a href="/en/plans/">Plans</a> · <a href="/en/discovery/#dq" hreflang="en">Free Discovery</a></p>
 <h1>Zion Apps Network</h1>
-<p class="muted">All apps hosted at ziontechgroup.com. Every app links to related apps below. Official path: Free Discovery → Consulting $499 → Starter $2,500 → Growth $8,000/mo.</p>
+<p class="muted">Explore tools and guides by category. If you have a Discovery result, <a href="/apps/discovery-app-paths.html">choose a next step for your field visit, hardware quote or cloud costs</a>.</p>
 
+<!--catalog-planning:start--><nav class="catalog-language-nav" aria-label="Catalog language"><a href="/apps/" lang="en" hreflang="en" aria-current="page">English</a><a href="/pt/apps/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="/es/apps/" lang="es" hreflang="es">Español</a><a href="/fr/apps/" lang="fr" hreflang="fr">Français</a><a href="/de/apps/" lang="de" hreflang="de">Deutsch</a></nav>
+<section id="resources" class="resources catalog-selected" aria-labelledby="resources-title"><p class="eyebrow">Apps network</p><h2 id="resources-title">Six resources. Three practical paths.</h2><section class="path" aria-labelledby="path-0"><div class="path-heading"><span aria-hidden="true">01</span><h3 id="path-0">Plan a field service</h3></div><div class="cards"><article class="resource"><p class="kind">Guide</p><h4>Datacenter service request</h4><p>Build a useful brief: equipment, location, access, maintenance window and expected completion evidence.</p><a href="/zion-app-network/datacenter-service-request-guide-2026.html" hreflang="en">Explore resource <span aria-hidden="true">↗</span></a></article><article class="resource"><p class="kind">Browser checklist</p><h4>Field visit handoff</h4><p>Review readiness in a local checklist, including the separate client, PO and Zion operational approvals.</p><a href="/zion-app-network/field-visit-handoff-2026.html" hreflang="en">Explore resource <span aria-hidden="true">↗</span></a></article></div></section><section class="path" aria-labelledby="path-1"><div class="path-heading"><span aria-hidden="true">02</span><h3 id="path-1">Model a cloud cost scenario</h3></div><div class="cards"><article class="resource"><p class="kind">Browser calculator</p><h4>FinOps scenario estimator</h4><p>Compare assumed cloud spend, savings, recurring costs and implementation investment. Results are estimates in USD.</p><a href="/apps/finops-scenario-estimator.html" hreflang="en">Explore resource <span aria-hidden="true">↗</span></a></article><article class="resource"><p class="kind">Guide</p><h4>FinOps pilot guide</h4><p>Define a baseline, a limited pilot and a measurement plan before treating a forecast as actual savings.</p><a href="/apps/finops-pilot-guide.html" hreflang="en">Explore resource <span aria-hidden="true">↗</span></a></article></div></section><section class="path" aria-labelledby="path-2"><div class="path-heading"><span aria-hidden="true">03</span><h3 id="path-2">Evaluate an AI app</h3></div><div class="cards"><article class="resource"><p class="kind">Browser scorecard</p><h4>App selection scorecard</h4><p>Compare evidence across five criteria and prepare a brief. A score supports review; it does not approve deployment.</p><a href="/zion-app-network/app-selection-evidence-scorecard-2026.html" hreflang="en">Explore resource <span aria-hidden="true">↗</span></a></article><article class="resource"><p class="kind">Guide</p><h4>Equipment lifecycle guide</h4><p>Compare repair, replacement and reuse questions, and record the facts needed for a decision.</p><a href="/zion-app-network/equipment-lifecycle-decision-guide-2026.html" hreflang="en">Explore resource <span aria-hidden="true">↗</span></a></article></div></section></section>
+<section class="catalog-planning" id="catalog-planning-guides" aria-labelledby="catalog-planning-title">
+<h2 id="catalog-planning-title">Prepare the service, the evidence and the next decision</h2><p>Six guides connect Discovery, field work and operational review. Each opens in the language selected here.</p>
+<div class="catalog-guide-grid"><article class="catalog-guide-card"><h3>Define the evidence before a field visit</h3><p>Agree the checks, records and acceptance criteria that show what was completed and what still needs review.</p><a data-catalog-guide="field-service-evidence-guide" href="/apps/field-service-evidence-guide.html" hreflang="en">Explore resource</a></article><article class="catalog-guide-card"><h3>Turn Discovery into a measurable pilot</h3><p>Choose one process, record a baseline and name an owner before testing a change with clear success and stop criteria.</p><a data-catalog-guide="discovery-first-win-guide" href="/apps/discovery-first-win-guide.html" hreflang="en">Explore resource</a></article><article class="catalog-guide-card"><h3>Prepare a smart hands request</h3><p>Bring equipment, location, access rules, permitted tasks and the proposed maintenance window into a brief the service team can assess.</p><a data-catalog-guide="field-services-smart-hands-playbook" href="/apps/field-services-smart-hands-playbook.html" hreflang="en">Explore resource</a></article><article class="catalog-guide-card"><h3>Choose the right field ticket</h3><p>Compare common onsite request types, identify the skills and inputs required, and clarify the limits of the work.</p><a data-catalog-guide="field-ticket-types" href="/apps/field-ticket-types.html" hreflang="en">Explore resource</a></article><article class="catalog-guide-card"><h3>Organize an IT operations review</h3><p>Connect service priorities, costs, accountable owners, changes and evidence so your team can review the next decision.</p><a data-catalog-guide="ai-it-ops-command-center" href="/apps/ai-it-ops-command-center.html" hreflang="en">Explore resource</a></article><article class="catalog-guide-card"><h3>Plan IT support across multiple locations</h3><p>Compare per-visit and monthly per-user support using site details, operating hours, demand and written service boundaries.</p><a data-catalog-guide="multi-site-it-support-planning" href="/apps/multi-site-it-support-planning.html" hreflang="en">Explore resource</a></article></div>
+<h3>Keep the next step connected</h3><nav class="catalog-next-links" aria-label="Keep the next step connected">
+<a href="/apps/discovery-app-paths.html" hreflang="en">Choose your next step after Discovery</a>
+<a href="/apps/operations-reliability-ai-2026.html" hreflang="en">Operations and reliability guide</a>
+<a href="/apps/content-hub.html" hreflang="en">Content hub (English)</a>
+<a href="/en/discovery/#dq" hreflang="en">Free online Discovery</a></nav><p><a href="/discovery/#dq" hreflang="pt-BR">Discovery in Portuguese</a></p>
+</section><!--catalog-planning:end-->
 <nav class="sub">
 <a href="#ai">AI & Automation</a> · <a href="#ops">Operations</a> · <a href="#ml">AI & ML</a> · <a href="#devops">DevOps</a> · <a href="#industry">Industries</a> · <a href="#sales">Sales</a>
 </nav>
@@ -29,20 +58,20 @@ h2{margin:0 0 8px;font-size:1.1rem}.muted{color:var(--muted)}
 <h2>AI & Automation</h2>
 <div class="grid">
 <article class="card"><h2>AI Prompt Library</h2><p>10 enterprise IT-ops prompts, copy-ready.</p><a class="btn" href="/prompt-library/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
-<article class="card"><h2>AI Governance Checklist</h2><p>Live readiness score, 10 controls.</p><a class="btn" href="/ai-governance-checklist/">Open</a> · <a href="/case-studies/">Cases</a> · <a href="/discovery/">Discovery</a></article>
+<article class="card"><h2>AI Governance Checklist</h2><p>Live readiness score, 10 controls.</p><a class="btn" href="/ai-governance-checklist/">Open</a> · <a href="/case-studies/">Cases</a> · <a href="/en/discovery/#dq" hreflang="en">Discovery</a></article>
 <article class="card"><h2>ROI Calculator</h2><p>Hours leaked vs official SKUs.</p><a class="btn" href="/roi-calc/">Open</a> · <a href="/services/">Services</a> · <a href="/industries/">Industries</a></article>
 <article class="card"><h2>Stack Audit</h2><p>Ten-check ops readiness.</p><a class="btn" href="/stack-audit/">Open</a> · <a href="/case-studies/">Cases</a> · <a href="/use-cases/">Use Cases</a></article>
-<article class="card"><h2>FinOps Estimator</h2><p>Existing cost sketch.</p><a class="btn" href="/finops-estimator/">Open</a> · <a href="/services/">Services</a> · <a href="/industries/">Industries</a></article>
-<article class="card"><h2>Agent Brief</h2><p>One-pager for Discovery.</p><a class="btn" href="/agent-brief/">Open</a> · <a href="/discovery/">Discovery</a> · <a href="/case-studies/">Cases</a></article>
+<article class="card"><h2>FinOps Estimator</h2><p>Compare cloud spend, savings assumptions and implementation costs.</p><a class="btn" href="/apps/finops-scenario-estimator.html">Open</a> · <a href="/services/">Services</a> · <a href="/industries/">Industries</a></article>
+<article class="card"><h2>Agent Brief</h2><p>One-pager for Discovery.</p><a class="btn" href="/agent-brief/">Open</a> · <a href="/en/discovery/#dq" hreflang="en">Discovery</a> · <a href="/case-studies/">Cases</a></article>
 <article class="card"><h2>AI Compliance Auditor</h2><p>Automated compliance checks.</p><a class="btn" href="/ai-compliance-auditor/">Open</a> · <a href="/industries/">Industries</a> · <a href="/case-studies/">Cases</a></article>
 <article class="card"><h2>AI Cybersecurity Threat Detection</h2><p>Real-time threat detection.</p><a class="btn" href="/ai-cybersecurity-threat-detection/">Open</a> · <a href="/zion-ai-threat-modeler/">Threat Modeler</a> · <a href="/security-awareness-coach/">Security Coach</a> · <a href="/use-cases/">Use Cases</a> · <a href="/industries/">Industries</a></article>
 <article class="card"><h2>AI Fraud Detection</h2><p>ML-based fraud prevention.</p><a class="btn" href="/ai-fraud-detection/">Open</a> · <a href="/zion-ai-vendor-risk/">Vendor Risk</a> · <a href="/use-cases/">Use Cases</a> · <a href="/industries/">Industries</a></article>
-<article class="card"><h2>AI Readiness Assessment</h2><p>Score your AI readiness.</p><a class="btn" href="/ai-readiness-assessment/">Open</a> · <a href="/discovery/">Discovery</a> · <a href="/case-studies/">Cases</a></article>
+<article class="card"><h2>AI Readiness Assessment</h2><p>Score your AI readiness.</p><a class="btn" href="/ai-readiness-assessment/">Open</a> · <a href="/en/discovery/#dq" hreflang="en">Discovery</a> · <a href="/case-studies/">Cases</a></article>
 <article class="card"><h2>AI Chat Companion</h2><p>Conversational AI assistant.</p><a class="btn" href="/ai-chat-companion/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/services/">Services</a></article>
 <article class="card"><h2>AI Chatbot Builder</h2><p>Build custom chatbots.</p><a class="btn" href="/ai-chatbot-builder/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>AI Customer Support Pro</h2><p>AI-powered support automation.</p><a class="btn" href="/ai-powered-customer-support/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/industries/">Industries</a></article>
 <article class="card"><h2>AI Content Generation</h2><p>Enterprise content automation.</p><a class="btn" href="/ai-content-generation-enterprise/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/services/">Services</a></article>
-<article class="card"><h2>AI Meeting Notes Copilot</h2><p>Meeting transcription and action items.</p><a href="/use-cases/">Use Cases</a> · <a href="/case-studies/">Cases</a></article>
+<article class="card"><h2>AI Meeting Notes Copilot</h2><p>Organize supplied meeting notes and review suggested action items.</p><a href="/use-cases/">Use Cases</a> · <a href="/case-studies/">Cases</a></article>
 <article class="card"><h2>AI Price Optimizer</h2><p>Dynamic pricing with AI.</p><a class="btn" href="/ai-price-optimizer/">Open</a> · <a href="/industries/">Industries</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>AI Process Mining</h2><p>Discover and optimize processes.</p><a class="btn" href="/ai-process-mining/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>AI RAG Knowledge Platform</h2><p>Retrieval-augmented generation.</p><a class="btn" href="/ai-rag-knowledge-platform/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
@@ -60,7 +89,7 @@ h2{margin:0 0 8px;font-size:1.1rem}.muted{color:var(--muted)}
 <article class="card"><h2>Agent SLA Monitor</h2><p>Track agent SLA compliance.</p><a class="btn" href="/agent-sla-monitor/">Open</a> · <a href="/case-studies/">Cases</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>Ops Runbook AI</h2><p>AI-powered runbook generation.</p><a class="btn" href="/ops-runbook-ai/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>Incident Cost</h2><p>Quantify incident impact.</p><a class="btn" href="/incident-cost/">Open</a> · <a href="/incident-comms-writer/">Comms Writer</a> · <a href="/use-cases/">Use Cases</a> · <a href="/industries/">Industries</a></article>
-<article class="card"><h2>AI Incident Response</h2><p>Automated incident handling.</p><a class="btn" href="/ai-incident-response/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/case-studies/">Cases</a></article>
+<article class="card"><h2>AI Incident Response</h2><p>Plan incident roles, communications and follow-up evidence.</p><a class="btn" href="/ai-incident-response/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/case-studies/">Cases</a></article>
 <article class="card"><h2>AI Observability Platform</h2><p>Full-stack observability.</p><a class="btn" href="/ai-observability-platform/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>AI Ticket Triage</h2><p>Automated ticket classification.</p><a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>Maintenance Ticket Triage</h2><p>Smart ticket routing.</p><a href="/use-cases/">Use Cases</a> · <a href="/industries/">Industries</a></article>
@@ -74,7 +103,7 @@ h2{margin:0 0 8px;font-size:1.1rem}.muted{color:var(--muted)}
 <div class="cat" id="ml">
 <h2>AI & ML Platforms</h2>
 <div class="grid">
-<article class="card"><h2>AI Lab</h2><p>Experiment with AI models.</p><a class="btn" href="/ai-lab/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/discovery/">Discovery</a></article>
+<article class="card"><h2>AI Lab</h2><p>Experiment with AI models.</p><a class="btn" href="/ai-lab/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/en/discovery/#dq" hreflang="en">Discovery</a></article>
 <article class="card"><h2>AI Data Warehouse</h2><p>Centralized data for AI.</p><a href="/services/">Services</a> · <a href="/industries/">Industries</a></article>
 <article class="card"><h2>AI ML Platform</h2><p>End-to-end ML operations.</p><a class="btn" href="/ai-ml-platform/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>LLM Gateway</h2><p>Manage LLM access and routing.</p><a class="btn" href="/llm-gateway/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/case-studies/">Cases</a></article>
@@ -110,12 +139,12 @@ h2{margin:0 0 8px;font-size:1.1rem}.muted{color:var(--muted)}
 <div class="grid">
 <article class="card"><h2>Healthcare IT HIPAA</h2><p>HIPAA-compliant AI for healthcare.</p><a class="btn" href="/healthcare-it-hipaa/">Open</a> · <a href="/industries/">Industries</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>AI Energy Optimization</h2><p>Optimize energy consumption.</p><a class="btn" href="/ai-energy-optimization/">Open</a> · <a href="/industries/">Industries</a> · <a href="/use-cases/">Use Cases</a></article>
-<article class="card"><h2>AI Chief Technology Officer</h2><p>Fractional CTO services.</p><a class="btn" href="/ai-chief-technology-officer-cto/">Open</a> · <a href="/services/">Services</a> · <a href="/discovery/">Discovery</a></article>
+<article class="card"><h2>AI Chief Technology Officer</h2><p>Fractional CTO services.</p><a class="btn" href="/ai-chief-technology-officer-cto/">Open</a> · <a href="/services/">Services</a> · <a href="/en/discovery/#dq" hreflang="en">Discovery</a></article>
 <article class="card"><h2>AI Staff Augmentation</h2><p>IT staff augmentation.</p><a class="btn" href="/ai-and-it-staff-augmentation/">Open</a> · <a href="/services/">Services</a> · <a href="/industries/">Industries</a></article>
-<article class="card"><h2>AI Consulting</h2><p>AI strategy consulting.</p><a class="btn" href="/ai-consulting/">Open</a> · <a href="/services/">Services</a> · <a href="/discovery/">Discovery</a></article>
+<article class="card"><h2>AI Consulting</h2><p>AI strategy consulting.</p><a class="btn" href="/ai-consulting/">Open</a> · <a href="/services/">Services</a> · <a href="/en/discovery/#dq" hreflang="en">Discovery</a></article>
 <article class="card"><h2>AI Managed Services</h2><p>24/7 AI operations.</p><a class="btn" href="/ai-managed-services/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>AI Outsourcing Services</h2><p>Outsource AI operations.</p><a class="btn" href="/ai-outsourcing-services/">Open</a> · <a href="/industries/">Industries</a> · <a href="/use-cases/">Use Cases</a></article>
-<article class="card"><h2>AI Implementation Services</h2><p>End-to-end AI implementation.</p><a class="btn" href="/ai-implementation-services/">Open</a> · <a href="/services/">Services</a> · <a href="/discovery/">Discovery</a></article>
+<article class="card"><h2>AI Implementation Services</h2><p>End-to-end AI implementation.</p><a class="btn" href="/ai-implementation-services/">Open</a> · <a href="/services/">Services</a> · <a href="/en/discovery/#dq" hreflang="en">Discovery</a></article>
 <article class="card"><h2>AI Integration Services</h2><p>Integrate AI into existing systems.</p><a class="btn" href="/ai-integration-services/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/services/">Services</a></article>
 <article class="card"><h2>AI Technical Staffing</h2><p>Hire AI engineers.</p><a class="btn" href="/ai-technical-staffing/">Open</a> · <a href="/industries/">Industries</a> · <a href="/services/">Services</a></article>
 <article class="card"><h2>Cybersecurity Scanner</h2><p>Automated security posture checks and compliance gap analysis.</p><a class="btn" href="/apps/cybersecurity-scanner.html">Open</a> · <a href="/services/">Services</a> · <a href="/case-studies/">Cases</a></article>
@@ -126,7 +155,7 @@ h2{margin:0 0 8px;font-size:1.1rem}.muted{color:var(--muted)}
 <h2>Sales & Growth</h2>
 <div class="grid">
 <article class="card"><h2>AI Lead Generation</h2><p>Find and qualify leads.</p><a class="btn" href="/ai-lead-generation/">Open</a> · <a href="/use-cases/">Use Cases</a> · <a href="/case-studies/">Cases</a></article>
-<article class="card"><h2>AI GTM Engine</h2><p>Go-to-market strategy.</p><a class="btn" href="/ai-gtm-engine/">Open</a> · <a href="/services/">Services</a> · <a href="/discovery/">Discovery</a></article>
+<article class="card"><h2>AI GTM Engine</h2><p>Go-to-market strategy.</p><a class="btn" href="/ai-gtm-engine/">Open</a> · <a href="/services/">Services</a> · <a href="/en/discovery/#dq" hreflang="en">Discovery</a></article>
 <article class="card"><h2>AI Revenue Operations</h2><p>RevOps automation.</p><a class="btn" href="/ai-revenue-operations/">Open</a> · <a href="/industries/">Industries</a> · <a href="/use-cases/">Use Cases</a></article>
 <article class="card"><h2>Partner Referral Tracker</h2><p>Track referral programs.</p><a href="/case-studies/">Cases</a> · <a href="/services/">Services</a></article>
 <article class="card"><h2>AI Partner Ecosystem</h2><p>Manage partner relationships.</p><a class="btn" href="/ai-partner-ecosystem/">Open</a> · <a href="/services/">Services</a> · <a href="/use-cases/">Use Cases</a></article>

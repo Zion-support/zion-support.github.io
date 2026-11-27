@@ -23,4 +23,5 @@ const searchServices = allServices.map((s: any) => ({
 }));
 
 export type { Service };
+export type SearchService = (typeof searchServices)[number];
 export { allServices, searchServices };

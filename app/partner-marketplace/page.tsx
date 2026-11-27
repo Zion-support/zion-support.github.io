@@ -7,7 +7,6 @@ import Head from 'next/head';
 const LOCALES = ['en', 'pt', 'es', 'fr', 'de'];
 
 const FEATURES = [
-[
         "Vendor directory",
         "Integration marketplace",
         "Partner testimonials",
@@ -16,12 +15,11 @@ const FEATURES = [
         "Request for proposal (RFP)",
         "Partner verification",
         "Deal marketplace"
-    ]
 ];
 
 export const metadata: Metadata = {
   title: 'AI Partner Marketplace — Zion Tech Group',
-  description: 'Discover vetted partners, integrators, and AI service providers who can build on Zion's platform.',
+  description: 'Discover vetted partners, integrators, and AI service providers who can build on Zion\'s platform.',
   alternates: { canonical: `https://ziontechgroup.com/partner-marketplace/` },
 };
 
@@ -37,7 +35,7 @@ function getTranslation(app: AppsNetworkApp, locale: string) {
 
 export default function Page({ searchParams }: { searchParams: { lang?: string } }) {
   const locale = (searchParams?.lang && LOCALES.includes(searchParams.lang)) ? searchParams.lang : 'en';
-  const app = appsNetworkBySlug('partner-marketplace');
+  const app = appsNetworkBySlug['partner-marketplace'];
   const { name, description } = getTranslation(app, locale);
   const related = relatedApps('partner-marketplace', 5);
 
@@ -80,11 +78,7 @@ export default function Page({ searchParams }: { searchParams: { lang?: string }
                 <Link
                   key={l}
                   href={`/partner-marketplace?lang=${ l }`}
-                  className={{
-                    (locale === l
-                      ? 'bg-purple-500/20 text-purple-200'
-                      : 'hover:bg-slate-800')
-                  }}
+                  className={locale === l ? 'bg-purple-500/20 text-purple-200' : 'hover:bg-slate-800'}
                 >
                   {l.toUpperCase()}
                 </Link>

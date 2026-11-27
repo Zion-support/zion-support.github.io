@@ -5,7 +5,7 @@ on:
 permissions:
   contents: read
 jobs:
-  scoped-contract:
+  navigation-contract:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -17,4 +17,32 @@ jobs:
         with:
           node-version: '20'
       - run: node scripts/test-productivity-navigation.cjs
+  publisher-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - run: node scripts/test-productivity-pipeline.cjs
+  scoped-contract:
+    if: always()
+    needs: [navigation-contract, publisher-contract]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require both productivity contracts to pass
+        env:
+          NAVIGATION_RESULT: ${{ needs.navigation-contract.result }}
+          PUBLISHER_RESULT: ${{ needs.publisher-contract.result }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$NAVIGATION_RESULT" != success || "$PUBLISHER_RESULT" != success ]]; then
+            echo "::error::Both navigation and publisher contracts must pass; navigation=$NAVIGATION_RESULT publisher=$PUBLISHER_RESULT"
+            exit 1
+          fi

@@ -1,58 +1,103 @@
-const { readFileSync, existsSync } = require('fs');
-const { join } = require('path');
-const { writeReport } = require('../../automation/reliability-reports.cjs');
-const { appendFileSync } = require('fs');
+#!/usr/bin/env node
+/**
+ * Guard static automation-health API freshness.
+ *
+ * Reads:
+ *   public/api/automation-health.json
+ *
+ * Writes:
+ *   automation/reports/automation-health-static-freshness-latest.json
+ *   GITHUB_OUTPUT: static_health_fresh=true|false
+ */
+const fs = require('fs');
+const path = require('path');
 
-const healthPath = join('public', 'api', 'automation-health.json');
+const ROOT = process.cwd();
+const HEALTH_JSON = path.join(ROOT, 'public', 'api', 'automation-health.json');
+const REPORT = path.join(ROOT, 'automation', 'reports', 'automation-health-static-freshness-latest.json');
 
-let staticHealthFresh = 'false';
-let staticHealthAgeHours = null;
-let staticHealthTimestamp = null;
-let staticHealthValid = false;
-let snapshotStatus = 'unknown';
-const configuredHours = process.env.AUTOMATION_HEALTH_STATIC_MAX_HOURS;
-const maxHours = configuredHours ? Number(configuredHours) : 24;
-
-try {
-  if (!existsSync(healthPath)) {
-    throw new Error('Missing ' + healthPath);
+function parseMaxHours(env) {
+  const raw = (env.AUTOMATION_HEALTH_STATIC_MAX_HOURS || '').trim();
+  if (raw === '') {
+    return { valid: false, value: null, reason: 'maxHoursAllowed ausente' };
   }
-  const raw = readFileSync(healthPath, 'utf8').trim();
-  if (!raw) throw new Error('Empty ' + healthPath);
-  const data = JSON.parse(raw);
-  snapshotStatus = data.status || 'unknown';
-  staticHealthTimestamp = data.timestamp || data.generatedAt;
-  if (!staticHealthTimestamp) throw new Error('Missing timestamp in ' + healthPath);
-  staticHealthValid = true;
-
-  if (!Number.isFinite(maxHours) || maxHours <= 0) throw new Error('Invalid freshness threshold');
-  const ts = new Date(staticHealthTimestamp);
-  const now = new Date();
-  staticHealthAgeHours = (now - ts) / 36e5;
-  staticHealthFresh = Number.isFinite(staticHealthAgeHours) && staticHealthAgeHours >= 0 && staticHealthAgeHours <= maxHours ? 'true' : 'false';
-} catch (err) {
-  staticHealthFresh = 'false';
-  staticHealthValid = false;
-  console.error('Automation health static freshness check failed:', err.message);
+  const num = Number(raw);
+  if (!Number.isFinite(num)) {
+    return { valid: false, value: null, reason: 'maxHoursAllowed não finito' };
+  }
+  if (num <= 0) {
+    return { valid: false, value: null, reason: 'maxHoursAllowed <= 0' };
+  }
+  return { valid: true, value: num, reason: null };
 }
 
-const coreStatus = staticHealthFresh === 'true' ? snapshotStatus : 'stale';
+const maxHoursParse = parseMaxHours(process.env);
+const MAX_HOURS = maxHoursParse.valid ? maxHoursParse.value : null;
 
-const report = {
-  check: 'automation_health_static_freshness',
-  coreStatus,
-  staticHealthFresh,
-  staticHealthValid,
-  staticHealthAgeHours,
-  staticHealthTimestamp,
-  staticHealthPath: healthPath,
-  maxHoursAllowed: maxHours,
-};
-
-writeReport('automation-health-static-freshness-latest', report);
-if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `static_health_fresh=${staticHealthFresh}\n`);
-console.log(JSON.stringify(report, null, 2));
-
-if (staticHealthFresh !== 'true') {
-  process.exitCode = 1;
+function appendGithubOutput(key, value) {
+  const p = process.env.GITHUB_OUTPUT;
+  if (!p) return;
+  fs.appendFileSync(p, `${key}=${value}\n`);
 }
+
+function main() {
+  const now = Date.now();
+  let generatedAt = null;
+  let ageHours = null;
+  let fresh = false;
+  let reason = '';
+  let maxHoursValid = maxHoursParse.valid;
+  let maxHoursReason = maxHoursParse.reason;
+
+  if (!fs.existsSync(HEALTH_JSON)) {
+    reason = 'public/api/automation-health.json missing';
+  } else {
+    try {
+      const json = JSON.parse(fs.readFileSync(HEALTH_JSON, 'utf8'));
+      generatedAt = typeof json.generatedAt === 'string' ? json.generatedAt : null;
+      const ts = generatedAt ? new Date(generatedAt).getTime() : NaN;
+      if (!Number.isFinite(ts)) {
+        reason = 'generatedAt missing or invalid';
+      } else {
+        ageHours = (now - ts) / 3600000;
+        if (!maxHoursValid) {
+          fresh = false;
+          reason = `maxHoursAllowed inválido: ${maxHoursReason}`;
+        } else {
+          fresh = ageHours <= MAX_HOURS;
+          reason = fresh ? 'within freshness threshold' : `stale: ${ageHours.toFixed(1)}h > ${MAX_HOURS}h`;
+        }
+      }
+    } catch (e) {
+      reason = `invalid JSON: ${e.message}`;
+    }
+  }
+
+  // If maxHours is invalid, health is never fresh (policy: never healthy)
+  if (!maxHoursValid) {
+    fresh = false;
+    // Keep the maxHoursReason if no other reason set
+    if (!reason.startsWith('maxHoursAllowed')) {
+      reason = `maxHoursAllowed inválido: ${maxHoursReason}; ${reason}`;
+    }
+  }
+
+  const report = {
+    generatedAt: new Date(now).toISOString(),
+    path: HEALTH_JSON,
+    healthGeneratedAt: generatedAt,
+    ageHours: ageHours == null ? null : Math.round(ageHours * 10) / 10,
+    maxHours: maxHoursValid ? MAX_HOURS : null,
+    maxHoursValid,
+    maxHoursReason: maxHoursValid ? null : maxHoursReason,
+    fresh,
+    reason,
+  };
+
+  fs.mkdirSync(path.dirname(REPORT), { recursive: true });
+  fs.writeFileSync(REPORT, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
+  appendGithubOutput('static_health_fresh', fresh ? 'true' : 'false');
+  console.log(`automation-health static freshness: ${fresh ? 'fresh' : 'stale'} — ${reason}`);
+}
+
+main();

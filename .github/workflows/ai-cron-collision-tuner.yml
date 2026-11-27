@@ -34,7 +34,11 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
+      - name: Test the read-only schedule audit
+        run: node --test tests/ci/cron-schedule-audit.test.cjs
+
       - name: Run cron collision tuner
+        id: cron-audit
         run: node automation/ai-cron-collision-tuner.cjs
 
       - name: Upload cron collision report
@@ -49,18 +53,18 @@ jobs:
           retention-days: 30
 
       - name: Open issue on severe cron collisions
-        if: always()
+        if: success() && steps.cron-audit.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           report="automation/reports/cron-collision-latest.json"
           [ -f "$report" ] || exit 0
-          severe=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log((r.exactCollisions||[]).length + (r.denseWindows||[]).length)")
+          severe=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));if(!r.status.startsWith('completed'))process.exit(1);console.log(r.exactCollisionCount + r.denseWindowCount)")
           if [ "$severe" = "0" ]; then
             echo "No severe cron collisions detected."
             export ISSUE_FINGERPRINT="cron-collision-hotspots"
-            export CLOSE_COMMENT="Auto-closing: no severe cron collision hotspots."
+            export CLOSE_COMMENT="Auto-closing: no declared UTC schedule hotspots within the measured forecast horizon."
             node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
@@ -72,7 +76,7 @@ jobs:
             echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo ""
             echo "### Summary"
-            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log('- Exact collisions: '+(r.exactCollisions||[]).length);console.log('- Dense windows: '+(r.denseWindows||[]).length);console.log('- Recommendation: '+(r.recommendation||'n/a'));"
+            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log('- Collision minutes: '+r.exactCollisionCount);console.log('- Dense five-minute windows: '+r.denseWindowCount);console.log('- Forecast: '+r.startUtc+' to '+r.endUtcExclusive+' (exclusive)');console.log('- Recommendation: '+r.recommendation);"
           } > "$body_file"
           export ISSUE_TITLE="Cron collision hotspots detected"
           export ISSUE_BODY_FILE="$body_file"
