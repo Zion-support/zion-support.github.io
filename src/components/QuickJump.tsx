@@ -23,7 +23,9 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
 
   // Extract headings from content
   const extractHeadings = useCallback(() => {
-    if (!contentRef.current) return;
+    if (!contentRef.current) {
+      return;
+    }
 
     const newHeadings: HeadingItem[] = [];
     const nodes = contentRef.current.querySelectorAll('h2, h3');
@@ -46,7 +48,9 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
 
   // Set up Intersection Observer for active section highlighting
   useEffect(() => {
-    if (headings.length === 0 || !contentRef.current) return;
+    if (headings.length === 0 || !contentRef.current) {
+      return;
+    }
 
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -65,7 +69,9 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
 
     headings.forEach((heading) => {
       const el = document.getElementById(heading.id);
-      if (el) observerRef.current?.observe(el);
+      if (el) {
+        observerRef.current?.observe(el);
+      }
     });
 
     return () => {
@@ -93,13 +99,17 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
   // Close on Escape
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false);
+      if (e.key === 'Escape') {
+        setOpen(false);
+      }
     };
     document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
   }, []);
 
-  if (headings.length === 0) return null;
+  if (headings.length === 0) {
+    return null;
+  }
 
   return (
     <nav
