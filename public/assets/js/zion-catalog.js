@@ -16,13 +16,17 @@
 
   function element(tag, text) {
     var node = document.createElement(tag);
-    if (text !== undefined) node.textContent = text;
+    if (text !== undefined) {
+      node.textContent = text;
+    }
     return node;
   }
 
   function renderCatalog() {
     var grid = document.getElementById("catalog-grid");
-    if (!grid) return;
+    if (!grid) {
+      return;
+    }
     var search = document.getElementById("catalog-q");
     var category = document.getElementById("catalog-cat");
     var empty = document.getElementById("catalog-empty");
@@ -32,9 +36,13 @@
     grid.replaceChildren();
     var shown = 0;
     ITEMS.forEach(function (item) {
-      if (selected && selected !== item.cat) return;
+      if (selected && selected !== item.cat) {
+        return;
+      }
       var combined = [item.name, item.desc, item.cat].join(" ").toLowerCase();
-      if (term && combined.indexOf(term) === -1) return;
+      if (term && combined.indexOf(term) === -1) {
+        return;
+      }
       var card = element("article");
       card.className = "card";
       var label = element("p", item.cat);
@@ -52,19 +60,25 @@
       grid.appendChild(card);
       shown++;
     });
-    if (empty) empty.hidden = shown > 0;
+    if (empty) {
+      empty.hidden = shown > 0;
+    }
   }
 
   function initCatalog() {
     var grid = document.getElementById("catalog-grid");
-    if (!grid) return;
+    if (!grid) {
+      return;
+    }
     var search = document.getElementById("catalog-q");
     var category = document.getElementById("catalog-cat");
     var chips = document.getElementById("catalog-chips");
 
     if (category && category.options.length < 2) {
       ["plano", "servico", "ferramenta", "conteudo", "empresa"].forEach(function (cat) {
-        if (!ITEMS.some(function (item) { return item.cat === cat; })) return;
+        if (!ITEMS.some(function (item) { return item.cat === cat; })) {
+          return;
+        }
         var option = element("option", cat);
         option.value = cat;
         category.appendChild(option);
@@ -77,7 +91,9 @@
         chip.className = "chip" + (cat ? "" : " on");
         chip.setAttribute("data-cat", cat);
         chip.addEventListener("click", function () {
-          if (category) category.value = cat;
+          if (category) {
+            category.value = cat;
+          }
           chips.querySelectorAll("[data-cat]").forEach(function (node) {
             node.classList.toggle("on", node === chip);
           });
@@ -86,8 +102,12 @@
         chips.appendChild(chip);
       });
     }
-    if (search) search.addEventListener("input", renderCatalog);
-    if (category) category.addEventListener("change", renderCatalog);
+    if (search) {
+      search.addEventListener("input", renderCatalog);
+    }
+    if (category) {
+      category.addEventListener("change", renderCatalog);
+    }
     renderCatalog();
   }
 
@@ -111,7 +131,9 @@
     var output = document.getElementById("finops-out");
 
     // No global auto-injection: enable the calculator only on an explicitly opted-in host.
-    if (!host && !(form && output)) return;
+    if (!host && !(form && output)) {
+      return;
+    }
     if (!form) {
       form = element("form");
       form.id = "finops-form";
@@ -133,7 +155,9 @@
       var data = new FormData(form);
       function bounded(key, maximum) {
         var n = Number(data.get(key));
-        if (!Number.isFinite(n)) return 0;
+        if (!Number.isFinite(n)) {
+          return 0;
+        }
         return Math.min(Math.max(n, 0), maximum);
       }
       var spend = bounded("spend", 100000000);
@@ -158,6 +182,9 @@
     initCatalog();
     ensureFinops();
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start, {once: true});
-  else start();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start, {once: true});
+  } else {
+    start();
+  }
 })();
