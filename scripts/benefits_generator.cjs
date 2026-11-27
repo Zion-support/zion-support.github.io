@@ -20,51 +20,72 @@ const DATA_TS = path.join('app', 'data', 'servicesData.ts');
 
 function slot(feature, category) {
   const f = feature.toLowerCase();
-  if (f.includes('automated') || f.includes('auto-') || f.includes('auto '))
+  if (f.includes('automated') || f.includes('auto-') || f.includes('auto ')) {
     return `Automate complex ${category} workflows to reduce manual effort and human error.`;
-  if (f.includes('real-time') || f.includes('realtime') || f.includes('live '))
+  }
+  if (f.includes('real-time') || f.includes('realtime') || f.includes('live ')) {
     return `Act on live data and events instantly rather than waiting for batch reports.`;
-  if (f.includes('analytics') || f.includes('analytics') || f.includes('insights') || f.includes('reports'))
+  }
+  if (f.includes('analytics') || f.includes('analytics') || f.includes('insights') || f.includes('reports')) {
     return `Make decisions backed by real analytical insight instead of guesswork.`;
-  if (f.includes('detection') || f.includes('detect') || f.includes('anomaly') || f.includes('monitoring'))
+  }
+  if (f.includes('detection') || f.includes('detect') || f.includes('anomaly') || f.includes('monitoring')) {
     return `Catch issues before they escalate with intelligent continuous monitoring.`;
-  if (f.includes('compliance') || f.includes('audit') || f.includes('regulatory'))
+  }
+  if (f.includes('compliance') || f.includes('audit') || f.includes('regulatory')) {
     return `Meet regulatory requirements automatically and maintain complete audit trail.`;
-  if (f.includes('orchestration') || f.includes('orchestrat') || f.includes('workflow'))
+  }
+  if (f.includes('orchestration') || f.includes('orchestrat') || f.includes('workflow')) {
     return `Coordinate complex multi-step workflows end-to-end with no manual handoffs.`;
-  if (f.includes('integrat') || f.includes('connector') || f.includes('api') || f.includes('sync'))
+  }
+  if (f.includes('integrat') || f.includes('connector') || f.includes('api') || f.includes('sync')) {
     return `Seamlessly connect all your tools and data sources in a unified workflow.`;
-  if (f.includes('predict') || f.includes('forecast') || f.includes('forecasting'))
+  }
+  if (f.includes('predict') || f.includes('forecast') || f.includes('forecasting')) {
     return `Anticipate demand, risk, or opportunity before it happens — not after.`;
-  if (f.includes('generation') || f.includes('generat') || f.includes('content'))
+  }
+  if (f.includes('generation') || f.includes('generat') || f.includes('content')) {
     return `Produce high-quality content at scale without the production bottlenecks.`;
-  if (f.includes('optimization') || f.includes('optimiz') || f.includes('optimi'))
+  }
+  if (f.includes('optimization') || f.includes('optimiz') || f.includes('optimi')) {
     return `Get more output from the same resources through continuous process optimisation.`;
-  if (f.includes('security') || f.includes('secure') || f.includes('protect') || f.includes('threat'))
+  }
+  if (f.includes('security') || f.includes('secure') || f.includes('protect') || f.includes('threat')) {
     return `Protect your organisation's digital assets and customer data from threats.`;
-  if (f.includes('cost') || f.includes('expense') || f.includes('spending'))
+  }
+  if (f.includes('cost') || f.includes('expense') || f.includes('spending')) {
     return `Cut operational costs while maintaining or improving service quality.`;
-  if (f.includes('customer') || f.includes('support') || f.includes('cx ') || f.includes('client'))
+  }
+  if (f.includes('customer') || f.includes('support') || f.includes('cx ') || f.includes('client')) {
     return `Improve customer experience and satisfaction through faster, more personalised service.`;
-  if (f.includes('data') && (f.includes('quality') || f.includes('clean') || f.includes('validat')))
+  }
+  if (f.includes('data') && (f.includes('quality') || f.includes('clean') || f.includes('validat'))) {
     return `Ensure data quality at every stage of the pipeline before decisions are made.`;
-  if (f.includes('training') || f.includes('learning') || f.includes('education') || f.includes('tutor'))
+  }
+  if (f.includes('training') || f.includes('learning') || f.includes('education') || f.includes('tutor')) {
     return `Accelerate skill development and knowledge transfer across your team.`;
-  if (f.includes('migration') || f.includes('modernis') || f.includes('legacy') || f.includes('upgrade'))
+  }
+  if (f.includes('migration') || f.includes('modernis') || f.includes('legacy') || f.includes('upgrade')) {
     return `Modernise legacy systems without disrupting ongoing operations.`;
-  if (f.includes('testing') || f.includes('qa ') || f.includes('test ') || f.includes('validat'))
+  }
+  if (f.includes('testing') || f.includes('qa ') || f.includes('test ') || f.includes('validat')) {
     return `Catch defects and prevent regressions faster with automated quality gates.`;
-  if (f.includes('supply') || f.includes('logistic') || f.includes('inventory'))
+  }
+  if (f.includes('supply') || f.includes('logistic') || f.includes('inventory')) {
     return `Optimise supply chain efficiency and reduce delays across the fulfilment network.`;
-  if (f.includes('cloud') && (f.includes('optim') || f.includes('cost') || f.includes('effici')))
+  }
+  if (f.includes('cloud') && (f.includes('optim') || f.includes('cost') || f.includes('effici'))) {
     return `Reduce cloud spend and improve resource utilisation rights-sized to demand.`;
+  }
   return null;
 }
 
 function benefitFromFeature(feature, category) {
   const f = feature.toLowerCase();
   const direct = slot(feature, category);
-  if (direct) return direct;
+  if (direct) {
+    return direct;
+  }
   // Fallback: title-case the feature as a readable sentence-ending benefit
   const title = feature.startsWith(feature[0].toUpperCase()) 
     ? feature 
@@ -74,7 +95,9 @@ function benefitFromFeature(feature, category) {
 
 function generateBenefits(service) {
   const { features, description, category } = service;
-  if (!features || features.length === 0) return [];
+  if (!features || features.length === 0) {
+    return [];
+  }
   
   const seen = new Set();
   const benefits = [];
@@ -82,8 +105,12 @@ function generateBenefits(service) {
   // 1. From features (up to 3 benefit statements)
   const usedFeatures = new Set();
   for (const feature of features) {
-    if (benefits.length >= 3) break;
-    if (usedFeatures.has(feature)) continue;
+    if (benefits.length >= 3) {
+      break;
+    }
+    if (usedFeatures.has(feature)) {
+      continue;
+    }
     usedFeatures.add(feature);
     const b = benefitFromFeature(feature, category);
     if (!seen.has(b)) { seen.add(b); benefits.push(b); }
@@ -94,9 +121,13 @@ function generateBenefits(service) {
     const desc = description.replace(/\.{3}/g, '').split(/[.!?]/);
     for (const sentence of desc) {
       const s = sentence.trim();
-      if (s.length < 30 || s.length > 180) continue;
+      if (s.length < 30 || s.length > 180) {
+        continue;
+      }
       // Only use substantive sentences (not single words, not "TBD" fragments)
-      if (!/[a-z]{3,}/i.test(s)) continue;
+      if (!/[a-z]{3,}/i.test(s)) {
+        continue;
+      }
       const benefit = s.startsWith(s[0].toUpperCase()) 
         ? s : s.charAt(0).toUpperCase() + s.slice(1);
       if (!seen.has(benefit) && benefits.length < 5) {
@@ -149,7 +180,9 @@ const newEntries = entries.map((entry, idx) => {
   const titleM    = entry.match(/title:\s*'([^']+)'/);
   // Detect benefits: []
   const benefitsEmpty = entry.includes("benefits: []");
-  if (!idMatch) return entry;
+  if (!idMatch) {
+    return entry;
+  }
   
   const featureMatch = entry.match(/features:\s*\[([^\]]*)\]/);
   const descMatch    = entry.match(/description:\s*'([^']*)'/);
@@ -235,7 +268,9 @@ function replaceBenefits(tsContent) {
     }
   }
   // Push remainder
-  if (currentObj) result.push(currentObj);
+  if (currentObj) {
+    result.push(currentObj);
+  }
   
   return result.join('');
 }

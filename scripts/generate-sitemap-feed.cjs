@@ -41,13 +41,21 @@ function collectLeafPages() {
   const topFiles = ['index.html'];
   for (const f of topFiles) {
     const p = path.join(outDir, f);
-    if (fs.existsSync(p)) pages.push({ url: `${SITE_URL}/${f === 'index.html' ? '' : f.replace(/\\.html$/, '')}`, lastmod: fs.statSync(p).mtime });
+    if (fs.existsSync(p)) {
+      pages.push({ url: `${SITE_URL}/${f === 'index.html' ? '' : f.replace(/\\.html$/, '')}`, lastmod: fs.statSync(p).mtime });
+    }
   }
   for (const entry of fs.readdirSync(outDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    if (skipDirs.has(entry.name)) continue;
+    if (!entry.isDirectory()) {
+      continue;
+    }
+    if (skipDirs.has(entry.name)) {
+      continue;
+    }
     const idx = path.join(outDir, entry.name, 'index.html');
-    if (fs.existsSync(idx)) pages.push({ url: `${SITE_URL}/${entry.name}/`, lastmod: fs.statSync(idx).mtime });
+    if (fs.existsSync(idx)) {
+      pages.push({ url: `${SITE_URL}/${entry.name}/`, lastmod: fs.statSync(idx).mtime });
+    }
   }
 
   // 2a) Dynamic ai/* sub-pages and solutions/* sub-pages
@@ -85,7 +93,9 @@ function collectLeafPages() {
   const svcDir = path.join(outDir, 'services');
   if (fs.existsSync(svcDir)) {
     for (const entry of fs.readdirSync(svcDir, { withFileTypes: true })) {
-      if (!entry.isDirectory() || entry.name === 'stage') continue;
+      if (!entry.isDirectory() || entry.name === 'stage') {
+        continue;
+      }
       const f = path.join(svcDir, entry.name, 'index.html');
       if (fs.existsSync(f)) {
         // Only add if not already added from service-index.json
@@ -100,7 +110,9 @@ function collectLeafPages() {
   const stageDir = path.join(outDir, 'services', 'stage');
   if (fs.existsSync(stageDir)) {
     for (const entry of fs.readdirSync(stageDir, { withFileTypes: true })) {
-      if (!entry.isDirectory()) continue;
+      if (!entry.isDirectory()) {
+        continue;
+      }
       const f = path.join(stageDir, entry.name, 'index.html');
       if (fs.existsSync(f)) {
         pages.push({ url: `${SITE_URL}/services/stage/${entry.name}/`, lastmod: fs.statSync(f).mtime });
@@ -112,7 +124,9 @@ function collectLeafPages() {
   const statusDir = path.join(outDir, 'status');
   if (fs.existsSync(statusDir)) {
     for (const entry of fs.readdirSync(statusDir, { withFileTypes: true })) {
-      if (!entry.isDirectory()) continue;
+      if (!entry.isDirectory()) {
+        continue;
+      }
       const f = path.join(statusDir, entry.name, 'index.html');
       if (fs.existsSync(f)) {
         pages.push({ url: `${SITE_URL}/status/${entry.name}/`, lastmod: fs.statSync(f).mtime, priority: 0.4, changefreq: 'monthly' });
@@ -124,22 +138,32 @@ function collectLeafPages() {
   const blogDir = path.join(outDir, 'blog');
   if (fs.existsSync(blogDir)) {
     for (const entry of fs.readdirSync(blogDir, { withFileTypes: true })) {
-      if (!entry.isDirectory()) continue;
+      if (!entry.isDirectory()) {
+        continue;
+      }
       const f = path.join(blogDir, entry.name, 'index.html');
-      if (!fs.existsSync(f)) continue;
+      if (!fs.existsSync(f)) {
+        continue;
+      }
       pages.push({ url: `${SITE_URL}/blog/${entry.name}/`, lastmod: fs.statSync(f).mtime });
     }
   }
 
   for (const wd of walkDirs) {
     const base = wd.dir;
-    if (!fs.existsSync(base)) continue;
+    if (!fs.existsSync(base)) {
+      continue;
+    }
     for (const entry of fs.readdirSync(base, { withFileTypes: true })) {
-      if (!entry.isDirectory()) continue;
+      if (!entry.isDirectory()) {
+        continue;
+      }
       const file = path.join(base, entry.name, 'index.html');
       const meta = path.join(base, entry.name, 'index.txt');
       const last = fs.existsSync(file) ? fs.statSync(file).mtime : fs.existsSync(meta) ? fs.statSync(meta).mtime : null;
-      if (!last) continue;
+      if (!last) {
+        continue;
+      }
       pages.push({ url: `${SITE_URL}/${wd.prefix}/${entry.name}/`, lastmod: last });
     }
   }
@@ -167,7 +191,9 @@ function buildSitemap(pages) {
   const rows = [];
   for (const p of pages) {
     const url = typeof p === 'string' ? p : p.url;
-    if (seen.has(url)) continue;
+    if (seen.has(url)) {
+      continue;
+    }
     seen.add(url);
     const lastmod = typeof p === 'string' ? new Date(today) : p.lastmod;
     rows.push(pageInfo(url, lastmod));
@@ -271,9 +297,13 @@ function main() {
   const blogEntries = [];
   if (fs.existsSync(blogDir)) {
     for (const entry of fs.readdirSync(blogDir, { withFileTypes: true })) {
-      if (!entry.isDirectory()) continue;
+      if (!entry.isDirectory()) {
+        continue;
+      }
       const f = path.join(blogDir, entry.name, 'index.html');
-      if (!fs.existsSync(f)) continue;
+      if (!fs.existsSync(f)) {
+        continue;
+      }
       const html = fs.readFileSync(f, 'utf8');
       const info = extractBlogInfo(html);
       blogEntries.push({
