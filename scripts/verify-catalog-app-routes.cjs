@@ -11,7 +11,7 @@ const catalogs = ['apps/index.html', ...['pt', 'es', 'fr', 'de'].map(locale => l
 
 function links(html) {
   return [...html.matchAll(/<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
-    .map(match => (match[1] ?? match[2] ?? match[3]).replace(/&amp;/gi, '&').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))));
+    .map(match => (match[1] ?? match[2] ?? match[3]).replace(/&amp;/gi, '&').replace(/&#(\d+);/g, (entity, codePoint) => String.fromCodePoint(Number(codePoint))));
 }
 
 function verify(output = 'out') {
@@ -56,5 +56,5 @@ function verify(output = 'out') {
 module.exports = {catalogs, links, verify};
 if (require.main === module) {
   const result = verify(process.argv[2] || 'out');
-  console.log('PASS catalog app routes and required guides: ' + result.routes + ' unique destinations; ' + result.catalogs + ' catalogs.');
+  process.stdout.write('PASS catalog app routes and required guides: ' + result.routes + ' unique destinations; ' + result.catalogs + ' catalogs.\n');
 }
