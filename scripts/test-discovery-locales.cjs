@@ -39,6 +39,11 @@ async function check(l,file){
   const contact=inputs.filter(input=>input.name===name);
   assert.equal(contact.length,1,'Unique participant field: '+l+'/'+name);
   assert.equal(contact[0].type,type,'Participant field type: '+l+'/'+name);
+  const id='dq-'+name;
+  assert.equal(contact[0].id,id,'Participant field ID: '+l+'/'+name);
+  assert.equal((html.match(new RegExp('\\bid="'+id+'"','g'))||[]).length,1,'Unique participant field ID: '+l+'/'+name);
+  assert.equal((html.match(new RegExp('<label\\b[^>]*\\bfor="'+id+'"[^>]*>\\s*[^<\\s]','g'))||[]).length,1,'Visible associated participant label: '+l+'/'+name);
+  assert.equal(contact[0].autocomplete,name,'Participant field autocomplete: '+l+'/'+name);
   assert(/\brequired(?:\s|\/?\>)/.test(contact[0].tag),'Required participant field: '+l+'/'+name);
  }
  const canonical='https://ziontechgroup.com'+(l==='pt'?'/discovery/':'/'+l+'/discovery/');
