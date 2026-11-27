@@ -57,7 +57,7 @@ function fixture(mode = 'accepted', script = source) {
     clearTimeout(id){timers.delete(id);},
     fetch:async(url,options)=>{
       calls.push({url,options,data:JSON.parse(options.body)});
-      const response = {ok:mode!=='http-error',json:async()=>{
+      const response = {ok:mode!=='http-error',status:mode==='http-error'?503:200,json:async()=>{
         if(mode==='invalid-json')throw new SyntaxError('Synthetic invalid JSON');
         if(mode==='json-pending')return new Promise(r=>{release=r;});
         return mode==='missing' ? {} : mode==='null' ? null : {success:mode==='rejected'?false:mode==='string-false'?'false':mode==='string-true'?'true':true};
@@ -167,6 +167,16 @@ async function run() {
     assert.equal(f.get('dq').attrs['aria-busy'],'false');
     assert.equal(f.timers.size,0);
     const status=f.get('dq-mail-status').textContent;
+    const expectedPhase = {
+      accepted:'accepted','string-true':'accepted',rejected:'rejected','string-false':'rejected',
+      'http-error':'http','invalid-json':'body',missing:'unrecognized-response',
+      null:'unrecognized-response',network:'request'
+    };
+    const diagnostic = f.get('dq-mail-status').attrs;
+    assert.deepEqual(Object.keys(diagnostic).sort(), ['data-elapsed-ms','data-http-class','data-request-phase']);
+    assert.equal(diagnostic['data-request-phase'], expectedPhase[mode]);
+    assert.equal(diagnostic['data-http-class'], mode==='network'?'none':mode==='http-error'?'5xx':'2xx');
+    assert.match(diagnostic['data-elapsed-ms'], /^[0-9]+$/);
     if(['accepted','string-true'].includes(mode)){
       assert.match(status,/aceita pelo serviço/);
       assert.match(status,/ainda não foi confirmada/);
@@ -193,7 +203,11 @@ async function run() {
     assert.equal(f.button.disabled,false);
     assert.match(f.get('dq-mail-status').textContent,/nenhum reenvio automático/);
     const status=f.get('dq-mail-status').textContent;
+    const diagnostic = {...f.get('dq-mail-status').attrs};
+    assert.equal(diagnostic['data-request-phase'],mode==='pending'?'request-timeout':'body-timeout');
+    assert.equal(diagnostic['data-http-class'],mode==='pending'?'none':'2xx');
     f.release({success:true});await flush();
+    assert.deepEqual(f.get('dq-mail-status').attrs,diagnostic,'late response cannot change diagnostics');
     assert.equal(f.get('dq-mail-status').textContent,status,'late response cannot change timeout state');
     await f.submit();assert.equal(f.calls.length,1);
     scenarios++;
