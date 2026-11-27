@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { usePathname } from 'next/navigation';
+
+const SCROLL_GAP_PX = 16;
+const SUBHEADING_INDENT_PX = 16;
 
 interface HeadingItem {
   id: string;
@@ -88,7 +90,7 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
     const el = document.getElementById(id);
     if (el) {
       const navHeight = 80;
-      const top = el.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+      const top = el.getBoundingClientRect().top + window.scrollY - navHeight - SCROLL_GAP_PX;
       window.scrollTo({ top, behavior: 'smooth' });
       setActiveId(id);
     }
@@ -159,7 +161,7 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
                       ? 'text-purple-300 bg-purple-500/10 font-medium'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
                   }`}
-                  style={{ paddingLeft: heading.level === 3 ? 16 : 8 }}
+                  style={{ paddingLeft: heading.level === 3 ? SUBHEADING_INDENT_PX : 8 }}
                 >
                   {heading.text}
                 </button>
@@ -188,7 +190,7 @@ export default function QuickJump({ contentRef, className = '' }: QuickJumpProps
                       ? 'text-purple-300 bg-purple-500/10 font-medium border-l-2 border-purple-400 -ml-[2px]'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800/40 border-l-2 border-transparent -ml-[2px]'
                   }`}
-                  style={{ paddingLeft: heading.level === 3 ? 16 : 8 }}
+                  style={{ paddingLeft: heading.level === 3 ? SUBHEADING_INDENT_PX : 8 }}
                 >
                   <span className="flex items-center gap-2">
                     {heading.level === 3 && (
