@@ -3,6 +3,8 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 
+const ANNUAL_BILLING_DISCOUNT = 0.2;
+
 interface PricingEstimatorProps {
   categories: { key: string; label: string; emoji: string }[];
   categoryCounts: Record<string, number>;
@@ -21,12 +23,16 @@ export default function PricingEstimator({ categories, categoryCounts, categoryP
   };
 
   const estimate = useMemo(() => {
-    if (selectedCategories.length === 0) return { min: 0, avg: 0, max: 0, savings: 0 };
+    if (selectedCategories.length === 0) {
+      return { min: 0, avg: 0, max: 0, savings: 0 };
+    }
 
     let min = 0, avg = 0, max = 0;
     for (const cat of selectedCategories) {
       const p = categoryPricing[cat];
-      if (!p) continue;
+      if (!p) {
+        continue;
+      }
       // Scale by team size (assume per-user pricing for team sizes > 1)
       const scale = cat === 'ai' || cat === 'automation' || cat === 'it' ? Math.ceil(teamSize / 10) : 1;
       min += p.min * scale;
@@ -35,7 +41,7 @@ export default function PricingEstimator({ categories, categoryCounts, categoryP
     }
 
     const annual = billingCycle === 'annual';
-    const discount = annual ? 0.2 : 0; // 20% annual discount
+    const discount = annual ? ANNUAL_BILLING_DISCOUNT : 0;
     const savings = avg * 12 * discount;
     const multiplier = annual ? 12 : 1;
 
