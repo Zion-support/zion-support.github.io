@@ -2,17 +2,20 @@
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import { allServices } from '../data/servicesData';
 import type { Service } from '../data/servicesData';
 import { searchServices } from '@/data/searchServices';
 
 /* ── Simple fuzzy-match ── */
 function fuzzyScore(query: string, text: string): number {
-  if (!query) return text.length; // longer text scores higher when no query
+  if (!query) {
+    return text.length; // longer text scores higher when no query
+  }
   const q = query.toLowerCase();
   const t = text.toLowerCase();
-  if (t.includes(q)) return 100 + (text.includes(query) ? 50 : 0); // substring = best
+  if (t.includes(q)) {
+    return 100 + (text.includes(query) ? 50 : 0); // substring = best
+  }
   // character-in-order match
   let qi = 0, score = 0;
   for (let i = 0; i < t.length && qi < q.length; i++) {
@@ -22,9 +25,13 @@ function fuzzyScore(query: string, text: string): number {
 }
 
 function highlightMatch(text: string, query: string): React.ReactNode {
-  if (!query) return text;
+  if (!query) {
+    return text;
+  }
   const idx = text.toLowerCase().indexOf(query.toLowerCase());
-  if (idx === -1) return text;
+  if (idx === -1) {
+    return text;
+  }
   return (
     <>
       {text.slice(0, idx)}
@@ -65,7 +72,9 @@ export default function SmartSearchBar({ initialQuery = '', initialCategory = 'a
   // Close dropdown on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) setOpen(false);
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
     };
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
@@ -73,7 +82,9 @@ export default function SmartSearchBar({ initialQuery = '', initialCategory = 'a
 
   const scored = useMemo(() => {
     let list = [...allServices];
-    if (category !== 'all') list = list.filter((s: Service) => s.category === category);
+    if (category !== 'all') {
+      list = list.filter((s: Service) => s.category === category);
+    }
     if (query.trim()) {
       const q = query.trim();
       list = list
@@ -93,12 +104,16 @@ export default function SmartSearchBar({ initialQuery = '', initialCategory = 'a
   }, [query, category]);
 
   const hitsByCategory = useMemo(() => {
-    if (!query.trim()) return {};
+    if (!query.trim()) {
+      return {};
+    }
     const q = query.trim();
     const counts: Record<string, number> = {};
     for (const s of allServices) {
       const score = Math.max(fuzzyScore(q, s.title), fuzzyScore(q, s.description));
-      if (score > 0) counts[s.category] = (counts[s.category] || 0) + 1;
+      if (score > 0) {
+        counts[s.category] = (counts[s.category] || 0) + 1;
+      }
     }
     return counts;
   }, [query]);
@@ -112,15 +127,23 @@ export default function SmartSearchBar({ initialQuery = '', initialCategory = 'a
       try { localStorage.setItem(LS_KEY, JSON.stringify(updated)); } catch { /* noop */ }
     }
     const params = new URLSearchParams();
-    if (qq) params.set('q', qq);
-    if (cc !== 'all') params.set('category', cc);
+    if (qq) {
+      params.set('q', qq);
+    }
+    if (cc !== 'all') {
+      params.set('category', cc);
+    }
     router.push(`/services?${params.toString()}`);
     setOpen(false);
   }, [query, category, recent, router]);
 
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') submitSearch();
-    if (e.key === 'Escape') setOpen(false);
+    if (e.key === 'Enter') {
+      submitSearch();
+    }
+    if (e.key === 'Escape') {
+      setOpen(false);
+    }
   };
 
   const panelOpen = open && (query.trim().length > 0 || recent.length > 0) && scored.length > 0;
