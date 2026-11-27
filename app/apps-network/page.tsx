@@ -96,7 +96,9 @@ export default function AppsNetworkPage() {
         <div className="space-y-10">
           {GROUPS.map((g) => {
             const apps = appsNetworkCatalog.filter((a) => a.group === g.key);
-            if (apps.length === 0) return null;
+            if (apps.length === 0) {
+              return null;
+            }
             return (
               <div key={g.key} id={g.key} className="scroll-mt-24">
                 <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
