@@ -232,6 +232,20 @@ test('Page exception leaves quoted-property naming diagnostics visible', () => {
   });
 });
 
+test('JSON-LD keywords retain their spelling without exempting unrelated quoted properties', () => {
+  const source = `export const metadata = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    invalid: { "@typing": "Article", "pt-BR": "Português" },
+  };`;
+  return eslint.lintText(source, { filePath: 'app/blog/lint-fixture/page.tsx' }).then(([result]) => {
+    const diagnostics = result.messages.filter((item) => item.ruleId === '@typescript-eslint/naming-convention');
+    assert.equal(diagnostics.length, 2, JSON.stringify(result.messages));
+    assert.ok(diagnostics.some((item) => item.message.includes('@typing')));
+    assert.ok(diagnostics.some((item) => item.message.includes('pt-BR')));
+  });
+});
+
 test('unused imports and variables remain visible warnings for the workflow zero-warning gate', () => {
   return eslint.lintText('import { readFile, writeFile as _writeFile } from "node:fs"; const unused = true; const _unused = true; export const ready = true;', {
     filePath: 'app/lint-fixture.ts',

@@ -16,6 +16,13 @@ const namingConventions = [
   { selector: 'variable', format: ['camelCase', 'UPPER_CASE'], leadingUnderscore: 'allow' },
   { selector: 'function', format: ['camelCase'] },
   { selector: 'parameter', format: ['camelCase'] },
+  // JSON-LD keywords must retain their spelling in serialized objects.
+  {
+    selector: 'objectLiteralProperty',
+    modifiers: ['requiresQuotes'],
+    filter: { regex: '^@(context|type)$', match: true },
+    format: null,
+  },
   { selector: 'property', format: ['camelCase', 'snake_case', 'UPPER_CASE'] },
   { selector: 'memberLike', format: ['camelCase'] },
   { selector: 'typeLike', format: ['PascalCase'] },
