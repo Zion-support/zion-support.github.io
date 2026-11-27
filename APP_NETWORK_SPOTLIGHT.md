@@ -4,19 +4,6 @@
 
 🌐 [Network Hub](https://zion-support.github.io/zion-network/) · 📊 [Status](https://zion-support.github.io/zion-status/) · 💠 [Plans](https://zion-support.github.io/zion-plans/) · 🗂 [Full Index](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
 
-## 🆕 Batch 56 (Sep 27) — People & Retention Suites Complete
-
-The master index now covers **all 41 category pages**. Two suites fully interlinked this week:
-
-**🧑‍💼 HR & Talent AI** — sourcing → screening → interviews → onboarding → engagement:
-[Zion AI Recruiter](https://ziontechgroup.com/zion-ai-recruiter/) · [AI Resume Screener](https://ziontechgroup.com/ai-resume-screener/) · [AI HR Talent Platform](https://ziontechgroup.com/ai-hr-talent-platform/) · [Zion AI Interview Copilot](https://ziontechgroup.com/zion-ai-interview-copilot/)
-
-**💚 Customer Success & Retention AI** — onboarding → health → churn → NPS → expansion:
-[Onboarding Journey Tracker](https://ziontechgroup.com/onboarding-journey-tracker/) · [Customer Health Scorer](https://ziontechgroup.com/customer-health-scorer/) · [Churn Risk Radar](https://ziontechgroup.com/churn-risk-radar/) · [Churn Radar](https://ziontechgroup.com/churn-radar/) · [NPS Insight Engine](https://ziontechgroup.com/nps-insight-engine/)
-
-Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP27_BATCH56.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH56.md) · Hub pages: [HR & Talent AI](https://github.com/Zion-support/zion-network/blob/main/network/hr-talent-ai.md) · [CS & Retention](https://github.com/Zion-support/zion-network/blob/main/network/customer-success-retention.md)
-
-
 ## 🤖 AI Agents & Orchestration
 
 Build, test and operate fleets of autonomous agents:
@@ -50,17 +37,6 @@ Build, test and operate fleets of autonomous agents:
 - **[Zion AI CAB Assistant](https://ziontechgroup.com/zion-ai-cab-assistant/)** — change advisory board risk scoring and automation
 - **[Zion AI Benchmark Lab](https://ziontechgroup.com/zion-ai-benchmark-lab/)** — model evaluations and leaderboards for vendor selection
 - **[Zion AI Churn Predictor](https://ziontechgroup.com/zion-ai-churn-predictor/)** — customer health scoring and save playbooks
-
-## 🧠 LLM & Prompt Engineering
-
-- **[LLM Gateway](https://ziontechgroup.com/llm-gateway/)** — unified multi-provider LLM routing & fallbacks
-- **[RAG Forge](https://ziontechgroup.com/rag-forge/)** — build & test RAG pipelines visually
-- **[Prompt Shield](https://ziontechgroup.com/prompt-shield/)** — prompt-injection defense
-- **[Prompt Forge](https://ziontechgroup.com/prompt-forge/)** — prompt versioning & A/B testing
-- **[LLM Cost Optimizer](https://ziontechgroup.com/llm-cost-optimizer/)** — cheapest model meeting quality targets
-
-Full spotlight: [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md)
-
 
 ## 🔒 Security & Compliance
 

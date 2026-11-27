@@ -45,3 +45,4 @@ export default function AutomatedTestingFramework() {
       </div>
     </div>
   );
+}

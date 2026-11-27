@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // generate-commercial-sitemap.cjs
 // Restore public/sitemap-0.xml as the clean commercial urlset.
-// public/sitemap.xml is the next-sitemap index that points at sitemap-0.
+// public/sitemap.xml indexes the commercial and Apps child sitemaps.
 //
 // Rules:
 // - Do not invent URLs: only emit paths that exist as public/**/index.html
@@ -48,6 +48,9 @@ const EXTRA = [
   '/industries/legal/',
   '/public-roadmap/',
   '/status-page/',
+  '/solutions/healthcare/',
+  '/industries/financial-services/',
+  '/tools/phishing-analyzer/',
 ];
 
 function publicFileFor(urlPath) {
@@ -124,6 +127,7 @@ function buildIndex() {
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     `<sitemap><loc>${SITE}/sitemap-0.xml</loc></sitemap>`,
+    `<sitemap><loc>${SITE}/apps/apps-sitemap.xml</loc></sitemap>`,
     '</sitemapindex>',
     '',
   ].join('\n');
@@ -171,7 +175,7 @@ function main() {
   const outDir = path.join(ROOT, 'out');
   if (fs.existsSync(outDir)) writeBoth(outDir, pages);
   console.log(`sitemap-0.xml: ${pages.length} commercial urls`);
-  console.log('sitemap.xml: sitemapindex -> /sitemap-0.xml');
+  console.log('sitemap.xml: sitemapindex -> /sitemap-0.xml, /apps/apps-sitemap.xml');
   return pages;
 }
 

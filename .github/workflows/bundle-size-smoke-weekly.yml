@@ -1,4 +1,4 @@
-# Ensures bundle-size.yml keeps path-scoped PR trigger + build path (grep-only).
+# Ensures bundle-size.yml keeps path-scoped PR trigger + static measurement path (grep-only).
 name: bundle size workflow smoke (weekly)
 permissions:
   contents: read
@@ -27,5 +27,5 @@ jobs:
           grep -Fq "branches: [main]" "$f"
           grep -Fq 'app/**' "$f"
           grep -Fq 'npm ci --prefer-offline --no-audit --fund=false' "$f"
-          grep -Fq 'npm run build' "$f"
+          grep -Fq 'Measure static bundle' "$f"
           echo "ok: $f"

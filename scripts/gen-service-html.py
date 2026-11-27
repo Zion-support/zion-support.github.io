@@ -99,7 +99,7 @@ __BENEFITS__
 </div>
 <p><a href="/services/">All services</a> &middot; <a href="/plans/">Live prices</a> &middot; <a href="/booking/">Book Discovery</a> &middot; <a href="/blog/">Field notes</a> &middot; <a href="/contact/">Contact</a> &middot; <a href="/use-cases/">Use cases</a></p>
 <footer>
-<p>&copy; 2026 Zion Tech Group &middot; 364 E Main St STE 1008, Middletown, DE 19709 &middot; <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> &middot; +1 302 464 0950</p>
+<p>&copy; 2026 Zion Tech Group &middot; 364 E Main St STE 1008, Middletown, DE 19709 &middot; <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> &middot; +55 11 97614-0076</p>
 <p><a href="/">Home</a> &middot; <a href="/services/">Services</a> &middot; <a href="/plans/">Plans</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
 </footer>
 </div>
@@ -165,7 +165,7 @@ def build_html(s):
         "@context": "https://schema.org", "@type": "Service",
         "name": s['title'],
         "provider": {"@type": "Organization", "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
-                     "email": "kleber@ziontechgroup.com", "telephone": "+1 302 464 0950"},
+                     "email": "kleber@ziontechgroup.com", "telephone": "+55 11 97614-0076"},
         "description": s.get('description', ''), "areaServed": "Worldwide",
         "url": s.get('canonical', 'https://ziontechgroup.com/services/' + s['slug'])
     }, ensure_ascii=False)

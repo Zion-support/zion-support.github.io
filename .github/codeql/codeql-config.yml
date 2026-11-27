@@ -1,8 +1,16 @@
 name: "Zion CodeQL config"
-# Exclude generated/static content so analysis fits in the runner
-# (repo ships 36k+ generated HTML/JS pages under public/).
+# Scope analysis to real application source only.
+# This repo is a GitHub Pages site with 800+ generated page directories
+# at the root (125k+ files); scanning everything exceeds hosted-runner
+# resources and fails the 'Perform CodeQL Analysis' step (~10 min, exit 1).
+paths:
+  - app
+  - api
+  - backend
+  - scripts
+  - automation
+  - __tests__
 paths-ignore:
-  - public
   - automation/reports
   - node_modules
   - .next

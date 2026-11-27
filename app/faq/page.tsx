@@ -39,6 +39,7 @@ export default function FAQPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-6">
             <a href="/contact/" className="btn-primary text-lg px-8 py-3">Ask a question</a>
+            <Link href="/discovery" className="btn-secondary text-lg px-8 py-3">🎯 Free AI Discovery</Link>
             <a href="/services/" className="btn-secondary text-lg px-8 py-3">Browse services</a>
           </div>
         </div>

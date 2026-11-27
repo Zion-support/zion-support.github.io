@@ -32,7 +32,7 @@ jobs:
           # 6. search page: merge sibling spans into one
           perl -0777 -pi -e 's/\{service\.industry && \(\s*<span className="text-slate-500">•<\/span>\s*<span className="text-slate-500">\{service\.industry\}<\/span>\s*\)\}/{service.industry \&\& (<span className="text-slate-500">• {service.industry}<\/span>)}/s' app/search/page.tsx || true
           # 7. appsNetwork.ts: catalog array closed before new-app objects — move the closing bracket
-          perl -0777 -pi -e 's/\];\n\n\n  // ── New apps added 2026-09-25 ──/\n\n  // ── New apps added 2026-09-25 ──/s' app/data/appsNetwork.ts
+          perl -0777 -pi -e 's/\];\n\n\n  \/\/ ── New apps added 2026-09-25 ──/\n\n  \/\/ ── New apps added 2026-09-25 ──/s' app/data/appsNetwork.ts
           perl -0777 -pi -e 's/\},\n\n\n\nexport const appsNetworkBySlug/},\n];\n\nexport const appsNetworkBySlug/s' app/data/appsNetwork.ts
           # 8. ServiceDiscoveryHub: missing return close at EOF
           if ! tail -3 app/components/ServiceDiscoveryHub.tsx | grep -q '}'; then printf '\n  );\n}\n' >> app/components/ServiceDiscoveryHub.tsx; fi
@@ -43,6 +43,7 @@ jobs:
           npm ci --prefer-offline --no-audit --fund=false
           npm run lint:check
       - name: Commit and push if changed
+        if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'

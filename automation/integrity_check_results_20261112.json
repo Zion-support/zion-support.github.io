@@ -1,0 +1,82 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "final": "https://ziontechgroup.com/",
+    "title": "Zion Tech Group | Advanced AI Services & IT Solutions",
+    "canonical": "https://ziontechgroup.com/",
+    "h1": "Design, Launch, and Scale <span>AI Operations</span> With Confidence",
+    "canonical_ok": true,
+    "ok": true
+  },
+  {
+    "route": "/public-roadmap",
+    "status": 200,
+    "final": "https://ziontechgroup.com/public-roadmap/",
+    "title": "Public Roadmap \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/public-roadmap/",
+    "h1": "Public Roadmap",
+    "canonical_ok": true,
+    "ok": true
+  },
+  {
+    "route": "/status-page",
+    "status": 200,
+    "final": "https://ziontechgroup.com/status-page/",
+    "title": "Status Page \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/status-page/",
+    "h1": "Status Page",
+    "canonical_ok": true,
+    "ok": true
+  },
+  {
+    "route": "/use-cases",
+    "status": 200,
+    "final": "https://ziontechgroup.com/use-cases/",
+    "title": "Use cases \u2014 Free Discovery \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/use-cases/",
+    "h1": "Use cases",
+    "canonical_ok": true,
+    "ok": true
+  },
+  {
+    "route": "/solutions/healthcare",
+    "status": 200,
+    "final": "https://ziontechgroup.com/solutions/healthcare/",
+    "title": "Healthcare Solutions \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/solutions/healthcare/",
+    "h1": "Healthcare &amp; Life Sciences",
+    "canonical_ok": true,
+    "ok": true
+  },
+  {
+    "route": "/industries/financial-services",
+    "status": 200,
+    "final": "https://ziontechgroup.com/industries/financial-services/",
+    "title": "AI for Financial Services &amp; FinTech \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/industries/financial-services/",
+    "h1": "AI for Financial Services &amp; FinTech",
+    "canonical_ok": true,
+    "ok": true
+  },
+  {
+    "route": "/free-consultation",
+    "status": 200,
+    "final": "https://ziontechgroup.com/free-consultation/",
+    "title": "This is the Free Discovery \u2014 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/free-consultation/",
+    "h1": "This is the Free Discovery",
+    "canonical_ok": true,
+    "ok": true
+  },
+  {
+    "route": "/tools/phishing-analyzer",
+    "status": 200,
+    "final": "https://ziontechgroup.com/tools/phishing-analyzer/",
+    "title": "Phishing Analyzer \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/tools/phishing-analyzer/",
+    "h1": "Phishing Analyzer",
+    "canonical_ok": true,
+    "ok": true
+  }
+]

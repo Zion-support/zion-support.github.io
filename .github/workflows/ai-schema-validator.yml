@@ -40,13 +40,15 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Build site
+      # Full `npm run build` removed: the 125k-file tree needs >16GB heap and
+      # OOMs (exit 134) on GitHub-hosted 15GB runners. The audit runs against
+      # the committed static mirror in public/ (same HTML GitHub Pages serves).
+      - name: Validate source (rsc guard; full build moved to Deploy on Push)
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
 
-      - name: Audit structured data in built pages
+      - name: Audit structured data in static pages
         id: audit
         run: |
           mkdir -p schema-reports
@@ -56,7 +58,7 @@ jobs:
           const path = require('path');
           const glob = require('glob');
 
-          const outputDir = fs.existsSync('out') ? 'out' : 'dist';
+          const outputDir = fs.existsSync('public') ? 'public' : (fs.existsSync('out') ? 'out' : 'dist');
           const htmlFiles = glob.sync(outputDir + '/**/index.html').slice(0, 40);
           const results = [];
 

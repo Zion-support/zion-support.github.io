@@ -6,8 +6,10 @@ name: Apps deployed-source drift guard
     paths:
       - '.github/workflows/apps-deployed-source-drift.yml'
   workflow_run:
+    # Both publishers can update the same live site. Audit every successful publish.
     workflows:
       - Continuous Pages Deploy
+      - Simple Static Deploy
     types: [completed]
   schedule:
     - cron: '7 15 * * *'
@@ -18,7 +20,8 @@ permissions:
   issues: write
 
 concurrency:
-  group: apps-deployed-source-drift
+  # An ignored publisher completion must not cancel a pending production comparison.
+  group: apps-deployed-source-drift-${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion != 'success' && github.run_id || 'eligible' }}
   cancel-in-progress: true
 
 jobs:
@@ -48,7 +51,16 @@ jobs:
           ref: ${{ steps.release.outputs.sha }}
           persist-credentials: false
 
-      - name: Compare production bodies with deployed source
+      - name: Rebuild exact Pages artifact used by production deploy
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash scripts/prepare-pages-out.sh
+          node scripts/render-productivity-release.cjs out
+          node scripts/render-field-evidence-release.cjs out
+          python3 scripts/assert-no-private-ops.py out
+
+      - name: Compare production bodies with deployed artifact
         id: drift
         shell: bash
         env:
@@ -61,28 +73,48 @@ jobs:
           import hashlib,json,os,sys,time,urllib.request
           from datetime import datetime,timezone
 
+          def read_complete_response(resp, max_bytes=52_428_800):
+            # Read to EOF; never hash a silently truncated prefix.
+            chunks=[]
+            received=0
+            declared=resp.headers.get('Content-Length')
+            expected=int(declared) if declared is not None else None
+            if expected is not None and (expected < 0 or expected > max_bytes):
+              raise ValueError('response_size_limit_or_invalid_length')
+            while True:
+              chunk=resp.read(min(65_536, max_bytes-received+1))
+              if not chunk:
+                break
+              received+=len(chunk)
+              if received > max_bytes:
+                raise ValueError('response_size_limit_exceeded')
+              chunks.append(chunk)
+            if expected is not None and received != expected:
+              raise ValueError('response_incomplete_content_length')
+            return b''.join(chunks)
+
           base='https://ziontechgroup.com'
           pairs={
-            '/':'public/index.html',
-            '/apps/':'public/apps/index.html',
-            '/pt/apps/':'public/pt/apps/index.html',
-            '/es/apps/':'public/es/apps/index.html',
-            '/fr/apps/':'public/fr/apps/index.html',
-            '/de/apps/':'public/de/apps/index.html',
-            '/discovery/':'public/discovery/index.html',
-            '/pt/discovery/':'public/pt/discovery/index.html',
-            '/es/discovery/':'public/es/discovery/index.html',
-            '/fr/discovery/':'public/fr/discovery/index.html',
-            '/de/discovery/':'public/de/discovery/index.html',
-            '/apps/operations-reliability-ai-2026.html':'public/apps/operations-reliability-ai-2026.html',
-            '/apps/operations-reliability-ai-2026-pt.html':'public/apps/operations-reliability-ai-2026-pt.html',
-            '/apps/operations-reliability-ai-2026-es.html':'public/apps/operations-reliability-ai-2026-es.html',
-            '/apps/operations-reliability-ai-2026-fr.html':'public/apps/operations-reliability-ai-2026-fr.html',
-            '/apps/operations-reliability-ai-2026-de.html':'public/apps/operations-reliability-ai-2026-de.html',
-            '/sitemap.xml':'public/sitemap.xml',
-            '/sitemap-0.xml':'public/sitemap-0.xml',
-            '/apps/apps-sitemap.xml':'public/apps/apps-sitemap.xml',
-            '/robots.txt':'public/robots.txt',
+            '/':'out/index.html',
+            '/apps/':'out/apps/index.html',
+            '/pt/apps/':'out/pt/apps/index.html',
+            '/es/apps/':'out/es/apps/index.html',
+            '/fr/apps/':'out/fr/apps/index.html',
+            '/de/apps/':'out/de/apps/index.html',
+            '/discovery/':'out/discovery/index.html',
+            '/pt/discovery/':'out/pt/discovery/index.html',
+            '/es/discovery/':'out/es/discovery/index.html',
+            '/fr/discovery/':'out/fr/discovery/index.html',
+            '/de/discovery/':'out/de/discovery/index.html',
+            '/apps/operations-reliability-ai-2026.html':'out/apps/operations-reliability-ai-2026.html',
+            '/apps/operations-reliability-ai-2026-pt.html':'out/apps/operations-reliability-ai-2026-pt.html',
+            '/apps/operations-reliability-ai-2026-es.html':'out/apps/operations-reliability-ai-2026-es.html',
+            '/apps/operations-reliability-ai-2026-fr.html':'out/apps/operations-reliability-ai-2026-fr.html',
+            '/apps/operations-reliability-ai-2026-de.html':'out/apps/operations-reliability-ai-2026-de.html',
+            '/sitemap.xml':'out/sitemap.xml',
+            '/sitemap-0.xml':'out/sitemap-0.xml',
+            '/apps/apps-sitemap.xml':'out/apps/apps-sitemap.xml',
+            '/robots.txt':'out/robots.txt',
           }
           headers={'User-Agent':'Zion-Apps-Deployed-Source-Drift/1.0','Cache-Control':'no-cache'}
           rows=[]
@@ -102,9 +134,12 @@ jobs:
                 req=urllib.request.Request(base+route+'?zion_drift='+os.environ.get('GITHUB_RUN_ID','manual')+f'-{attempt}',headers=headers)
                 with urllib.request.urlopen(req,timeout=20) as resp:
                   status=resp.status
-                  live=resp.read(4_000_000)
+                  live=read_complete_response(resp)
+                error=None
                 if status==200: break
               except Exception as exc:
+                live=None
+                status=0
                 error=str(exc)
                 time.sleep(2)
             live_sha=hashlib.sha256(live).hexdigest() if live is not None else None
@@ -125,7 +160,7 @@ jobs:
             rows.append(row)
             if not match:
               failures.append(row)
-              print(f'::error::{route} drift/status mismatch mode={mode} source={source_sha} live={live_sha} status={status} missing={missing}')
+              print(f'::error::{route} drift/status mismatch mode={mode} source={source_sha} live={live_sha} status={status} missing={missing} error={error}')
             elif mode=='semantic':
               print(f'OK {route} semantic contract HTTP 200 markers={len(markers)}')
             else:

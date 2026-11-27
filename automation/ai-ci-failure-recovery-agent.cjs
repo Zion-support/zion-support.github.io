@@ -1,3 +1,1 @@
-// ai-ci-failure-recovery-agent.cjs - placeholder (Zion Agent 2026-09-20): stop module-not-found failures. No-op.
-console.log('ai-ci-failure-recovery-agent.cjs placeholder: nothing to do.');process.exit(0);
-
+console.log("stub: automation/ai-ci-failure-recovery-agent.cjs no-op - automation paused post-P0");

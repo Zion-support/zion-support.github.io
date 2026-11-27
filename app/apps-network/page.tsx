@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import {
   APPS_NETWORK_HUB,
   appsNetworkCatalog,
+  appsNetworkBySlug,
   homepageFeaturedApps,
   type AppsNetworkApp,
 } from '../data/appsNetwork';
@@ -15,17 +16,18 @@ export const metadata: Metadata = {
 };
 
 const GROUPS: { key: AppsNetworkApp['group']; label: string; href: string }[] = [
-  { key: 'money', label: 'Money & FinOps', href: '/apps/categories/money/' },
-  { key: 'ops', label: 'Ops & incidents', href: '/apps/categories/ops/' },
-  { key: 'govern', label: 'Governance & bids', href: '/apps/categories/govern/' },
-  { key: 'ai', label: 'AI product apps', href: '/apps/' },
-  { key: 'field', label: 'Field & support', href: '/apps/' },
-  { key: 'work', label: 'Worksheets', href: '/apps/playbook/' },
-
+  { key: 'money', label: 'Money & FinOps', href: '/apps-network/#money' },
+  { key: 'ops', label: 'Ops & incidents', href: '/apps-network/#ops' },
+  { key: 'govern', label: 'Governance & bids', href: '/apps-network/#govern' },
+  { key: 'ai', label: 'AI product apps', href: '/apps-network/#ai' },
+  { key: 'field', label: 'Field & support', href: '/apps-network/#field' },
+  { key: 'work', label: 'Worksheets & briefs', href: '/apps-network/#work' },
 ];
 
-function AppCard({ app }: { app: AppsNetworkApp }) {
-  const related = app.related
+type AppCardData = Omit<AppsNetworkApp, 'related'> & { readonly related?: readonly string[] };
+
+function AppCard({ app }: { app: AppCardData }) {
+  const related = (app.related ?? appsNetworkBySlug[app.slug]?.related ?? [])
     .map((slug) => appsNetworkCatalog.find((a) => a.slug === slug))
     .filter(Boolean)
     .slice(0, 3) as AppsNetworkApp[];
@@ -79,16 +81,10 @@ export default function AppsNetworkPage() {
               </Link>
             ))}
             <Link
-              href="/apps/operations-reliability-ai-2026.html"
-              className="rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200 hover:bg-cyan-400/20 transition-colors"
-            >
-              Operations & Reliability
-            </Link>
-            <Link
               href="/discovery/"
               className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-2 text-sm font-semibold text-white"
             >
-              Free Discovery
+              Discovery $99
             </Link>
           </div>
         </div>
@@ -96,21 +92,32 @@ export default function AppsNetworkPage() {
 
       <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold text-white mb-3">Browse by job-to-be-done</h2>
-        <p className="text-slate-400 text-sm mb-8">Each category page interlinks sibling tools and the hub.</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {GROUPS.map((g) => (
-            <Link
-              key={g.key}
-              href={g.href}
-              className="rounded-xl border border-slate-800 bg-slate-900/40 p-5 hover:border-pink-500/30 transition-colors"
-            >
-              <h3 className="font-semibold text-white">{g.label}</h3>
-              <p className="text-xs text-slate-500 mt-2">
-                {appsNetworkCatalog.filter((a) => a.group === g.key).length} apps in catalog →
-              </p>
-            </Link>
-          ))}
-
+        <p className="text-slate-400 text-sm mb-8">Every app interlinks its siblings — no dead ends.</p>
+        <div className="space-y-10">
+          {GROUPS.map((g) => {
+            const apps = appsNetworkCatalog.filter((a) => a.group === g.key);
+            if (apps.length === 0) return null;
+            return (
+              <div key={g.key} id={g.key} className="scroll-mt-24">
+                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                  {g.label}
+                  <span className="text-xs text-slate-500 font-normal">{apps.length} apps</span>
+                </h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {apps.map((app) => (
+                    <Link
+                      key={app.slug}
+                      href={app.href}
+                      className="rounded-xl border border-slate-800 bg-slate-900/40 p-4 hover:border-purple-500/30 hover:bg-slate-800/60 transition-colors"
+                    >
+                      <h4 className="text-sm font-semibold text-white hover:text-purple-300 transition-colors">{app.name}</h4>
+                      <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">{app.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -128,9 +135,49 @@ export default function AppsNetworkPage() {
         </div>
       </section>
 
+{/* ── Free AI/IT Discovery — always online, always free ── */}
       <section className="border-t border-slate-800">
         <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white mb-3">Full path-tool catalog</h2>
+          <div className="rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-950/40 to-slate-900 p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-2">Free AI/IT Discovery — always online, always free</h2>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  No commitment, no sales call required. Start with a free online discovery that maps your
+                  AI opportunity, runs 7 quick checks, and shares a clear recommendation in minutes.
+                  Nothing is stored. Nothing is sold.
+                </p>
+              </div>
+              <Link href="/discovery/" className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-500 transition">
+                Start free discovery →
+              </Link>
+            </div>
+            <div className="mt-5 grid sm:grid-cols-3 gap-4 text-sm">
+              {[
+                { label: 'What you get', value: 'use-case map + 7 risk checks' },
+                { label: 'How long', value: 'minutes, online' },
+                { label: 'Cost', value: 'free, no credit card' },
+              ].map(f => (
+                <div key={f.label} className="rounded-xl border border-slate-800 bg-slate-900/50 p-4">
+                  <dt className="text-[10px] uppercase tracking-widest text-slate-500">{f.label}</dt>
+                  <dd className="text-white font-semibold mt-1">{f.value}</dd>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link href="/discovery/" className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-300 hover:bg-emerald-500/20 transition">
+                Take the free discovery now
+              </Link>
+              <Link href="/discovery/" className="text-slate-400 hover:text-white">
+                How discovery works
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-slate-800">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {appsNetworkCatalog.map((app) => (
               <AppCard key={app.slug} app={app} />
@@ -139,11 +186,12 @@ export default function AppsNetworkPage() {
           <div className="mt-10 rounded-xl border border-purple-500/30 bg-gradient-to-br from-purple-950/40 to-slate-900 p-6">
             <h3 className="text-xl font-semibold text-white">Need these capabilities in production?</h3>
             <p className="text-slate-400 text-sm mt-2 max-w-2xl">
-              Start with the free online Discovery to map one process and identify the right apps. Consulting, Starter, and Growth remain optional paid delivery paths.
+              Start with a $99 Discovery — one process, one report, one 30-minute session — then
+              Consulting, Starter, or Growth.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">
-                Start free Discovery →
+                Book Discovery →
               </Link>
               <Link href="/en/plans/" className="text-slate-400 hover:text-white">
                 Official plans

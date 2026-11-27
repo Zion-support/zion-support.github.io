@@ -1,0 +1,413 @@
+{
+  "release": "energy-utilities-guide-2026-10-30-v1",
+  "slug": "october-2026-batch102-energy-ai.html",
+  "sourceChecked": "2026-10-30",
+  "repositories": [
+    "zion-grid-load-forecaster",
+    "zion-outage-response-dispatcher",
+    "zion-renewable-yield-optimizer",
+    "zion-meter-anomaly-detector"
+  ],
+  "locales": {
+    "en": {
+      "lang": "en",
+      "name": "English",
+      "title": "Energy & utilities: plan a measurable AI pilot",
+      "description": "Compare four documented energy and utilities concepts, define data and review requirements, and prepare a measurable pilot with Zion’s free online Discovery.",
+      "eyebrow": "Zion Apps Network · Energy & utilities",
+      "intro": "Choose one operational question, identify the evidence you need and define a small pilot. This guide connects four documented concepts for demand forecasting, outage triage, renewable performance and meter review.",
+      "home": "Home",
+      "catalog": "Apps catalog",
+      "discovery": "Free online Discovery",
+      "network": "Network directory",
+      "languages": "Language",
+      "skip": "Skip to the guide",
+      "start": "Start free Discovery",
+      "browse": "Explore the catalog",
+      "statusTitle": "Understand the starting point",
+      "status": "The four linked repositories currently contain a README describing a concept. They do not yet provide an executable application, a trained model or a verified integration. Use these descriptions to prepare a scope for review.",
+      "checked": "Repository contents reviewed on 30 October 2026.",
+      "cardsTitle": "Four questions worth testing",
+      "cardsIntro": "Choose the question that matches your available data and your team’s responsibility. Each card opens the source concept and identifies an evaluation goal.",
+      "concept": "Documented concept",
+      "source": "Read the source concept",
+      "reviewLabel": "Evidence to prepare",
+      "cards": [
+        [
+          "Demand forecasting",
+          "Can a forecast improve the way your team plans for electricity demand?",
+          "Use historical demand, weather and calendar data with consistent timestamps. Compare against a simple baseline on an unseen time period; record typical and peak-demand errors."
+        ],
+        [
+          "Outage triage",
+          "Can better event grouping help a dispatcher review an incident faster?",
+          "Use anonymized historical events and confirmed incident outcomes. Measure triage time and incorrect priorities; keep dispatch, site access and safety decisions with the authorized operator."
+        ],
+        [
+          "Renewable performance",
+          "Which production losses deserve investigation first?",
+          "Gather production, weather, downtime and curtailment records. Compare equivalent operating conditions and review the assumptions with an energy specialist before changing equipment settings."
+        ],
+        [
+          "Meter anomaly review",
+          "Which readings need a human check before a billing decision?",
+          "Review approved, anonymized meter histories and known data-quality issues. Track false alerts and confirmed findings; an unusual reading alone does not establish fraud or justify a billing change."
+        ]
+      ],
+      "planTitle": "Turn a concept into a bounded pilot",
+      "steps": [
+        [
+          "Define one decision",
+          "Choose a site or process, a responsible owner and a measurable outcome."
+        ],
+        [
+          "Confirm usable data",
+          "Document the source, period, units, permissions and missing values. Start with an approved sample."
+        ],
+        [
+          "Set a fair comparison",
+          "Agree on a baseline, evaluation period and success threshold before inspecting the results."
+        ],
+        [
+          "Review before acting",
+          "Test recommendations alongside the current process. Record failures and decide with the responsible team whether to continue, revise or stop."
+        ]
+      ],
+      "discoveryTitle": "Start with a free, online Discovery",
+      "discoveryText": "The questionnaire helps organize your process, priorities and readiness into a report with suggested next steps. Discovery is free and online; no payment, card or meeting is required.",
+      "nextTitle": "Connect your next step",
+      "nextIntro": "Use the same language across the catalog, Discovery and the planning resources below.",
+      "verification": "App verification guide",
+      "pilot": "Automation pilot planner",
+      "legacy": "Earlier network collections",
+      "legacyText": "The following older collections remain available in their original language.",
+      "legacyLinks": [
+        "Manufacturing and Industry 4.0 collection",
+        "Marketing and growth collection",
+        "Discovery spotlight"
+      ],
+      "footer": "Zion Tech Group · Define the scope, evaluate the evidence and review the next step with your team.",
+      "catalogLabel": "Energy & utilities pilot guide"
+    },
+    "pt": {
+      "lang": "pt-BR",
+      "name": "Português",
+      "title": "Energia e utilities: planeje um piloto de IA mensurável",
+      "description": "Compare quatro conceitos documentados para energia e utilities, defina dados e critérios de revisão e prepare um piloto mensurável com o Discovery online gratuito da Zion.",
+      "eyebrow": "Rede de Apps Zion · Energia e utilities",
+      "intro": "Escolha uma questão operacional, identifique as evidências necessárias e defina um piloto de escopo limitado. Este guia conecta quatro conceitos documentados para previsão de demanda, triagem de interrupções, desempenho renovável e revisão de medidores.",
+      "home": "Início",
+      "catalog": "Catálogo de apps",
+      "discovery": "Discovery online gratuito",
+      "network": "Diretório da rede",
+      "languages": "Idioma",
+      "skip": "Ir para o guia",
+      "start": "Iniciar Discovery gratuito",
+      "browse": "Explorar o catálogo",
+      "statusTitle": "Entenda o ponto de partida",
+      "status": "Os quatro repositórios vinculados contêm atualmente um README com a descrição de um conceito. Ainda não oferecem aplicação executável, modelo treinado ou integração verificada. Use essas descrições para preparar um escopo a ser revisado.",
+      "checked": "Conteúdo dos repositórios revisado em 30 de outubro de 2026.",
+      "cardsTitle": "Quatro perguntas para orientar um teste",
+      "cardsIntro": "Escolha a pergunta compatível com os dados disponíveis e a responsabilidade da sua equipe. Cada cartão abre o conceito de origem e indica um objetivo de avaliação.",
+      "concept": "Conceito documentado",
+      "source": "Ler o conceito de origem",
+      "reviewLabel": "Evidências a preparar",
+      "cards": [
+        [
+          "Previsão de demanda",
+          "Uma previsão pode melhorar o planejamento da demanda de eletricidade?",
+          "Use histórico de demanda, clima e calendário com horários consistentes. Compare com uma referência simples em um período ainda não usado na análise; registre erros típicos e nos picos de demanda."
+        ],
+        [
+          "Triagem de interrupções",
+          "Agrupar melhor os eventos pode agilizar a revisão de um incidente?",
+          "Use eventos históricos anonimizados e desfechos confirmados. Meça o tempo de triagem e as prioridades incorretas; mantenha despacho, acesso ao local e decisões de segurança com o operador autorizado."
+        ],
+        [
+          "Desempenho renovável",
+          "Quais perdas de produção merecem investigação primeiro?",
+          "Reúna registros de produção, clima, indisponibilidade e restrições de geração. Compare condições equivalentes e revise as premissas com um especialista em energia antes de alterar equipamentos."
+        ],
+        [
+          "Revisão de medidores",
+          "Quais leituras precisam de análise humana antes de uma decisão de faturamento?",
+          "Revise históricos de medição autorizados e anonimizados, além de problemas de qualidade conhecidos. Acompanhe alertas falsos e achados confirmados; uma leitura incomum, sozinha, não comprova fraude nem justifica alterar uma cobrança."
+        ]
+      ],
+      "planTitle": "Transforme um conceito em um piloto de escopo limitado",
+      "steps": [
+        [
+          "Defina uma decisão",
+          "Escolha um local ou processo, um responsável e um resultado mensurável."
+        ],
+        [
+          "Confirme os dados disponíveis",
+          "Documente origem, período, unidades, permissões e valores ausentes. Comece com uma amostra autorizada."
+        ],
+        [
+          "Estabeleça uma comparação justa",
+          "Combine referência, período de avaliação e critério de sucesso antes de examinar os resultados."
+        ],
+        [
+          "Revise antes de agir",
+          "Teste as recomendações em paralelo ao processo atual. Registre falhas e decida com a equipe responsável se deve continuar, ajustar ou encerrar."
+        ]
+      ],
+      "discoveryTitle": "Comece com um Discovery online gratuito",
+      "discoveryText": "O questionário ajuda a organizar processo, prioridades e prontidão em um relatório com próximos passos sugeridos. O Discovery é gratuito e online; não exige pagamento, cartão ou reunião.",
+      "nextTitle": "Conecte o próximo passo",
+      "nextIntro": "Mantenha o mesmo idioma no catálogo, no Discovery e nos recursos de planejamento abaixo.",
+      "verification": "Guia de verificação de apps",
+      "pilot": "Planejador de piloto de automação",
+      "legacy": "Coleções anteriores da rede",
+      "legacyText": "As coleções anteriores abaixo continuam disponíveis no idioma original.",
+      "legacyLinks": [
+        "Coleção de manufatura e Indústria 4.0",
+        "Coleção de marketing e crescimento",
+        "Destaque de Discovery"
+      ],
+      "footer": "Zion Tech Group · Defina o escopo, avalie as evidências e revise o próximo passo com sua equipe.",
+      "catalogLabel": "Guia de piloto para energia e utilities"
+    },
+    "es": {
+      "lang": "es",
+      "name": "Español",
+      "title": "Energía y utilities: planifique un piloto de IA medible",
+      "description": "Compare cuatro conceptos documentados para energía y utilities, defina datos y criterios de revisión y prepare un piloto medible con el Discovery gratuito de Zion.",
+      "eyebrow": "Red de Apps Zion · Energía y utilities",
+      "intro": "Elija una pregunta operativa, identifique las evidencias necesarias y defina un piloto acotado. Esta guía conecta cuatro conceptos documentados para previsión de demanda, clasificación de interrupciones, rendimiento renovable y revisión de contadores.",
+      "home": "Inicio",
+      "catalog": "Catálogo de apps",
+      "discovery": "Discovery gratuito en línea",
+      "network": "Directorio de la red",
+      "languages": "Idioma",
+      "skip": "Ir a la guía",
+      "start": "Iniciar Discovery gratuito",
+      "browse": "Explorar el catálogo",
+      "statusTitle": "Conozca el punto de partida",
+      "status": "Los cuatro repositorios enlazados contienen actualmente un README que describe un concepto. Todavía no incluyen una aplicación ejecutable, un modelo entrenado ni una integración verificada. Utilice estas descripciones para preparar un alcance que su equipo pueda revisar.",
+      "checked": "Contenido de los repositorios revisado el 30 de octubre de 2026.",
+      "cardsTitle": "Cuatro preguntas para orientar una prueba",
+      "cardsIntro": "Elija la pregunta que se ajuste a sus datos disponibles y a la responsabilidad de su equipo. Cada tarjeta abre el concepto de origen e identifica un objetivo de evaluación.",
+      "concept": "Concepto documentado",
+      "source": "Leer el concepto de origen",
+      "reviewLabel": "Evidencias que preparar",
+      "cards": [
+        [
+          "Previsión de demanda",
+          "¿Puede una previsión mejorar la planificación de la demanda eléctrica?",
+          "Utilice datos históricos de demanda, clima y calendario con marcas de tiempo coherentes. Compare con una referencia sencilla en un periodo no utilizado en el análisis; registre errores habituales y en las horas punta."
+        ],
+        [
+          "Clasificación de interrupciones",
+          "¿Puede una mejor agrupación de eventos agilizar la revisión de un incidente?",
+          "Utilice eventos históricos anonimizados y resultados confirmados. Mida el tiempo de clasificación y las prioridades incorrectas; mantenga el envío de equipos, el acceso y las decisiones de seguridad bajo el control del operador autorizado."
+        ],
+        [
+          "Rendimiento renovable",
+          "¿Qué pérdidas de producción merecen investigarse primero?",
+          "Reúna registros de producción, clima, indisponibilidad y restricciones de generación. Compare condiciones equivalentes y revise los supuestos con un especialista antes de cambiar los ajustes de los equipos."
+        ],
+        [
+          "Revisión de contadores",
+          "¿Qué lecturas necesitan una revisión humana antes de una decisión de facturación?",
+          "Revise historiales de medición autorizados y anonimizados y los problemas de calidad conocidos. Registre falsas alertas y hallazgos confirmados; una lectura inusual por sí sola no demuestra fraude ni justifica modificar una factura."
+        ]
+      ],
+      "planTitle": "Convierta un concepto en un piloto acotado",
+      "steps": [
+        [
+          "Defina una decisión",
+          "Elija un sitio o proceso, un responsable y un resultado medible."
+        ],
+        [
+          "Confirme los datos utilizables",
+          "Documente origen, periodo, unidades, permisos y valores ausentes. Empiece con una muestra autorizada."
+        ],
+        [
+          "Establezca una comparación justa",
+          "Acuerde una referencia, un periodo de evaluación y un umbral de éxito antes de examinar los resultados."
+        ],
+        [
+          "Revise antes de actuar",
+          "Pruebe las recomendaciones en paralelo al proceso actual. Registre fallos y decida con el equipo responsable si continuar, ajustar o detener el piloto."
+        ]
+      ],
+      "discoveryTitle": "Empiece con un Discovery gratuito en línea",
+      "discoveryText": "El cuestionario ayuda a organizar su proceso, prioridades y preparación en un informe con próximos pasos sugeridos. Discovery es gratuito y en línea; no requiere pago, tarjeta ni reunión.",
+      "nextTitle": "Conecte el siguiente paso",
+      "nextIntro": "Mantenga el mismo idioma en el catálogo, Discovery y los recursos de planificación siguientes.",
+      "verification": "Guía de verificación de apps",
+      "pilot": "Planificador de piloto de automatización",
+      "legacy": "Colecciones anteriores de la red",
+      "legacyText": "Las siguientes colecciones anteriores siguen disponibles en su idioma original.",
+      "legacyLinks": [
+        "Colección de fabricación e Industria 4.0",
+        "Colección de marketing y crecimiento",
+        "Selección de Discovery"
+      ],
+      "footer": "Zion Tech Group · Defina el alcance, evalúe las evidencias y revise el siguiente paso con su equipo.",
+      "catalogLabel": "Guía de piloto para energía y utilities"
+    },
+    "fr": {
+      "lang": "fr",
+      "name": "Français",
+      "title": "Énergie et services publics : préparer un pilote IA mesurable",
+      "description": "Comparez quatre concepts documentés pour l’énergie, définissez les données et les critères de revue, puis préparez un pilote mesurable avec le Discovery gratuit de Zion.",
+      "eyebrow": "Réseau d’apps Zion · Énergie et services publics",
+      "intro": "Choisissez une question opérationnelle, identifiez les preuves nécessaires et définissez un pilote limité. Ce guide relie quatre concepts documentés : prévision de la demande, triage des coupures, performance renouvelable et examen des compteurs.",
+      "home": "Accueil",
+      "catalog": "Catalogue d’apps",
+      "discovery": "Discovery gratuit en ligne",
+      "network": "Annuaire du réseau",
+      "languages": "Langue",
+      "skip": "Aller au guide",
+      "start": "Commencer le Discovery gratuit",
+      "browse": "Explorer le catalogue",
+      "statusTitle": "Comprendre le point de départ",
+      "status": "Les quatre dépôts liés contiennent actuellement un README décrivant un concept. Ils ne proposent pas encore d’application exécutable, de modèle entraîné ni d’intégration vérifiée. Utilisez ces descriptions pour préparer un périmètre à examiner.",
+      "checked": "Contenu des dépôts vérifié le 30 octobre 2026.",
+      "cardsTitle": "Quatre questions à tester",
+      "cardsIntro": "Choisissez la question adaptée aux données disponibles et aux responsabilités de votre équipe. Chaque carte ouvre le concept source et précise un objectif d’évaluation.",
+      "concept": "Concept documenté",
+      "source": "Lire le concept source",
+      "reviewLabel": "Preuves à préparer",
+      "cards": [
+        [
+          "Prévision de la demande",
+          "Une prévision peut-elle améliorer la planification de la demande d’électricité ?",
+          "Utilisez des historiques de demande, de météo et de calendrier avec des horodatages cohérents. Comparez les résultats à une référence simple sur une période non utilisée dans l’analyse ; mesurez les erreurs habituelles et celles des pics de demande."
+        ],
+        [
+          "Triage des coupures",
+          "Un meilleur regroupement des événements peut-il accélérer l’examen d’un incident ?",
+          "Utilisez des événements historiques anonymisés et des résultats confirmés. Mesurez le temps de triage et les priorités erronées ; confiez l’envoi des équipes, l’accès au site et les décisions de sécurité à l’opérateur habilité."
+        ],
+        [
+          "Performance renouvelable",
+          "Quelles pertes de production faut-il examiner en premier ?",
+          "Rassemblez les données de production, météo, indisponibilité et limitation de production. Comparez des conditions équivalentes et faites vérifier les hypothèses par un spécialiste avant de modifier les réglages."
+        ],
+        [
+          "Examen des compteurs",
+          "Quelles mesures nécessitent un contrôle humain avant une décision de facturation ?",
+          "Examinez des historiques autorisés et anonymisés ainsi que les problèmes de qualité connus. Suivez les fausses alertes et les constats confirmés ; une mesure inhabituelle ne prouve pas, à elle seule, une fraude et ne justifie pas une modification de facture."
+        ]
+      ],
+      "planTitle": "Transformer un concept en pilote limité",
+      "steps": [
+        [
+          "Définir une décision",
+          "Choisissez un site ou un processus, un responsable et un résultat mesurable."
+        ],
+        [
+          "Confirmer les données utilisables",
+          "Documentez la source, la période, les unités, les autorisations et les valeurs manquantes. Commencez par un échantillon autorisé."
+        ],
+        [
+          "Prévoir une comparaison équitable",
+          "Convenez d’une référence, d’une période d’évaluation et d’un seuil de réussite avant d’examiner les résultats."
+        ],
+        [
+          "Vérifier avant d’agir",
+          "Testez les recommandations en parallèle du processus actuel. Consignez les échecs et décidez avec l’équipe responsable de poursuivre, d’ajuster ou d’arrêter."
+        ]
+      ],
+      "discoveryTitle": "Commencer par un Discovery gratuit en ligne",
+      "discoveryText": "Le questionnaire aide à organiser votre processus, vos priorités et votre niveau de préparation dans un rapport proposant les prochaines étapes. Discovery est gratuit et en ligne, sans paiement, sans carte et sans rendez-vous.",
+      "nextTitle": "Préparer la prochaine étape",
+      "nextIntro": "Conservez la même langue dans le catalogue, le Discovery et les ressources de planification ci-dessous.",
+      "verification": "Guide de vérification des apps",
+      "pilot": "Planificateur de pilote d’automatisation",
+      "legacy": "Collections antérieures du réseau",
+      "legacyText": "Les collections antérieures ci-dessous restent disponibles dans leur langue d’origine.",
+      "legacyLinks": [
+        "Collection industrie et Industrie 4.0",
+        "Collection marketing et croissance",
+        "Présentation du Discovery"
+      ],
+      "footer": "Zion Tech Group · Définissez le périmètre, évaluez les preuves et examinez la prochaine étape avec votre équipe.",
+      "catalogLabel": "Guide de pilote pour l’énergie"
+    },
+    "de": {
+      "lang": "de",
+      "name": "Deutsch",
+      "title": "Energie und Versorgung: einen messbaren KI-Piloten planen",
+      "description": "Vergleichen Sie vier dokumentierte Energiekonzepte, legen Sie Daten und Prüfkriterien fest und planen Sie einen messbaren Piloten mit Zions kostenlosem Discovery-Check.",
+      "eyebrow": "Zion Apps Network · Energie und Versorgung",
+      "intro": "Wählen Sie eine betriebliche Frage, bestimmen Sie die nötigen Nachweise und planen Sie einen begrenzten Piloten. Dieser Leitfaden verbindet vier dokumentierte Konzepte für Bedarfsprognosen, Störungstriage, erneuerbare Erzeugung und Zählerprüfung.",
+      "home": "Startseite",
+      "catalog": "App-Katalog",
+      "discovery": "Kostenloser Online-Discovery-Check",
+      "network": "Netzwerkverzeichnis",
+      "languages": "Sprache",
+      "skip": "Zum Leitfaden",
+      "start": "Kostenlosen Discovery-Check starten",
+      "browse": "Katalog öffnen",
+      "statusTitle": "Den Ausgangspunkt verstehen",
+      "status": "Die vier verlinkten Repositorys enthalten derzeit eine README-Datei mit einer Konzeptbeschreibung. Sie bieten noch keine ausführbare Anwendung, kein trainiertes Modell und keine verifizierte Integration. Nutzen Sie die Beschreibungen, um einen prüfbaren Umfang vorzubereiten.",
+      "checked": "Inhalte der Repositorys am 30. Oktober 2026 geprüft.",
+      "cardsTitle": "Vier Fragen für einen sinnvollen Test",
+      "cardsIntro": "Wählen Sie die Frage passend zu Ihren Daten und den Zuständigkeiten Ihres Teams. Jede Karte führt zum Ausgangskonzept und nennt ein Bewertungsziel.",
+      "concept": "Dokumentiertes Konzept",
+      "source": "Ausgangskonzept lesen",
+      "reviewLabel": "Benötigte Nachweise",
+      "cards": [
+        [
+          "Bedarfsprognosen",
+          "Kann eine Prognose die Planung des Strombedarfs verbessern?",
+          "Nutzen Sie historische Bedarfs-, Wetter- und Kalenderdaten mit einheitlichen Zeitstempeln. Vergleichen Sie die Ergebnisse mit einer einfachen Referenz in einem bisher ungenutzten Zeitraum; erfassen Sie typische Fehler und Fehler bei Lastspitzen."
+        ],
+        [
+          "Störungstriage",
+          "Kann eine bessere Gruppierung von Ereignissen die Prüfung eines Vorfalls beschleunigen?",
+          "Nutzen Sie anonymisierte historische Ereignisse und bestätigte Ergebnisse. Messen Sie Bearbeitungszeit und falsche Prioritäten; Einsatzfreigabe, Standortzugang und Sicherheitsentscheidungen bleiben beim befugten Betreiber."
+        ],
+        [
+          "Erneuerbare Erzeugung",
+          "Welche Erzeugungsverluste sollten zuerst untersucht werden?",
+          "Erfassen Sie Erzeugung, Wetter, Ausfallzeiten und Abregelungen. Vergleichen Sie gleichwertige Betriebsbedingungen und lassen Sie Annahmen fachlich prüfen, bevor Sie Geräteeinstellungen ändern."
+        ],
+        [
+          "Zählerprüfung",
+          "Welche Messwerte benötigen eine menschliche Prüfung vor einer Abrechnungsentscheidung?",
+          "Prüfen Sie freigegebene, anonymisierte Messreihen und bekannte Datenqualitätsprobleme. Erfassen Sie Fehlalarme und bestätigte Befunde; ein ungewöhnlicher Messwert allein belegt keinen Betrug und rechtfertigt keine Rechnungsänderung."
+        ]
+      ],
+      "planTitle": "Aus einem Konzept einen begrenzten Piloten machen",
+      "steps": [
+        [
+          "Eine Entscheidung festlegen",
+          "Wählen Sie einen Standort oder Prozess, eine verantwortliche Person und ein messbares Ergebnis."
+        ],
+        [
+          "Nutzbare Daten bestätigen",
+          "Dokumentieren Sie Quelle, Zeitraum, Einheiten, Berechtigungen und fehlende Werte. Beginnen Sie mit einer freigegebenen Stichprobe."
+        ],
+        [
+          "Einen fairen Vergleich planen",
+          "Vereinbaren Sie Referenz, Bewertungszeitraum und Erfolgsschwelle, bevor Sie Ergebnisse prüfen."
+        ],
+        [
+          "Vor dem Handeln prüfen",
+          "Testen Sie Empfehlungen parallel zum bestehenden Prozess. Dokumentieren Sie Fehler und entscheiden Sie mit dem zuständigen Team über Fortsetzung, Anpassung oder Abbruch."
+        ]
+      ],
+      "discoveryTitle": "Mit einem kostenlosen Online-Discovery-Check beginnen",
+      "discoveryText": "Der Fragebogen strukturiert Ihren Prozess, Ihre Prioritäten und Ihre Voraussetzungen in einem Bericht mit vorgeschlagenen nächsten Schritten. Discovery ist kostenlos und online; Zahlung, Karte oder Besprechung sind nicht erforderlich.",
+      "nextTitle": "Den nächsten Schritt verbinden",
+      "nextIntro": "Nutzen Sie dieselbe Sprache im Katalog, im Discovery-Check und in den folgenden Planungsressourcen.",
+      "verification": "Leitfaden zur App-Prüfung",
+      "pilot": "Planer für Automatisierungspiloten",
+      "legacy": "Frühere Netzwerksammlungen",
+      "legacyText": "Die folgenden älteren Sammlungen bleiben in ihrer ursprünglichen Sprache verfügbar.",
+      "legacyLinks": [
+        "Sammlung zu Fertigung und Industrie 4.0",
+        "Sammlung zu Marketing und Wachstum",
+        "Discovery-Überblick"
+      ],
+      "footer": "Zion Tech Group · Legen Sie den Umfang fest, bewerten Sie Nachweise und prüfen Sie den nächsten Schritt mit Ihrem Team.",
+      "catalogLabel": "Pilotleitfaden für Energie und Versorgung"
+    }
+  }
+}

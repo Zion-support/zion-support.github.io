@@ -129,7 +129,6 @@ jobs:
 
       - name: Create or update release
         if: steps.notes.outputs.generated == 'true'
-        continue-on-error: true  # GITHUB_TOKEN 403 on git/refs (repo restricts token); notes still in summary
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         with:
           script: |
@@ -146,10 +145,6 @@ jobs:
                 sha: sha,
               });
             } catch (e) {
-              if (e.status === 403) {
-                core.warning(`Tag creation forbidden (403): ${e.message}. Skipping tag/release; notes are in the job summary.`);
-                return;
-              }
               if (e.status === 422) {
                 const suffix = `-${context.runNumber}`;
                 await github.rest.git.createRef({

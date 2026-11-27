@@ -12,11 +12,21 @@
  *   OPENROUTER_API_KEY=xxx node automation/ai-site-link-audit-automation.cjs run --create-pages
  */
 
-const fsNative = require('fs');
-const fs = fsNative.promises;
+const fs = require('fs').promises;
 const path = require('path');
 const https = require('https');
-const { createLLMClient } = require('./lib/llm-client.cjs');
+// Lazy-loaded: only required when --create-pages mode runs (module lives outside this repo's trimmed tree)
+let _createLLMClient = null;
+function createLLMClient(opts) {
+  if (!_createLLMClient) {
+    try {
+      _createLLMClient = require('./lib/llm-client.cjs').createLLMClient;
+    } catch (e) {
+      throw new Error('LLM client unavailable (automation/lib/llm-client.cjs missing): ' + e.message);
+    }
+  }
+  return _createLLMClient(opts);
+}
 
 const CONFIG = {
   rootDir: process.cwd(),
@@ -29,26 +39,21 @@ const CONFIG = {
       '/contact','/case-studies','/blog','/industries','/community',
       '/automation','/consultation','/micro-saas-services','/pricing',
       '/search','/careers','/terms','/privacy','/innovation-bundles',
-      '/workflow-automation','/partners','/site-map',
-      '/apps','/pt/apps','/es/apps','/fr/apps','/de/apps',
-      '/discovery','/pt/discovery','/es/discovery','/fr/discovery','/de/discovery',
-      '/apps/operations-reliability-ai-2026.html',
-      '/zion-app-network/app-network-operations-reliability-2026.html',
-      '/zion-app-network/app-network-operations-evidence-checklist-2026.html'
+      '/workflow-automation','/partners','/site-map'
     ];
     try {
       const appDir = path.join(process.cwd(), 'app');
-      const entries = fsNative.readdirSync(appDir, { withFileTypes: true });
+      const entries = fs.readdirSync(appDir, { withFileTypes: true });
       for (const e of entries) {
         if (!e.isDirectory() || e.name.startsWith('.') || e.name === 'not-found' || e.name === 'api') continue;
         const pp = path.join(appDir, e.name, 'page.tsx');
-        if (fsNative.existsSync(pp)) base.push('/' + e.name);
+        if (fs.existsSync(pp)) base.push('/' + e.name);
         const sub = path.join(appDir, e.name);
-        if (!fsNative.existsSync(sub) || !fsNative.statSync(sub).isDirectory()) continue;
-        for (const sube of fsNative.readdirSync(sub, { withFileTypes: true })) {
+        if (!fs.existsSync(sub) || !fs.statSync(sub).isDirectory()) continue;
+        for (const sube of fs.readdirSync(sub, { withFileTypes: true })) {
           if (!sube.isDirectory() || sube.name.startsWith('.')) continue;
           const ssp = path.join(sub, sube.name, 'page.tsx');
-          if (fsNative.existsSync(ssp)) base.push('/' + e.name + '/' + sube.name);
+          if (fs.existsSync(ssp)) base.push('/' + e.name + '/' + sube.name);
         }
       }
     } catch {}

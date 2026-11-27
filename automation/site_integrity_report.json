@@ -1,6 +1,91 @@
 {
-  "total_crawled": 189,
-  "http_200": 189,
-  "broken_count": 0,
-  "broken": []
+  "total_crawled": 300,
+  "http_200": 286,
+  "broken_count": 14,
+  "broken": [
+    {
+      "url": "https://ziontechgroup.com/token-cost/",
+      "status": -1,
+      "final": "https://ziontechgroup.com/token-cost/",
+      "type": "external reference error"
+    },
+    {
+      "url": "https://ziontechgroup.com/agents/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/agents/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/apps/discovery-first-win-guide.html",
+      "status": 404,
+      "final": "https://ziontechgroup.com/apps/discovery-first-win-guide.html",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/apps/discovery-showcase.html",
+      "status": 404,
+      "final": "https://ziontechgroup.com/apps/discovery-showcase.html",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/apps/app-verification-guide.html",
+      "status": 404,
+      "final": "https://ziontechgroup.com/apps/app-verification-guide.html",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/apps/operational-planning-tools.html",
+      "status": 404,
+      "final": "https://ziontechgroup.com/apps/operational-planning-tools.html",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/apps/october-2026-batch111-agriculture.html",
+      "status": 404,
+      "final": "https://ziontechgroup.com/apps/october-2026-batch111-agriculture.html",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/site-uptime-watchdog/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/site-uptime-watchdog/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-smart-hands-scheduler/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/ai-smart-hands-scheduler/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/pt/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/pt/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/es/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/es/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/fr/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/fr/undefined/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/de/undefined/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/de/undefined/",
+      "type": "missing page"
+    }
+  ]
 }

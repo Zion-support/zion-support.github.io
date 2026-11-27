@@ -45,6 +45,8 @@ permissions:
         default: true
         type: boolean
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=8192'
 
 jobs:
   ideas-evolution:
@@ -52,7 +54,6 @@ jobs:
     timeout-minutes: 35
     env:
       NEXT_TELEMETRY_DISABLED: "1"
-      NODE_OPTIONS: '--max-old-space-size=12288'
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -108,11 +109,13 @@ jobs:
       - name: Homepage industry sync
         run: node automation/ai-homepage-industry-sync-agent.cjs run --apply || true
 
-      - name: Validate build
+      # Full `npm run build` removed: the ~35k-route tree needs >16GB heap and
+      # OOMs (exit 134) on 15GB GitHub-hosted runners. rsc:guard stays; full
+      # build validation happens in Deploy on Push / GitHub Pages.
+      - name: Validate content (rsc guard; build moved to Deploy on Push)
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
 
       - name: Commit, push, and deploy
         env:
@@ -124,8 +127,4 @@ jobs:
           git add -A
           if ! git diff --staged --quiet; then
             bash scripts/automation/commit-and-push-main.sh "chore(content): ideas + evolution deploy - ideation + audit ideas + burst"
-            if false # Netlify build hook removed (migrated to GitHub Pages) && [ "$TRIGGER_DEPLOY" = "1" ]; then
-              echo "# NO-OP: Netlify deploy removed (migrated to GitHub Pages)"
-            fi
-
           fi

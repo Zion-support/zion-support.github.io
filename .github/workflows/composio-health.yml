@@ -6,52 +6,27 @@ on:
   push:
     paths:
       - '.github/workflows/composio-health.yml'
-    branches:
-      - main
-
+      - 'scripts/automation/check-composio-health.py'
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: composio-health
+  cancel-in-progress: false
 jobs:
   health-check:
     runs-on: ubuntu-latest
-    env:
-      COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+    timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      # 2026-10-02 fix: npm package `composio` no longer ships a CLI binary
-      # (whoami exited 127). Use the REST API directly for health checks.
-      # 2026-10-03 fix: v1 /connectedAccounts endpoint retired by Composio
-      # ("This endpoint is no longer available. Please upgrade to v3 APIs.").
-      # Migrated probe to v3 /connected_accounts.
-      - name: Verify API key (connected accounts probe)
-        run: |
-          set -euo pipefail
-          if [ -z "${COMPOSIO_API_KEY:-}" ]; then
-            echo "COMPOSIO_API_KEY secret is NOT set"; exit 1
-          fi
-          code=$(curl -sS -o /tmp/ca.json -w "%{http_code}" \
-            -H "X-API-Key: ${COMPOSIO_API_KEY}" \
-            "https://backend.composio.dev/api/v3/connected_accounts?statuses=ACTIVE&limit=100")
-          echo "connectedAccounts HTTP $code"
-          case "$code" in
-            2*) echo "API key OK" ;;
-            401|403) echo "API key INVALID/EXPIRED"; exit 1 ;;
-            *) echo "Unexpected status"; head -c 500 /tmp/ca.json; exit 1 ;;
-          esac
-
-      - name: Count active connected accounts
-        run: |
-          python3 - <<'PY' || true
-          import json
-          d=json.load(open('/tmp/ca.json'))
-          items=d.get('items') or d.get('connected_accounts') or d.get('connectedAccounts') or []
-          print(f"Active connected accounts: {len(items)}")
-          for a in items[:50]:
-              print('-', a.get('appName') or (a.get('toolkit') or {}).get('slug'), a.get('status'))
-          PY
-
-      - name: Summary
-        if: always()
-        run: |
-          echo "Composio health check completed at $(date -u)"
-          echo "Key set: $([ -n "$COMPOSIO_API_KEY" ] && echo 'yes' || echo 'no')"
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Verify project authentication and inventory connection states
+        env:
+          COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+        run: python3 scripts/automation/check-composio-health.py
+      - name: Upload credential-free health inventory
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: composio-health-${{ github.run_id }}
+          path: automation/reports/composio-health-latest.json
+          if-no-files-found: error

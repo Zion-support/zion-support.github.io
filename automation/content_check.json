@@ -1,0 +1,44 @@
+{
+  "/public-roadmap": {
+    "status": 200,
+    "title": "Public Roadmap \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/public-roadmap/",
+    "h1": "Public Roadmap"
+  },
+  "/status-page": {
+    "status": 200,
+    "title": "Status Page \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/status-page/",
+    "h1": "Status Page"
+  },
+  "/use-cases": {
+    "status": 200,
+    "title": "Use cases \u2014 Free Discovery \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/use-cases/",
+    "h1": "Use cases"
+  },
+  "/solutions/healthcare": {
+    "status": 200,
+    "title": "Healthcare Solutions \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/solutions/healthcare/",
+    "h1": "Healthcare & Life Sciences"
+  },
+  "/industries/financial-services": {
+    "status": 200,
+    "title": "AI for Financial Services & FinTech \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/industries/financial-services/",
+    "h1": "AI for Financial Services & FinTech"
+  },
+  "/free-consultation": {
+    "status": 200,
+    "title": "This is the Free Discovery \u2014 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/free-consultation/",
+    "h1": "This is the Free Discovery"
+  },
+  "/tools/phishing-analyzer": {
+    "status": 200,
+    "title": "Phishing Analyzer \u00b7 Zion Tech Group",
+    "canonical": "https://ziontechgroup.com/tools/phishing-analyzer/",
+    "h1": "Phishing Analyzer"
+  }
+}

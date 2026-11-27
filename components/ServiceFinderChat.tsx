@@ -189,7 +189,7 @@ export default function ServiceFinderChat() {
       if (matches.length > 0) {
         botContent = `Great question! I found ${matches.length} services that match your needs. Here are my top recommendations:`;
       } else {
-        botContent = "I'd love to help! Could you tell me more about what you're looking for? Try keywords like: email, security, AI, cloud, sales, marketing, HR, finance, support, healthcare, or manufacturing. You can also call us at +1 302 464 0950 for personalized assistance!";
+        botContent = "I'd love to help! Could you tell me more about what you're looking for? Try keywords like: email, security, AI, cloud, sales, marketing, HR, finance, support, healthcare, or manufacturing. You can also call us at +55 11 97614-0076 for personalized assistance!";
       }
       
       setMessages(prev => [...prev, { 
@@ -303,7 +303,7 @@ export default function ServiceFinderChat() {
               </button>
             </div>
             <p className="text-xs text-slate-500 mt-2 text-center">
-              📞 Need human help? <a href="tel:+13024640950" className="text-purple-400">+1 302 464 0950</a>
+              📞 Need human help? <a href="tel:+5511976140076" className="text-purple-400">+55 11 97614-0076</a>
             </p>
           </div>
         </div>

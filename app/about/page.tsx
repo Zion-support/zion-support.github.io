@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'About Zion Tech Group | AI & IT Company',
@@ -52,6 +53,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
             <a href="/contact/" className="btn-primary text-center">Talk to an engineer</a>
+            <Link href="/discovery" className="btn-secondary text-center">🎯 Free AI Discovery</Link>
             <a href="/case-studies/" className="btn-secondary text-center">See results</a>
           </div>
         </div>
