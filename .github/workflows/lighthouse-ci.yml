@@ -19,6 +19,7 @@ concurrency:
       - 'next.config.*'
       - 'tailwind.config.*'
       - 'package.json'
+      - '.github/workflows/lighthouse-ci.yml'
   schedule:
     - cron: '0 6 * * 1'
   workflow_dispatch:
@@ -59,22 +60,67 @@ jobs:
           fi
 
       - name: Serve and audit
+        shell: bash
         run: |
-          if [ -d out ]; then npx serve out -l 3000 & else npx serve . -l 3000 & fi
-          SERVER_PID=$!
-          sleep 3
+          set -euo pipefail
+          site_dir=.
+          if [ -d out ]; then site_dir=out; fi
+          run_dir=$(mktemp -d)
+          server_pid=
+          chrome_pid=
+          cleanup() {
+            local status=$?
+            trap - EXIT
+            if [ "$status" -ne 0 ]; then
+              tail -n 40 "$run_dir/server.log" "$run_dir/chrome.log" >&2 || true
+            fi
+            if [ -n "$chrome_pid" ]; then kill "$chrome_pid" 2>/dev/null || true; fi
+            if [ -n "$server_pid" ]; then kill "$server_pid" 2>/dev/null || true; fi
+            if [ -n "$chrome_pid" ]; then wait "$chrome_pid" 2>/dev/null || true; fi
+            if [ -n "$server_pid" ]; then wait "$server_pid" 2>/dev/null || true; fi
+            rm -rf "$run_dir"
+            exit "$status"
+          }
+          trap cleanup EXIT
+
+          chrome=$(command -v google-chrome || command -v chromium)
+          "$chrome" --version
+          python3 -m http.server 3000 --bind 127.0.0.1 --directory "$site_dir" > "$run_dir/server.log" 2>&1 &
+          server_pid=$!
+          "$chrome" --headless --no-sandbox --disable-dev-shm-usage \
+            --remote-debugging-port=0 --user-data-dir="$run_dir/profile" \
+            about:blank > "$run_dir/chrome.log" 2>&1 &
+          chrome_pid=$!
+
+          site_url=http://127.0.0.1:3000
+          chrome_port=
+          for _ in {1..45}; do
+            kill -0 "$server_pid"
+            kill -0 "$chrome_pid"
+            if [ -s "$run_dir/profile/DevToolsActivePort" ] &&
+              read -r chrome_port < "$run_dir/profile/DevToolsActivePort" &&
+              [ -n "$chrome_port" ]; then
+              if curl --noproxy '*' --fail --silent --max-time 2 "$site_url/" > /dev/null &&
+                curl --noproxy '*' --fail --silent --max-time 2 "http://127.0.0.1:$chrome_port/json/version" > /dev/null; then
+                break
+              fi
+            fi
+            chrome_port=
+            sleep 1
+          done
+          if [ -z "$chrome_port" ]; then
+            echo "::error::The audit site or Chrome DevTools did not become ready."
+            exit 1
+          fi
 
           mkdir -p lighthouse-results
-
-          npx lighthouse http://localhost:3000 \
-            --chrome-flags="--headless --no-sandbox" \
+          npx --no-install lighthouse "$site_url" \
+            --hostname=127.0.0.1 --port="$chrome_port" \
             --output=json \
             --output=html \
             --output-path=lighthouse-results/report \
             --only-categories=performance,accessibility,best-practices,seo \
             --quiet
-
-          kill $SERVER_PID || true
 
       - name: Parse scores
         id: scores
