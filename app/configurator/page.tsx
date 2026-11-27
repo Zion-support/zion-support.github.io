@@ -46,7 +46,9 @@ export default function ConfiguratorPage() {
   const steps: Step[] = ['budget', 'needs', 'services', 'timeline', 'review'];
 
   const recommendedServices = useMemo(() => {
-    if (!budget || needs.length === 0) return [];
+    if (!budget || needs.length === 0) {
+      return [];
+    }
     return allServices.filter(s =>
       needs.some(n => s.description.toLowerCase().includes(n.split(' ')[0].toLowerCase()))
     ).slice(0, 5);
@@ -54,12 +56,16 @@ export default function ConfiguratorPage() {
 
   const handleNext = () => {
     const idx = steps.indexOf(step);
-    if (idx < steps.length - 1) setStep(steps[idx + 1]);
+    if (idx < steps.length - 1) {
+      setStep(steps[idx + 1]);
+    }
   };
 
   const handleBack = () => {
     const idx = steps.indexOf(step);
-    if (idx > 0) setStep(steps[idx - 1]);
+    if (idx > 0) {
+      setStep(steps[idx - 1]);
+    }
   };
 
   // ── Client-side proposal generator (no server needed) ──────────────
@@ -151,7 +157,9 @@ ${services.length > 0 ? `<p style="margin-top:12px;color:#666;font-size:14px">
   };
 
   const downloadProposal = () => {
-    if (!proposalHtml) return;
+    if (!proposalHtml) {
+      return;
+    }
     const blob = new Blob([proposalHtml], { type: 'text/html' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
@@ -162,7 +170,9 @@ ${services.length > 0 ? `<p style="margin-top:12px;color:#666;font-size:14px">
   };
 
   const emailProposal = () => {
-    if (!proposalHtml) return;
+    if (!proposalHtml) {
+      return;
+    }
     // Open user's email client with a pre-filled message
     const subject = encodeURIComponent(`Proposal — ${companyName} — ${COMPANY.name}`);
     const body = encodeURIComponent(
@@ -175,7 +185,9 @@ ${services.length > 0 ? `<p style="margin-top:12px;color:#666;font-size:14px">
   };
 
   const printProposal = () => {
-    if (!proposalHtml) return;
+    if (!proposalHtml) {
+      return;
+    }
     const w = window.open('', '_blank');
     if (w) {
       w.document.write(proposalHtml);
@@ -228,8 +240,11 @@ ${services.length > 0 ? `<p style="margin-top:12px;color:#666;font-size:14px">
                       type="checkbox"
                       checked={needs.includes(n)}
                       onChange={e => {
-                        if (e.target.checked) setNeeds([...needs, n]);
-                        else setNeeds(needs.filter(x => x !== n));
+                        if (e.target.checked) {
+                          setNeeds([...needs, n]);
+                        } else {
+                          setNeeds(needs.filter(x => x !== n));
+                        }
                       }}
                       className="h-5 w-5 rounded border-purple-500"
                     />
@@ -259,8 +274,11 @@ ${services.length > 0 ? `<p style="margin-top:12px;color:#666;font-size:14px">
                       type="checkbox"
                       defaultChecked
                       onChange={e => {
-                        if (e.target.checked) setSelectedServices([...selectedServices, s.id]);
-                        else setSelectedServices(selectedServices.filter(id => id !== s.id));
+                        if (e.target.checked) {
+                          setSelectedServices([...selectedServices, s.id]);
+                        } else {
+                          setSelectedServices(selectedServices.filter(id => id !== s.id));
+                        }
                       }}
                       className="mt-1 h-5 w-5 rounded border-purple-500"
                     />
