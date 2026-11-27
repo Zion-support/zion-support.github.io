@@ -49,5 +49,5 @@ function validateLegacyRedirects(directory) {
 module.exports = { validateLegacyRedirects };
 if (require.main === module) {
   const count = validateLegacyRedirects(path.resolve(process.argv[2] || 'out'));
-  console.log(`OK legacy redirects: ${count} aliases land on /services/`);
+  process.stdout.write(`OK legacy redirects: ${count} aliases land on /services/\n`);
 }
