@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { clsx } from "clsx";
+import { ChevronDown as ChevronDownIcon } from "lucide-react";
 
 interface FilterState {
   industry: string[];
@@ -72,10 +71,7 @@ export default function FilterPanel({
       >
         <span className="capitalize">{type} ({options.filter((o) => filters[type].includes(o)).length})</span>
         <ChevronDownIcon
-          className={clsx(
-            "w-4 h-4 transition-transform duration-200",
-            openSections[type] && "rotate-180"
-          )}
+          className={`w-4 h-4 transition-transform duration-200${openSections[type] ? ' rotate-180' : ''}`}
         />
       </button>
 

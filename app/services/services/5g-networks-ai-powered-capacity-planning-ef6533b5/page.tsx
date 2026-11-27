@@ -1,4 +1,3 @@
-import { Layout } from '@/components/Layout'
 
 export const metadata = {
   title: '5G Networks AI-Powered Capacity Planning - AI-Powered 5G Networks Solution',
@@ -7,7 +6,6 @@ export const metadata = {
 
 export default function ServicePage() {
   return (
-    <Layout>
       <div className="min-h-screen bg-slate-950 text-white">
         <div className="max-w-4xl mx-auto py-16 px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-purple-400 mb-6">
@@ -64,6 +62,5 @@ export default function ServicePage() {
           </a>
         </div>
       </div>
-    </Layout>
   )
 }

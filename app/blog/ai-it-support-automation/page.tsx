@@ -23,11 +23,10 @@ export default function AiItSupportAutomationPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-10 space-y-8">
       <ArticleStructuredData
-        title={metadata.title as string}
+        headline={metadata.title as string}
         description={metadata.description as string}
-        canonical={metadata.alternates?.canonical as string}
-        publishedAt="2026-07-08"
-        updatedAt="2026-07-08"
+        slug="ai-it-support-automation"
+        datePublished="2026-07-08"
       />
       <SiteBreadcrumbs
         items={[

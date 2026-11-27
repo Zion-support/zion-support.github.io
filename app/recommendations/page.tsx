@@ -1,3 +1,5 @@
+'use client';
+
 // app/recommendations/page.tsx - AI-Powered Service Recommendations
 import { useState } from 'react';
 import Link from 'next/link';
@@ -135,7 +137,9 @@ export default function RecommendationsPage() {
               </h3>
               {recommended.length > 0 ? (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {recommended.map((service: any) => (
+                  {recommended.map((service: any) => {
+                    const startingPrice = service.pricing ? Object.values(service.pricing)[0] : 'Contact';
+                    return (
                     <Link
                       key={service.id}
                       href={service.href}
@@ -148,14 +152,15 @@ export default function RecommendationsPage() {
                       <p className="text-xs text-slate-400 line-clamp-2 mb-3">{service.description}</p>
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-purple-400">
-                          {service.pricing ? Object.values(service.pricing)[0] : 'Contact'}
+                          {typeof startingPrice === 'string' ? startingPrice : null}
                         </span>
                         <span className="text-xs text-cyan-400 group-hover:translate-x-1 transition-transform">
                           View →
                         </span>
                       </div>
                     </Link>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : (
                 <div className="text-center py-12">

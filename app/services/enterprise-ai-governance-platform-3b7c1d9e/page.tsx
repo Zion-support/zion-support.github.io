@@ -12,9 +12,9 @@ export const metadata = {
 export default function Service() {
   return (
     <div className="min-h-[calc(100vh-4.5rem)] pb-16">
-      <BreadcrumbSchema 
-        serviceName="Enterprise AI Governance Platform"
-        serviceDescription="Ensure responsible, transparent, and compliant AI deployment at scale with our Enterprise AI Governance Platform. This comprehensive solution provides end-to-end AI lifecycle management, risk mitigation, and regulatory compliance for enterprise AI initiatives."
+      <BreadcrumbSchema
+        path="/services/enterprise-ai-governance-platform-3b7c1d9e"
+        title={metadata.title}
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mb-12">

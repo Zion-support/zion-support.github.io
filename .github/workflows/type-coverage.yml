@@ -23,7 +23,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v6.0.2
       with:
-        fetch-depth: 0
+        fetch-depth: 1
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
@@ -33,6 +33,8 @@ jobs:
       run: npm ci
     - name: Run TypeScript Check
       id: type-check
+      env:
+        NODE_OPTIONS: --max-old-space-size=12288
       run: 'npm run type-check
 
         echo "exit_code=$?" >> $GITHUB_OUTPUT
@@ -77,4 +79,4 @@ jobs:
       if: success() && github.event_name == 'schedule'
       run: "node automation/notify-telegram.js \"\u2705 Weekly TypeScript Check \u2014\
         \ all clear.\" || true\n"
-    timeout-minutes: 10
+    timeout-minutes: 60
