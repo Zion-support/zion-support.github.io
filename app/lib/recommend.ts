@@ -15,15 +15,17 @@ export function recommendServices(params: {
   const { budget, needs, excludeIds = [] } = params;
 
   // Budget tier mapping for scoring
-  const budgetTiers: Record<string, { min: number; max: number; weight: number }> = {
-    'Under $1,000': { min: 0, max: 1000, weight: 1 },
-    '$1,000–$5,000': { min: 1000, max: 5000, weight: 1 },
-    '$5,000–$20,000': { min: 5000, max: 20000, weight: 1 },
-    '$20,000–$100,000': { min: 20000, max: 100000, weight: 1 },
-    'Over $100,000': { min: 100000, max: Infinity, weight: 1 },
-  };
+  const budgetTiers = Object.fromEntries([
+    ['Under $1,000', { min: 0, max: 1000, weight: 1 }],
+    ['$1,000–$5,000', { min: 1000, max: 5000, weight: 1 }],
+    ['$5,000–$20,000', { min: 5000, max: 20000, weight: 1 }],
+    ['$20,000–$100,000', { min: 20000, max: 100000, weight: 1 }],
+    ['Over $100,000', { min: 100000, max: Infinity, weight: 1 }],
+  ]);
 
   const budgetTier = budgetTiers[budget] || { min: 0, max: Infinity, weight: 1 };
+
+  const perfectBudgetFitBonus = 15;
 
   // Normalize needs for matching
   const normalizedNeeds = needs.map((n) => n.toLowerCase().split(' '));
@@ -60,9 +62,8 @@ export function recommendServices(params: {
       const priceKeys = Object.keys(service.pricing);
       if (priceKeys.length > 0) {
         const lowestPrice = extractPrice(service.pricing[priceKeys[0] as keyof typeof service.pricing] ?? '0');
-        const highestPrice = extractPrice(service.pricing[priceKeys[priceKeys.length - 1] as keyof typeof service.pricing] ?? '0');
         if (lowestPrice <= budgetTier.max && lowestPrice >= budgetTier.min) {
-          score += 15; // Perfect budget fit
+          score += perfectBudgetFitBonus;
         } else if (lowestPrice <= budgetTier.max * 2) {
           score += 5; // Within range
         } else if (lowestPrice > budgetTier.max * 2) {
