@@ -37,6 +37,8 @@ module.exports = [
       '!.eslintrc-autonomous.cjs',
       '**/node_modules/**', '**/.next/**', '**/out/**', '**/dist/**', '**/build/**',
       '**/coverage/**', '**/.hermes/**', 'automation/reports/**',
+      // The committed Next.js export and Go module cache contain generated or third-party code.
+      '_next/static/chunks/**', 'go/pkg/mod/**',
       '**/*.config.js', '**/*.config.cjs', 'scripts/automation/**',
       'automation/**/*.cjs', 'eslint-rules/**',
     ],
