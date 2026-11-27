@@ -29,7 +29,9 @@ function assertHomepageCards(section,l){
   return blocks[0];
  }).join('');
  const links=new Set([...cards.matchAll(/\bhref\s*=\s*(["'])(.*?)\1/gi)].map(m=>m[2]));
- for(const slug of slugs)assert(links.has(route(l,slug)),'Missing homepage resource card destination '+route(l,slug));
+ for(const slug of slugs){
+  assert(links.has(route(l,slug)),'Missing homepage resource card destination '+route(l,slug));
+ }
 }
 function transform(before,l,current=''){
  assert(C[l],'Known locale');
@@ -43,30 +45,43 @@ function transform(before,l,current=''){
 // Validate the whole batch before any writes; this is not a filesystem transaction.
 function plan(out='out'){
  const homes=[],pages=[],changes=[],base=fs.realpathSync(out);
- for(const l of Object.keys(C))for(const slug of ['',...slugs]){
-  const u=slug?route(l,slug):C[l].home,f=disk(out,u);
-  assert(fs.existsSync(f),'Missing maintained route '+u);
-  const real=fs.realpathSync(f);
-  assert(real.startsWith(base+path.sep),'Maintained route escapes output '+u);
-  assert(fs.statSync(f).isFile(),'Maintained route must be a file '+u);
-  const before=fs.readFileSync(f,'utf8'),after=transform(before,l,slug);
-  assert.equal(transform(after,l,slug),after,'Byte-idempotence '+u);
-  changes.push({file:f,real,before,after});
-  (slug?pages:homes).push({locale:C[l].lang,path:u,catalog:'/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l,nav:'/zion-app-network/CATALOG-NAVIGATION.html#resource-path-'+l});
+ for(const l of Object.keys(C)){
+  for(const slug of ['',...slugs]){
+   const u=slug?route(l,slug):C[l].home,f=disk(out,u);
+   assert(fs.existsSync(f),'Missing maintained route '+u);
+   const real=fs.realpathSync(f);
+   assert(real.startsWith(base+path.sep),'Maintained route escapes output '+u);
+   assert(fs.statSync(f).isFile(),'Maintained route must be a file '+u);
+   const before=fs.readFileSync(f,'utf8'),after=transform(before,l,slug);
+   assert.equal(transform(after,l,slug),after,'Byte-idempotence '+u);
+   changes.push({file:f,real,before,after});
+   (slug?pages:homes).push({locale:C[l].lang,path:u,catalog:'/zion-app-network/CATALOG-PRODUCTIVITY-REVIEW.html#'+l,nav:'/zion-app-network/CATALOG-NAVIGATION.html#resource-path-'+l});
+  }
  }
  const manifestFile=path.join(out,'apps/productivity-navigation-publication.json');
  const parent=path.dirname(manifestFile);
- if(fs.existsSync(parent))assert(fs.realpathSync(parent).startsWith(base+path.sep),'Manifest directory escapes output');
+ if(fs.existsSync(parent)){
+  assert(fs.realpathSync(parent).startsWith(base+path.sep),'Manifest directory escapes output');
+ }
  if(fs.existsSync(manifestFile)){assert(!fs.lstatSync(manifestFile).isSymbolicLink(),'Manifest must not be a symlink');assert(fs.statSync(manifestFile).isFile(),'Manifest must be a file');}
  const manifest={release:RELEASE,homeRelease:HOME_RELEASE,homes,pages,scope:'Five compact homepage catalog blocks reuse all six reviewed resource cards; 30 reciprocal six-resource navigation blocks stay unchanged. Existing cards, forms, scripts and all bytes outside owned additions preserved.',fullNetworkComplete:false};
  return {changes,manifestFile,manifest};
 }
 function apply(prepared){
  for(const p of prepared.changes){assert.equal(fs.realpathSync(p.file),p.real,'Route changed after preflight');assert.equal(fs.readFileSync(p.file,'utf8'),p.before,'Input changed after preflight');}
- for(const p of prepared.changes)fs.writeFileSync(p.file,p.after);
+ for(const p of prepared.changes){
+  fs.writeFileSync(p.file,p.after);
+ }
  fs.mkdirSync(path.dirname(prepared.manifestFile),{recursive:true});
  fs.writeFileSync(prepared.manifestFile,JSON.stringify(prepared.manifest,null,2)+'\n');
  return prepared.manifest;
 }
-function run(out='out'){const manifest=apply(plan(out));console.log('PASS '+RELEASE+': five homepage blocks, 30 reciprocal resource blocks, full-batch preflight, protected forms/scripts and byte-idempotence.');return manifest;}
-module.exports={run,plan,apply,transform,block,C,slugs,route,RELEASE,HOME_RELEASE};if(require.main===module)run(process.argv[2]||'out');
+function run(out='out'){
+ const manifest=apply(plan(out));
+ process.stdout.write('PASS '+RELEASE+': five homepage blocks, 30 reciprocal resource blocks, full-batch preflight, protected forms/scripts and byte-idempotence.\n');
+ return manifest;
+}
+module.exports={run,plan,apply,transform,block,C,slugs,route,RELEASE,HOME_RELEASE};
+if(require.main===module){
+ run(process.argv[2]||'out');
+}
