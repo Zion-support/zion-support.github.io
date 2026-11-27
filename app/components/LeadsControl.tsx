@@ -90,8 +90,8 @@ interface PipelineStage {
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function getPriority(score: number): Priority {
-  if (score >= 80) return 'hot';
-  if (score >= 60) return 'warm';
+  if (score >= 80) { return 'hot'; }
+  if (score >= 60) { return 'warm'; }
   return 'cold';
 }
 
@@ -118,23 +118,23 @@ function revenuePotential(lead: Lead): number {
 function autoScore(lead: Partial<Lead>): number {
   let score = 50; // base
   // Company size bonus
-  if (lead.companySize === 'Enterprise') score += 15;
-  else if (lead.companySize === 'Mid-Market') score += 10;
-  else if (lead.companySize === 'SMB') score += 5;
+  if (lead.companySize === 'Enterprise') { score += 15; }
+  else if (lead.companySize === 'Mid-Market') { score += 10; }
+  else if (lead.companySize === 'SMB') { score += 5; }
   // Budget bonus
-  if (lead.budgetRange === '$100K+') score += 15;
-  else if (lead.budgetRange === '$50K-$100K') score += 10;
-  else if (lead.budgetRange === '$10K-$50K') score += 5;
+  if (lead.budgetRange === '$100K+') { score += 15; }
+  else if (lead.budgetRange === '$50K-$100K') { score += 10; }
+  else if (lead.budgetRange === '$10K-$50K') { score += 5; }
   // Timeline bonus
-  if (lead.decisionTimeline === 'Immediate') score += 15;
-  else if (lead.decisionTimeline === '1-3 months') score += 10;
-  else if (lead.decisionTimeline === '3-6 months') score += 5;
+  if (lead.decisionTimeline === 'Immediate') { score += 15; }
+  else if (lead.decisionTimeline === '1-3 months') { score += 10; }
+  else if (lead.decisionTimeline === '3-6 months') { score += 5; }
   // Source bonus
-  if (lead.source === 'Email Partnership') score += 10;
-  else if (lead.source === 'Referral') score += 8;
-  else if (lead.source === 'LinkedIn') score += 5;
+  if (lead.source === 'Email Partnership') { score += 10; }
+  else if (lead.source === 'Referral') { score += 8; }
+  else if (lead.source === 'LinkedIn') { score += 5; }
   // Pain points signal
-  if (lead.painPoints && lead.painPoints.length > 0) score += Math.min(lead.painPoints.length * 3, 10);
+  if (lead.painPoints && lead.painPoints.length > 0) { score += Math.min(lead.painPoints.length * 3, 10); }
   return Math.min(Math.max(score, 10), 100);
 }
 
@@ -317,11 +317,11 @@ const QUICK_REPLY_TEMPLATES = [
 
 // ─── localStorage helpers ────────────────────────────────────────────────────
 function loadFromStorage<T>(key: string, fallback: T): T {
-  if (typeof window === 'undefined') return fallback;
+  if (typeof window === 'undefined') { return fallback; }
   try { const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; } catch { return fallback; }
 }
 function saveToStorage(key: string, value: unknown) {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined') { return; }
   try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* quota */ }
 }
 
@@ -389,11 +389,11 @@ export default function LeadsControl() {
   // ── Filtering ─────────────────────────────────────────────────────────────
   const filteredLeads = useMemo(() => {
     return leads.filter(l => {
-      if (filter !== 'all' && l.status !== filter) return false;
-      if (industryFilter !== 'all' && l.industry !== industryFilter) return false;
-      if (priorityFilter !== 'all' && getPriority(l.score) !== priorityFilter) return false;
-      if (dateFrom && l.dateFound < dateFrom) return false;
-      if (dateTo && l.dateFound > dateTo) return false;
+      if (filter !== 'all' && l.status !== filter) { return false; }
+      if (industryFilter !== 'all' && l.industry !== industryFilter) { return false; }
+      if (priorityFilter !== 'all' && getPriority(l.score) !== priorityFilter) { return false; }
+      if (dateFrom && l.dateFound < dateFrom) { return false; }
+      if (dateTo && l.dateFound > dateTo) { return false; }
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         return l.company.toLowerCase().includes(q) ||
@@ -446,7 +446,7 @@ export default function LeadsControl() {
   // ── Actions ─────────────────────────────────────────────────────────────────
   const updateLeadStatus = useCallback((id: string, status: LeadStatus) => {
     setLeads(prev => prev.map(l => {
-      if (l.id !== id) return l;
+      if (l.id !== id) { return l; }
       const updated = { ...l, status, lastContact: new Date().toISOString().split('T')[0] };
       updated.activities = logActivity(updated.activities || [], id, `Status → ${status}`);
       return updated;
@@ -456,7 +456,7 @@ export default function LeadsControl() {
   const toggleLeadSelection = useCallback((id: string) => {
     setSelectedLeads(prev => {
       const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
+      if (next.has(id)) { next.delete(id); } else { next.add(id); }
       return next;
     });
   }, []);
@@ -513,7 +513,7 @@ export default function LeadsControl() {
   }, []);
 
   const addLead = useCallback(() => {
-    if (!newLead.company) return;
+    if (!newLead.company) { return; }
     const lead: Lead = {
       id: `l${Date.now()}`,
       company: newLead.company || '',
@@ -541,7 +541,7 @@ export default function LeadsControl() {
 
   const bulkExport = useCallback(() => {
     const selectedList = leads.filter(l => selectedLeads.has(l.id));
-    if (selectedList.length === 0) return;
+    if (selectedList.length === 0) { return; }
     const rows = ['Company,Contact,Email,Industry,Score,Priority,Status,Services,Website,Company Size,Budget,Timeline'];
     selectedList.forEach(l => {
       rows.push(`"${l.company}","${l.contact}","${l.email}","${l.industry}",${l.score},"${getPriority(l.score)}","${l.status}","${l.services.join('; ')}","${l.website || ''}","${l.companySize || ''}","${l.budgetRange || ''}","${l.decisionTimeline || ''}"`);
@@ -558,7 +558,7 @@ export default function LeadsControl() {
   }, [leads, selectedLeads]);
 
   const bulkStatusUpdate = useCallback(() => {
-    if (selectedLeads.size === 0) return;
+    if (selectedLeads.size === 0) { return; }
     setLeads(prev => prev.map(l => selectedLeads.has(l.id) ? { ...l, status: bulkStatus, lastContact: new Date().toISOString().split('T')[0] } : l));
     setShowBulkMenu(false);
     setSelectedLeads(new Set());
@@ -566,7 +566,7 @@ export default function LeadsControl() {
 
   const saveFilterPreset = useCallback(() => {
     const name = prompt('Preset name:');
-    if (!name) return;
+    if (!name) { return; }
     setFilterPresets(prev => [...prev, {
       id: `p${Date.now()}`, name,
       filters: { status: filter, industry: industryFilter, priority: priorityFilter, dateFrom, dateTo },
@@ -929,7 +929,7 @@ export default function LeadsControl() {
             .filter(l => l.daysSince >= 3)
             .sort((a, b) => b.daysSince - a.daysSince)
             .slice(0, 5);
-          if (reminders.length === 0) return null;
+          if (reminders.length === 0) { return null; }
           return (
             <div className="bg-gradient-to-r from-red-500/10 to-amber-500/10 border border-red-500/20 rounded-xl p-4 mb-6">
               <h3 className="text-xs font-semibold text-red-300 mb-3">⏰ Follow-up Reminders ({reminders.length})</h3>
@@ -1285,10 +1285,10 @@ export default function LeadsControl() {
                 const responseRate = p.length > 0 ? Math.round((responded / p.length) * 100) : 0;
                 const totalBudget = p.reduce((s, l) => {
                   const b = l.budgetRange || '';
-                  if (b.includes('100K+')) return s + 150000;
-                  if (b.includes('50K-$100K')) return s + 75000;
-                  if (b.includes('10K-$50K')) return s + 30000;
-                  if (b.includes('1K-$10K')) return s + 5000;
+                  if (b.includes('100K+')) { return s + 150000; }
+                  if (b.includes('50K-$100K')) { return s + 75000; }
+                  if (b.includes('10K-$50K')) { return s + 30000; }
+                  if (b.includes('1K-$10K')) { return s + 5000; }
                   return s + 25000;
                 }, 0);
                 const immediate = p.filter(l => l.decisionTimeline === 'Immediate').length;
@@ -1611,7 +1611,7 @@ export default function LeadsControl() {
                   const colors = ['text-blue-400', 'text-emerald-400', 'text-amber-400', 'text-purple-400', 'text-cyan-400', 'text-pink-400', 'text-slate-400'];
                   return sources.map((src, i) => {
                     const count = leads.filter(l => l.source === src).length;
-                    if (count === 0) return null;
+                    if (count === 0) { return null; }
                     return (
                       <div key={i} className="bg-slate-800/50 rounded-lg p-4 text-center">
                         <div className={`text-2xl font-bold ${colors[i]}`}>{count}</div>
@@ -1723,7 +1723,7 @@ export default function LeadsControl() {
                   // Find high-budget leads
                   const highBudget = leads.filter(l => (l.budgetRange || '').includes('100K+') && l.status !== 'converted');
                   highBudget.slice(0, 2).forEach(l => recs.push({ priority: 'high', icon: '💰', text: `${l.company} — ${l.budgetRange} budget, ${l.decisionTimeline}`, action: 'Priority outreach' }));
-                  if (recs.length === 0) recs.push({ priority: 'low', icon: '✅', text: 'All leads are up to date! No urgent actions needed.', action: '—' });
+                  if (recs.length === 0) { recs.push({ priority: 'low', icon: '✅', text: 'All leads are up to date! No urgent actions needed.', action: '—' }); }
                   return recs.slice(0, 8).map((r, i) => (
                     <div key={i} className={"flex items-center gap-3 bg-slate-900/50 rounded-lg p-3 " + (r.priority === 'high' ? 'border-l-2 border-red-500' : r.priority === 'medium' ? 'border-l-2 border-amber-500' : 'border-l-2 border-emerald-500')}>
                       <span className="text-lg shrink-0">{r.icon}</span>
@@ -1770,17 +1770,17 @@ export default function LeadsControl() {
                 }} className="w-full text-xs px-4 py-2.5 rounded-lg bg-amber-600 text-white hover:bg-amber-500 font-medium">📧 Email All Leads ({leads.filter(l => l.email).length})</button>
                 <button onClick={() => {
                   const emails = leads.filter(l => l.status === 'new' && l.email).map(l => l.email).join(',');
-                  if (!emails) return;
+                  if (!emails) { return; }
                   window.open(`mailto:?bcc=${emails}&subject=AI Solutions for Your Business&body=Hi,%0A%0AI noticed you might be exploring AI solutions. At Zion Tech Group, we build custom AI that reduces costs by 40-60%.%0A%0ABest,%0AKleber Garcia%0AZion Tech Group`);
                 }} className="w-full text-xs px-4 py-2.5 rounded-lg bg-purple-600 text-white hover:bg-purple-500 font-medium">📧 Email New Leads ({leads.filter(l => l.status === 'new' && l.email).length})</button>
                 <button onClick={() => {
                   const emails = leads.filter(l => l.source === 'Email Partnership' && l.email).map(l => l.email).join(',');
-                  if (!emails) return;
+                  if (!emails) { return; }
                   window.open(`mailto:?bcc=${emails}&subject=Partnership Follow-up — Zion Tech Group&body=Hi,%0A%0AFollowing up on our partnership discussion. Let me know if you'd like to schedule a call this week.%0A%0ABest,%0AKleber Garcia%0AZion Tech Group`);
                 }} className="w-full text-xs px-4 py-2.5 rounded-lg bg-cyan-600 text-white hover:bg-cyan-500 font-medium">📧 Email Partnerships ({leads.filter(l => l.source === 'Email Partnership' && l.email).length})</button>
                 <button onClick={() => {
                   const emails = leads.filter(l => getPriority(l.score) === 'hot' && l.email).map(l => l.email).join(',');
-                  if (!emails) return;
+                  if (!emails) { return; }
                   window.open(`mailto:?bcc=${emails}&subject=Priority: Custom AI Solutions&body=Hi,%0A%0AI wanted to personally reach out — I think there's a great fit between our AI solutions and your needs.%0A%0ABest,%0AKleber Garcia%0AZion Tech Group`);
                 }} className="w-full text-xs px-4 py-2.5 rounded-lg bg-red-600 text-white hover:bg-red-500 font-medium">🔥 Email Hot Leads ({leads.filter(l => getPriority(l.score) === 'hot' && l.email).length})</button>
               </div>
@@ -1867,11 +1867,11 @@ export default function LeadsControl() {
                   leads.filter(l => l.score >= 80 && l.status === 'new').forEach(l => recs.push({ priority: 'high', icon: '🔥', text: `${l.company} — score ${l.score}, ${l.decisionTimeline}`, action: 'Contact today', lead: l }));
                   leads.filter(l => l.status !== 'converted' && l.status !== 'lost').forEach(l => {
                     const days = l.lastContact ? Math.floor((Date.now() - new Date(l.lastContact).getTime()) / 86400000) : Math.floor((Date.now() - new Date(l.dateFound).getTime()) / 86400000);
-                    if (days >= 3) recs.push({ priority: days >= 7 ? 'high' : 'medium', icon: days >= 7 ? '🔴' : '🟡', text: `${l.company} — ${days}d since last contact`, action: 'Follow up', lead: l });
+                    if (days >= 3) { recs.push({ priority: days >= 7 ? 'high' : 'medium', icon: days >= 7 ? '🔴' : '🟡', text: `${l.company} — ${days}d since last contact`, action: 'Follow up', lead: l }); }
                   });
                   leads.filter(l => l.source === 'Email Partnership' && l.status === 'replied').forEach(l => recs.push({ priority: 'high', icon: '🤝', text: `${l.company} partnership — ${l.budgetRange}`, action: 'Schedule call', lead: l }));
                   leads.filter(l => (l.budgetRange || '').includes('100K+') && l.status !== 'converted' && l.status !== 'lost').slice(0, 2).forEach(l => recs.push({ priority: 'high', icon: '💰', text: `${l.company} — ${l.budgetRange}`, action: 'Priority outreach', lead: l }));
-                  if (recs.length === 0) recs.push({ priority: 'low', icon: '✅', text: 'All leads up to date!', action: '—' });
+                  if (recs.length === 0) { recs.push({ priority: 'low', icon: '✅', text: 'All leads up to date!', action: '—' }); }
                   return recs.slice(0, 10).map((r, i) => (
                     <div key={i} className={`flex items-center gap-3 bg-slate-900/50 rounded-lg p-3 cursor-pointer hover:bg-slate-800/50 transition border-l-2 ${r.priority === 'high' ? 'border-red-500' : r.priority === 'medium' ? 'border-amber-500' : 'border-emerald-500'}`} onClick={() => r.lead && setDetailLead(r.lead)}>
                       <span className="text-lg shrink-0">{r.icon}</span>
@@ -1940,12 +1940,12 @@ export default function LeadsControl() {
               <div className="flex gap-2">
                 <button onClick={() => {
                   const textarea = document.getElementById('bulk-emails') as HTMLTextAreaElement;
-                  if (!textarea) return;
+                  if (!textarea) { return; }
                   const lines = textarea.value.split('\n').map(l => l.trim()).filter(l => l.includes('@'));
                   let added = 0;
                   lines.forEach(line => {
                     const email = line.match(/[\w.+-]+@[\w-]+\.[\w.]+/)?.[0] || '';
-                    if (!email) return;
+                    if (!email) { return; }
                     const domain = email.split('@')[1];
                     const company = domain.split('.')[0].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
                     const newLead: Lead = {
@@ -1967,11 +1967,11 @@ export default function LeadsControl() {
                     added++;
                   });
                   textarea.value = '';
-                  if (added > 0) setActiveTab('leads');
+                  if (added > 0) { setActiveTab('leads'); }
                 }} className="text-xs px-4 py-2 rounded-lg bg-amber-600 text-white hover:bg-amber-500 font-medium">➕ Add Leads</button>
                 <button onClick={() => {
                   const textarea = document.getElementById('bulk-emails') as HTMLTextAreaElement;
-                  if (textarea) textarea.value = '';
+                  if (textarea) { textarea.value = ''; }
                 }} className="text-xs px-4 py-2 rounded-lg bg-slate-700 text-slate-300 hover:bg-slate-600">Clear</button>
               </div>
             </div>
@@ -2011,7 +2011,7 @@ export default function LeadsControl() {
                   input.accept = '.json';
                   input.onchange = (e) => {
                     const file = (e.target as HTMLInputElement).files?.[0];
-                    if (!file) return;
+                    if (!file) { return; }
                     const reader = new FileReader();
                     reader.onload = (ev) => {
                       try {
@@ -2034,7 +2034,7 @@ export default function LeadsControl() {
                   input.accept = '.csv';
                   input.onchange = (e) => {
                     const file = (e.target as HTMLInputElement).files?.[0];
-                    if (!file) return;
+                    if (!file) { return; }
                     const reader = new FileReader();
                     reader.onload = (ev) => {
                       try {
@@ -2052,7 +2052,7 @@ export default function LeadsControl() {
                           const email = get('email') || '';
                           const contact = get('contact') || get('name') || '';
                           const industry = get('industry') || 'Other';
-                          if (!company) return;
+                          if (!company) { return; }
                           const newLead: Lead = {
                             id: `l${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
                             company, contact, email, source: 'CSV Import', industry,
@@ -2066,7 +2066,7 @@ export default function LeadsControl() {
                           setLeads(prev => [newLead, ...prev]);
                           added++;
                         });
-                        if (added > 0) setActiveTab('leads');
+                        if (added > 0) { setActiveTab('leads'); }
                       } catch { /* invalid CSV */ }
                     };
                     reader.readAsText(file);
@@ -2245,7 +2245,7 @@ export default function LeadsControl() {
             {/* Related email activity */}
             {(() => {
               const related = EMAIL_ACTIVITY.filter(e => e.recipient.includes(detailLead.email?.split('@')[0] || '') || e.subject.includes(detailLead.company));
-              if (related.length === 0) return null;
+              if (related.length === 0) { return null; }
               return (
                 <div className="mb-4">
                   <div className="text-[10px] text-slate-500 uppercase mb-2">📧 Related Email Activity</div>
