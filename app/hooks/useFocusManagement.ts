@@ -4,21 +4,29 @@ import { useEffect } from 'react';
 
 export function useFocusManagement() {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') {
+      return;
+    }
 
     const FOCUS_STORAGE_KEY = 'zion:last-focused-id';
 
     const getTargetFromHash = () => {
       const hash = window.location.hash;
-      if (!hash) return null;
+      if (!hash) {
+        return null;
+      }
       const id = hash.replace(/^#/, '');
       const candidate = document.getElementById(id);
-      if (candidate && typeof candidate.focus === 'function') return candidate;
+      if (candidate && typeof candidate.focus === 'function') {
+        return candidate;
+      }
       return null;
     };
 
     const tryFocus = (element: HTMLElement | null) => {
-      if (!element) return false;
+      if (!element) {
+        return false;
+      }
       try {
         element.focus({ preventScroll: true });
         return true;
@@ -36,7 +44,9 @@ export function useFocusManagement() {
 
     const persistFocusedElement = () => {
       const active = document.activeElement as HTMLElement | null;
-      if (!active) return;
+      if (!active) {
+        return;
+      }
       const id = active.id || active.getAttribute('aria-describedby');
       if (id) {
         try {
@@ -50,7 +60,9 @@ export function useFocusManagement() {
     const restoreFocusedElement = () => {
       try {
         const id = sessionStorage.getItem(FOCUS_STORAGE_KEY);
-        if (!id) return;
+        if (!id) {
+          return;
+        }
         const target = document.getElementById(id) || document.querySelector(`[aria-describedby="${id}"]`);
         if (target && typeof (target as HTMLElement).focus === 'function') {
           (target as HTMLElement).focus({ preventScroll: true });
@@ -72,7 +84,9 @@ export function useFocusManagement() {
 
     const handleClick = (event: Event) => {
       const anchor = (event.target as HTMLElement | null)?.closest('a[href^="#"]') as HTMLAnchorElement | null;
-      if (!anchor) return;
+      if (!anchor) {
+        return;
+      }
       persistFocusedElement();
     };
 
