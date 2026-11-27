@@ -2,10 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const { URL } = require('url');
+const { format } = require('node:util');
 
 const BASE = process.env.BASE || 'https://ziontechgroup.com';
 const CONCURRENCY = 6;
 const DELAY_MS = 120;
+const MAX_REPORTED_BROKEN_LINKS = 200;
+const MIN_SUCCESS_STATUS = 200;
+const MIN_ERROR_STATUS = 400;
 
 const docsDir = path.join(__dirname, '..', 'docs');
 const rootDir = path.join(__dirname, '..');
@@ -26,7 +30,9 @@ function walk(dir, baseDir) {
         htmlFiles.push({ file: full, baseDir });
       }
     }
-  } catch (e) {}
+  } catch {
+    // An unavailable directory does not stop discovery in other directories.
+  }
 }
 walk(docsDir, docsDir);
 walk(rootDir, rootDir);
@@ -143,14 +149,19 @@ async function run() {
   for (let i = 0; i < Math.min(CONCURRENCY, queue.length); i++) {
     active.push(processChunk(queue, i, CONCURRENCY));
   }
-  await Promise.all(active);
+  try {
+    await Promise.all(active);
+  } catch (error) {
+    throw new Error('Live link checks did not finish', { cause: error });
+  }
 
-  const report = { generatedAt: new Date().toISOString(), base: BASE, totalFiles: htmlFiles.length, totalChecked: checked.size, brokenCount: broken.length, broken: broken.slice(0, 200) };
+  const report = { generatedAt: new Date().toISOString(), base: BASE, totalFiles: htmlFiles.length, totalChecked: checked.size, brokenCount: broken.length, broken: broken.slice(0, MAX_REPORTED_BROKEN_LINKS) };
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  console.log(JSON.stringify({ totalFiles: htmlFiles.length, totalChecked: checked.size, brokenCount: broken.length, reportPath }, null, 2));
+  const summary = { totalFiles: htmlFiles.length, totalChecked: checked.size, brokenCount: broken.length, reportPath };
+  process.stdout.write(`${JSON.stringify(summary, null, 2)}\n`);
   if (broken.length) {
-    console.log('First broken:', broken[0]);
+    process.stdout.write(`${format('First broken:', broken[0])}\n`);
   }
 }
 
@@ -160,12 +171,16 @@ async function processChunk(items, start, step) {
     if (checked.has(target)) {
       continue;
     }
-    const status = await checkUrl(target);
-    checked.set(target, status);
-    if (status < 200 || status >= 400) {
-      broken.push({ target, status });
+    try {
+      const status = await checkUrl(target);
+      checked.set(target, status);
+      if (status < MIN_SUCCESS_STATUS || status >= MIN_ERROR_STATUS) {
+        broken.push({ target, status });
+      }
+      await new Promise(resolve => setTimeout(resolve, DELAY_MS));
+    } catch (error) {
+      throw new Error(`Could not complete check for ${target}`, { cause: error });
     }
-    await new Promise(r => setTimeout(r, DELAY_MS));
   }
 }
 
