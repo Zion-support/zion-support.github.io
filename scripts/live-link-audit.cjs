@@ -15,10 +15,16 @@ const htmlFiles = [];
 function walk(dir, baseDir) {
   try {
     for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
-      if (item.name.startsWith('.') || item.name === 'node_modules' || item.name === 'out' || item.name === '_next') continue;
+      if (item.name.startsWith('.') || item.name === 'node_modules' || item.name === 'out' || item.name === '_next') {
+        continue;
+      }
       const full = path.join(dir, item.name);
-      if (item.isDirectory()) walk(full, baseDir);
-      else if (item.name.endsWith('.html')) htmlFiles.push({ file: full, baseDir });
+      if (item.isDirectory()) {
+        walk(full, baseDir);
+      }
+      else if (item.name.endsWith('.html')) {
+        htmlFiles.push({ file: full, baseDir });
+      }
     }
   } catch (e) {}
 }
@@ -36,8 +42,12 @@ const TEMPLATE_GUARD = /\$\{|\{SITE\}/i;
 function isExternal(link) {
   try {
     const u = new URL(link, BASE);
-    if (u.host !== new URL(BASE).host) return true;
-    if (EXTERNAL_HOSTS.has(u.host)) return true;
+    if (u.host !== new URL(BASE).host) {
+      return true;
+    }
+    if (EXTERNAL_HOSTS.has(u.host)) {
+      return true;
+    }
     return false;
   } catch {
     return true;
@@ -45,7 +55,9 @@ function isExternal(link) {
 }
 
 function resolveLink(link) {
-  if (!link.startsWith('/')) return link;
+  if (!link.startsWith('/')) {
+    return link;
+  }
   let pathname = link.split('?', 1)[0].split('#', 1)[0].replace(/\/+$/, '') + '/';
   if (PATH_ALIASES.has(pathname)) {
     const alias = PATH_ALIASES.get(pathname);
@@ -59,15 +71,21 @@ function toTarget(link) {
   try {
     link = resolveLink(link);
     const resolved = new URL(link, BASE);
-    if (resolved.host !== new URL(BASE).host) return null;
+    if (resolved.host !== new URL(BASE).host) {
+      return null;
+    }
     let rel = resolved.pathname.split('?', 1)[0].split('#', 1)[0].replace(/^\/+/, '');
-    if (!rel) rel = 'index.html';
+    if (!rel) {
+      rel = 'index.html';
+    }
     const isDir = rel.endsWith('/');
     const fsRel = isDir ? `${rel}index.html` : rel;
     let live = `${BASE.replace(/\/$/, '')}/${fsRel}`;
     if (isDir) {
       const candidate = `${BASE.replace(/\/$/, '')}/${rel}`;
-      if (candidate !== live) live = candidate;
+      if (candidate !== live) {
+        live = candidate;
+      }
     }
     return live;
   } catch {
@@ -96,37 +114,57 @@ async function run() {
     let m;
     while ((m = hrefRegex.exec(content)) !== null) {
       const link = m[1];
-      if (!link || link.startsWith('javascript:') || link.startsWith('mailto:') || link.startsWith('tel:') || link.startsWith('#') || link.startsWith('/_next/') || link.startsWith('_next/')) continue;
-      if (TEMPLATE_GUARD.test(link)) continue;
-      if (isExternal(link)) continue;
+      if (!link || link.startsWith('javascript:') || link.startsWith('mailto:') || link.startsWith('tel:') || link.startsWith('#') || link.startsWith('/_next/') || link.startsWith('_next/')) {
+        continue;
+      }
+      if (TEMPLATE_GUARD.test(link)) {
+        continue;
+      }
+      if (isExternal(link)) {
+        continue;
+      }
       const pathPart = link.split('?', 1)[0].split('#', 1)[0].replace(/\/+$/, '');
-      if (IGNORE_PATHS.has(pathPart)) continue;
+      if (IGNORE_PATHS.has(pathPart)) {
+        continue;
+      }
       const target = toTarget(link);
-      if (!target) continue;
+      if (!target) {
+        continue;
+      }
       const key = target;
-      if (seen.has(key)) continue;
+      if (seen.has(key)) {
+        continue;
+      }
       seen.add(key);
       queue.push(key);
     }
   }
   const active = [];
-  for (let i = 0; i < Math.min(CONCURRENCY, queue.length); i++) active.push(processChunk(queue, i, CONCURRENCY));
+  for (let i = 0; i < Math.min(CONCURRENCY, queue.length); i++) {
+    active.push(processChunk(queue, i, CONCURRENCY));
+  }
   await Promise.all(active);
 
   const report = { generatedAt: new Date().toISOString(), base: BASE, totalFiles: htmlFiles.length, totalChecked: checked.size, brokenCount: broken.length, broken: broken.slice(0, 200) };
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   console.log(JSON.stringify({ totalFiles: htmlFiles.length, totalChecked: checked.size, brokenCount: broken.length, reportPath }, null, 2));
-  if (broken.length) console.log('First broken:', broken[0]);
+  if (broken.length) {
+    console.log('First broken:', broken[0]);
+  }
 }
 
 async function processChunk(items, start, step) {
   for (let i = start; i < items.length; i += step) {
     const target = items[i];
-    if (checked.has(target)) continue;
+    if (checked.has(target)) {
+      continue;
+    }
     const status = await checkUrl(target);
     checked.set(target, status);
-    if (status < 200 || status >= 400) broken.push({ target, status });
+    if (status < 200 || status >= 400) {
+      broken.push({ target, status });
+    }
     await new Promise(r => setTimeout(r, DELAY_MS));
   }
 }
