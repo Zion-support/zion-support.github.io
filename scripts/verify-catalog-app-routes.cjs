@@ -35,14 +35,20 @@ function verify(output = 'out') {
     assert(fs.existsSync(file) && fs.statSync(file).isFile(), 'Missing catalog: ' + catalog);
     for (const href of links(fs.readFileSync(file, 'utf8'))) {
       const url = new URL(href, origin + '/' + catalog.replace(/index\.html$/, ''));
-      if (!['http:', 'https:'].includes(url.protocol) || url.host !== 'ziontechgroup.com') continue;
-      if (!/^\/(?:pt\/|es\/|fr\/|de\/)?apps(?:\/|$)/.test(url.pathname)) continue;
+      if (!['http:', 'https:'].includes(url.protocol) || url.host !== 'ziontechgroup.com') {
+        continue;
+      }
+      if (!/^\/(?:pt\/|es\/|fr\/|de\/)?apps(?:\/|$)/.test(url.pathname)) {
+        continue;
+      }
       check(url.pathname, catalog);
     }
   }
   // The released guides and homepages also link these families. A catalog-only
   // scan would miss their disappearance, so retain the complete staging contract.
-  for (const route of requiredRoutes) check('/' + route.path, 'Required guide');
+  for (const route of requiredRoutes) {
+    check('/' + route.path, 'Required guide');
+  }
   assert.equal(missing.length, 0, 'Missing catalog app routes in final Pages artifact:\n' + missing.join('\n'));
   return {catalogs: catalogs.length, routes: checked.size};
 }
