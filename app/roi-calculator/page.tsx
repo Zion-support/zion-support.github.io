@@ -98,7 +98,7 @@ export default function ROICalculatorPage() {
   });
 
   const results = useMemo<ROIResult | null>(() => {
-    if (!showResults) return null;
+    if (!showResults) { return null; }
     return calculateROI(formData);
   }, [showResults, formData]);
 
@@ -580,18 +580,18 @@ function calculateROI(data: CompanyData): ROIResult {
   // Calculate monthly savings based on pain points
   let monthlySavings = 0;
   data.painPoints.forEach(point => {
-    if (point.includes('email')) monthlySavings += 2500 * employeeMultiplier;
-    if (point.includes('response times')) monthlySavings += 3500 * employeeMultiplier;
-    if (point.includes('support ticket')) monthlySavings += 4000 * employeeMultiplier;
-    if (point.includes('sales opportunities')) monthlySavings += 5000 * baseMultiplier;
-    if (point.includes('workflows')) monthlySavings += 3000 * employeeMultiplier;
-    if (point.includes('security')) monthlySavings += 4500 * baseMultiplier;
-    if (point.includes('retention')) monthlySavings += 6000 * baseMultiplier;
-    if (point.includes('analytics')) monthlySavings += 2000 * employeeMultiplier;
-    if (point.includes('scalability')) monthlySavings += 3500 * baseMultiplier;
-    if (point.includes('operational costs')) monthlySavings += 5500 * baseMultiplier;
-    if (point.includes('compliance')) monthlySavings += 4000 * baseMultiplier;
-    if (point.includes('automation')) monthlySavings += 3000 * employeeMultiplier;
+    if (point.includes('email')) { monthlySavings += 2500 * employeeMultiplier; }
+    if (point.includes('response times')) { monthlySavings += 3500 * employeeMultiplier; }
+    if (point.includes('support ticket')) { monthlySavings += 4000 * employeeMultiplier; }
+    if (point.includes('sales opportunities')) { monthlySavings += 5000 * baseMultiplier; }
+    if (point.includes('workflows')) { monthlySavings += 3000 * employeeMultiplier; }
+    if (point.includes('security')) { monthlySavings += 4500 * baseMultiplier; }
+    if (point.includes('retention')) { monthlySavings += 6000 * baseMultiplier; }
+    if (point.includes('analytics')) { monthlySavings += 2000 * employeeMultiplier; }
+    if (point.includes('scalability')) { monthlySavings += 3500 * baseMultiplier; }
+    if (point.includes('operational costs')) { monthlySavings += 5500 * baseMultiplier; }
+    if (point.includes('compliance')) { monthlySavings += 4000 * baseMultiplier; }
+    if (point.includes('automation')) { monthlySavings += 3000 * employeeMultiplier; }
   });
 
   const annualSavings = monthlySavings * 12;
@@ -603,8 +603,8 @@ function calculateROI(data: CompanyData): ROIResult {
   
   // Risk score based on number of pain points and current tools
   let riskScore = Math.min(100, data.painPoints.length * 8);
-  if (data.currentTools.includes('None/Manual')) riskScore += 20;
-  if (data.currentTools.includes('Spreadsheets')) riskScore += 10;
+  if (data.currentTools.includes('None/Manual')) { riskScore += 20; }
+  if (data.currentTools.includes('Spreadsheets')) { riskScore += 10; }
   riskScore = Math.min(100, riskScore);
 
   // Generate recommendations based on pain points
