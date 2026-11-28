@@ -33,3 +33,11 @@ jobs:
     uses: ./.github/workflows/ai-production-deploy-validation.yml
     with:
       source_sha: ${{ needs.deploy.outputs.source_sha }}
+  drift:
+    needs: deploy
+    if: ${{ github.ref == 'refs/heads/main' && needs.deploy.result == 'success' && needs.deploy.outputs.source_sha == github.sha }}
+    permissions:
+      contents: read
+    uses: ./.github/workflows/canonical-pages-drift-receipt.yml
+    with:
+      source_sha: ${{ needs.deploy.outputs.source_sha }}

@@ -5,6 +5,9 @@ on:
     paths:
       - '.github/workflows/**'
       - 'tests/publication/**'
+      - 'tests/ci/test_canonical_drift_confidence_gate.cjs'
+      - 'tests/ci/test_canonical_pages_drift.py'
+      - 'scripts/ci/canonical-pages-drift.py'
       - 'scripts/assert-no-private-ops.py'
       - 'scripts/export-public-pages.py'
       - 'scripts/prepare-pages-out.sh'
@@ -52,3 +55,7 @@ jobs:
           python3 -I -m unittest discover -s tests/publication -p 'test_*.py' -v
           python3 -I scripts/test-private-ops-guard.py -v
           python3 -I scripts/test-public-pages-export.py -v
+      - name: Canonical Pages drift receipt fixtures (offline)
+        run: |
+          node --test tests/ci/test_canonical_drift_confidence_gate.cjs
+          python3 -I -m unittest discover -s tests/ci -p 'test_canonical_pages_drift.py' -v

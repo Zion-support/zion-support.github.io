@@ -1,0 +1,54 @@
+name: Canonical Pages deployed-source drift receipt
+
+"on":
+  workflow_call:
+    inputs:
+      source_sha:
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    # Same-run evidence: no secondary event, secret, Pages grant or issue access.
+    if: ${{ github.ref == 'refs/heads/main' && inputs.source_sha == github.sha }}
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SOURCE_SHA: ${{ inputs.source_sha }}
+    steps:
+      - name: Download the exact uploaded Pages archive
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: canonical-pages-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/canonical-drift-source
+      - name: Compare published Pages bytes
+        id: drift_check
+        # Recording a known comparison failure must not hide the actual deploy.
+        # The confidence gate independently requires the explicit PASS step.
+        continue-on-error: true
+        env:
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ && "$SOURCE_SHA" = "$GITHUB_SHA" ]]
+          tmp="$(mktemp -d)"
+          git -C "$tmp" init --quiet
+          git -C "$tmp" -c credential.helper= fetch --no-tags --depth=1 https://github.com/Zion-support/zion-support.github.io.git "$SOURCE_SHA"
+          test "$(git -C "$tmp" rev-parse FETCH_HEAD)" = "$SOURCE_SHA"
+          git -C "$tmp" show "$SOURCE_SHA:scripts/ci/canonical-pages-drift.py" > "$RUNNER_TEMP/canonical-pages-drift.py"
+          python3 "$RUNNER_TEMP/canonical-pages-drift.py" "$RUNNER_TEMP/canonical-drift-source/artifact.tar" "$RUNNER_TEMP/canonical-drift-report.json"
+      - name: Upload immutable deployment drift receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: canonical-drift-${{ github.run_id }}-${{ github.run_attempt }}-${{ env.SOURCE_SHA }}
+          path: ${{ runner.temp }}/canonical-drift-report.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Record verified canonical drift PASS
+        if: ${{ steps.drift_check.outcome == 'success' }}
+        run: echo 'Exact deployed artifact, run ID, attempt and source SHA verified by drift audit.'
