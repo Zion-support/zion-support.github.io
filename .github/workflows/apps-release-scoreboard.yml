@@ -45,16 +45,24 @@ jobs:
             raw=subprocess.check_output(['gh','api',path],text=True)
             return json.loads(raw)
 
+          def is_informational(run, file_name):
+            conclusion=run.get('conclusion')
+            return conclusion=='cancelled' or (
+              file_name=='apps-production-content-canary.yml'
+              and run.get('event')=='workflow_run'
+              and conclusion=='skipped'
+            )
+
           rows=[]
           hard_failures=[]
           for label,file_name,critical in workflows:
             data=api(f'repos/{repo}/actions/workflows/{file_name}/runs?branch=main&per_page=10')
             runs=data.get('workflow_runs',[])
             chosen=None
-            # Prefer newest non-cancelled run. Cancellation is often concurrency cleanup,
-            # so do not treat it as health evidence when a newer/older usable run exists.
+            # Prefer the latest check that ran or is pending. The production canary
+            # deliberately skips workflow_run events for unsuccessful deployments.
             for run in runs:
-              if run.get('conclusion')!='cancelled':
+              if not is_informational(run, file_name):
                 chosen=run
                 break
             if chosen is None and runs:
@@ -74,7 +82,7 @@ jobs:
                 state='pending'
               elif conclusion=='success':
                 state='green'
-              elif conclusion=='cancelled':
+              elif is_informational(chosen, file_name):
                 state='unknown'
               else:
                 state='red'
@@ -95,7 +103,7 @@ jobs:
             'signals':rows,
             'critical_terminal_failures':len(hard_failures),
             'overall':'red' if hard_failures else 'no-terminal-failure',
-            'policy_note':'queued/in_progress, cancelled and first-run-missing are not treated as release failures',
+            'policy_note':'queued/in_progress, cancelled, first-run-missing and skipped deployment-triggered production canaries are informational',
           }
           out=Path('automation/reports/apps-release-scoreboard.json')
           out.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
