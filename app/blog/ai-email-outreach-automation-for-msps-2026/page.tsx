@@ -21,12 +21,13 @@ export default function AIEmailOutreachAutomationForMSPs() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       <ArticleStructuredData
-        title="AI Email Outreach Automation for MSPs"
+        headline="AI Email Outreach Automation for MSPs"
         description="AI email outreach automation for MSPs and IT services companies. Generate leads, nurture prospects, and win clients with intelligent email sequences and CRM enrichment."
-        url="https://ziontechgroup.com/blog/ai-email-outreach-automation-for-msps-2026"
+        slug="ai-email-outreach-automation-for-msps-2026"
         datePublished="2026-07-07"
-        authorName="Kleber Garcia Alcatrão"
-        publisherName="Zion Tech Group"
+        author="Kleber Garcia Alcatrão"
+        authorType="Person"
+        publisher="Zion Tech Group"
       />
       <SiteBreadcrumbs
         items={[

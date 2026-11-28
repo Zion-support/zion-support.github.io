@@ -13,10 +13,10 @@ export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
       <ArticleStructuredData
-        title="AI-Human Handoff Playbook for Support Teams 2026"
+        headline="AI-Human Handoff Playbook for Support Teams 2026"
         description="Practical AI-human handoff playbook for support teams and MSPs in 2026. Reduce response time while keeping accountability with automation plus live escalation."
-        canonical="https://ziontechgroup.com/blog/ai-human-handoff-playbook-for-support-teams-2026"
-        publishDate="2026-07-08"
+        slug="ai-human-handoff-playbook-for-support-teams-2026"
+        datePublished="2026-07-08"
       />
       <SiteBreadcrumbs
         items={[

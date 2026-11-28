@@ -35,7 +35,7 @@ function getTranslation(app: AppsNetworkApp, locale: string) {
 
 export default function Page({ searchParams }: { searchParams: { lang?: string } }) {
   const locale = (searchParams?.lang && LOCALES.includes(searchParams.lang)) ? searchParams.lang : 'en';
-  const app = appsNetworkBySlug('logistics-ai-suite');
+  const app = appsNetworkBySlug['logistics-ai-suite'];
   const { name, description } = getTranslation(app, locale);
   const related = relatedApps('logistics-ai-suite', 5);
 

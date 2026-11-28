@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 
 interface Service {
   id: string;

@@ -5,7 +5,7 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import { Rocket, Brain, Automation, DollarSign, Clock, TrendingUp, Zap, Users } from 'lucide-react';
+import { Rocket, Brain, Workflow as Automation, DollarSign, Clock, TrendingUp, Zap, Users } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Automation for Startups | Reduce Costs & Accelerate Growth | Zion Tech Group',

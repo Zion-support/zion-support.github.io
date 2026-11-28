@@ -1,8 +1,2 @@
-declare module 'next' {
-  export const Fragment: unique symbol;
-  export type ReactNode = unknown;
-}
-declare module 'react/jsx-runtime' {
-  export const Fragment: unique symbol;
-  export const jsx: any;
-}
+// Framework types come from Next.js and React; do not shadow their modules.
+export {};

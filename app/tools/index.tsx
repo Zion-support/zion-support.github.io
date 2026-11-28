@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import GeoAnswer from '@/components/GeoAnswer';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Tools — Free Developer Utilities & AI Tools',

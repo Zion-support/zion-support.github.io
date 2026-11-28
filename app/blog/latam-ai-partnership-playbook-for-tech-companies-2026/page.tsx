@@ -13,10 +13,10 @@ export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
       <ArticleStructuredData
-        title="Latam AI Partnership Playbook"
+        headline="Latam AI Partnership Playbook"
         description="A practical guide for building AI partnerships in LATAM."
-        canonical="https://ziontechgroup.com/blog/latam-ai-partnership-playbook-for-tech-companies-2026"
-        publishDate="2026-07-07"
+        slug="latam-ai-partnership-playbook-for-tech-companies-2026"
+        datePublished="2026-07-07"
       />
       <SiteBreadcrumbs
         items={[
