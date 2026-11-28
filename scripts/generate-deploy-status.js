@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { fileURLToPath } from 'url';
+import { format } from 'node:util';
 
 const dir = 'automation/reports';
 const file = join(dir, 'deploy-status-latest.json');
@@ -12,8 +12,8 @@ const data = {
   source: process.env.DEPLOY_STATUS_SOURCE || 'unknown',
   timestamp: new Date().toISOString(),
   commit: process.env.GITHUB_SHA || 'unknown',
-  run_id: process.env.GITHUB_RUN_ID || 'unknown',
+  'run_id': process.env.GITHUB_RUN_ID || 'unknown',
 };
 
 writeFileSync(file, JSON.stringify(data, null, 2));
-console.log('✅ Deploy status written:', data);
+process.stdout.write(`${format('✅ Deploy status written:', data)}\n`);
