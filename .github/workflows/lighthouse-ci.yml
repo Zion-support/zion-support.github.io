@@ -52,19 +52,18 @@ jobs:
         run: |
           set -euo pipefail
           npm run rsc:guard
-          if npm run build; then
-            echo "Next.js build succeeded"
+          if npm run build && [ -s out/index.html ]; then
+            echo "Auditing the Next.js static export."
           else
-            echo "::warning::Next.js build failed (heap OOM on 90k+ file tree); falling back to auditing the static site from the repository root (same content GitHub Pages serves)."
-            rm -rf out
+            echo "::warning::Next.js did not produce a usable static export. Preparing the GitHub Pages artifact for this audit."
+            bash scripts/prepare-pages-out.sh
+            test -s out/index.html
           fi
 
       - name: Serve and audit
         shell: bash
         run: |
           set -euo pipefail
-          site_dir=.
-          if [ -d out ]; then site_dir=out; fi
           if ! chrome=$(command -v google-chrome || command -v chromium); then
             echo "::error::Lighthouse requires google-chrome or chromium on PATH." >&2
             exit 1
@@ -88,7 +87,7 @@ jobs:
           }
           trap cleanup EXIT
 
-          python3 -m http.server 3000 --bind 127.0.0.1 --directory "$site_dir" > "$run_dir/server.log" 2>&1 &
+          python3 -m http.server 3000 --bind 127.0.0.1 --directory out > "$run_dir/server.log" 2>&1 &
           server_pid=$!
           "$chrome" --headless --no-sandbox --disable-dev-shm-usage \
             --remote-debugging-port=0 --user-data-dir="$run_dir/profile" \
