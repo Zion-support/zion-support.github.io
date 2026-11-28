@@ -28,10 +28,12 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
-        node-version: '20'
+        node-version: '22'
         cache: npm
     - name: Install dependencies
       run: npm ci
+    - name: Test autonomous lint configuration and reporting
+      run: node --test tests/ci/test_autonomous_eslint.cjs tests/ci/test_eslint_report_summary.cjs tests/ci/test_custom_eslint_workflow.cjs
     - name: Run Autonomous ESLint
       id: eslint
       continue-on-error: true
@@ -78,46 +80,17 @@ jobs:
       with:
         script: |
           const fs = require('node:fs');
-          const path = require('node:path');
+          const { summarize } = require('./scripts/checks/eslint-report-summary.cjs');
           const code = process.env.ESLINT_EXIT_CODE;
           const run = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
           const sections = [];
-          if (code === '1') {
-            try {
-              const files = JSON.parse(fs.readFileSync('/tmp/eslint-report.json', 'utf8'));
-              if (!Array.isArray(files)) throw new Error('Expected an ESLint file list');
-              const details = [];
-              let errors = 0;
-              let warnings = 0;
-              function oneLine(value) {
-                return String(value).replace(/[\r\n\t]+/g, ' ').replace(/`/g, "'").replace(/@/g, '@\u200b').slice(0, 180);
-              }
-              for (const file of files) {
-                if (typeof file.filePath !== 'string' || !Array.isArray(file.messages)) {
-                  throw new Error('Invalid ESLint file result');
-                }
-                for (const message of file.messages) {
-                  if (message.severity !== 1 && message.severity !== 2) continue;
-                  if (message.severity === 2) errors++;
-                  else warnings++;
-                  if (details.length < 25) {
-                    const location = oneLine(path.relative(process.env.GITHUB_WORKSPACE, file.filePath));
-                    const rule = oneLine(message.ruleId || (message.fatal ? 'fatal' : 'lint'));
-                    details.push(`- \`${location}:${Number(message.line) || 0}:${Number(message.column) || 0}\` ${message.severity === 2 ? 'error' : 'warning'} \`${rule}\` — \`${oneLine(message.message)}\``);
-                  }
-                }
-              }
-              if (errors + warnings === 0) throw new Error('No diagnostics for exit 1');
-              sections.push(`ESLint reported **${errors} ${errors === 1 ? 'error' : 'errors'}** and **${warnings} ${warnings === 1 ? 'warning' : 'warnings'}**. The workflow allows zero warnings.`);
-              sections.push(details.join('\n'));
-              if (errors + warnings > details.length) sections.push('The artifact contains the remaining diagnostics.');
-            } catch {
-              sections.push('ESLint exited with code 1, but its JSON report was unavailable or invalid. See the lint step.');
-            }
-          } else if (code === '0') {
+          if (code === '0') {
             sections.push('ESLint exited successfully. A different workflow step failed.');
           } else {
-            sections.push(code ? `ESLint could not complete (exit ${code}). See the lint step for the configuration or execution error.` : 'The lint step did not return an exit code. Check setup and execution logs.');
+            let report = '';
+            try { report = fs.readFileSync('/tmp/eslint-report.json', 'utf8'); }
+            catch {}
+            sections.push(summarize(report, code));
           }
           sections.push(`[Workflow run](${run}) · Commit \`${context.sha}\``);
           const body = sections.join('\n\n');

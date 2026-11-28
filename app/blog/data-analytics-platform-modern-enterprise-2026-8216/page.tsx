@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import JsonLd from '@/components/JsonLd';
 import PageShell from '@/components/PageShell';
 
 export const metadata = {
@@ -10,17 +9,38 @@ export const metadata = {
   twitter: { card: 'summary_large_image', title: 'Data Analytics Platform', description: 'Practical guide to data analytics platform.' }
 };
 
+function serializeBlogPosting(headline: string, description: string, canonicalUrl: string) {
+  const author = Object.fromEntries([
+    ['@type', 'Organization'],
+    ['name', 'Zion Tech Group'],
+  ]);
+  const publisher = Object.fromEntries([
+    ['@type', 'Organization'],
+    ['name', 'Zion Tech Group'],
+    ['url', 'https://ziontechgroup.com'],
+  ]);
+  const data = Object.fromEntries([
+    ['@context', 'https://schema.org'],
+    ['@type', 'BlogPosting'],
+    ['headline', headline],
+    ['description', description],
+    ['author', author],
+    ['publisher', publisher],
+    ['mainEntityOfPage', canonicalUrl],
+  ]);
+  return JSON.stringify(data).replace(/</g, '\\u003c');
+}
+
 export default function Page() {
   return (
-    <PageShell title="Data Analytics Platform" description="Practical guide to data analytics platform: frameworks, metrics, and rollout playbook." canonical="https://ziontechgroup.com/blog/data-analytics-platform-modern-enterprise-2026-8216/" jsonLd={{
-      '@context':'https://schema.org',
-      '@type':'BlogPosting',
-      headline: 'Data Analytics Platform',
-      description: 'Practical guide to data analytics platform: frameworks, metrics, and rollout playbook.',
-      author: { '@type':'Organization', name: 'Zion Tech Group' },
-      publisher: { '@type':'Organization', name: 'Zion Tech Group', url: 'https://ziontechgroup.com' },
-      mainEntityOfPage: 'https://ziontechgroup.com/blog/data-analytics-platform-modern-enterprise-2026-8216/'
-    }}>
+    <PageShell title="Data Analytics Platform" description="Practical guide to data analytics platform: frameworks, metrics, and rollout playbook." canonical="https://ziontechgroup.com/blog/data-analytics-platform-modern-enterprise-2026-8216/">
+      <script type="application/ld+json">
+        {serializeBlogPosting(
+          'Data Analytics Platform',
+          'Practical guide to data analytics platform: frameworks, metrics, and rollout playbook.',
+          'https://ziontechgroup.com/blog/data-analytics-platform-modern-enterprise-2026-8216/',
+        )}
+      </script>
       <article className="max-w-3xl mx-auto space-y-6 text-slate-300">
         <p>Data Analytics Platform is moving from experiment to operating layer. Most programs fail because they optimize for demos instead of outcomes.</p>
         <h2>What works</h2>
