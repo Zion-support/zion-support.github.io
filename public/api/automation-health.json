@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-11-28T07:41:38.135Z",
-  "status": "ok",
-  "severity": "nominal",
+  "timestamp": "2026-11-28T19:58:29.676Z",
+  "status": "degraded",
+  "severity": "critical",
   "scope": "Live production route sample and latest completed Simple Static Deploy. The full Next.js application build is not measured by this snapshot.",
   "checks": {
     "pages": true,
-    "deploy": true,
+    "deploy": false,
     "build": null
   },
   "deployment": {
-    "url": "https://github.com/Zion-support/zion-support.github.io/actions/runs/46068715450",
-    "conclusion": "success",
-    "headSha": "7f82185d4e0a99a0d21c65253ff681bb1954ae8f",
-    "completedAt": "2026-11-27T21:17:39Z"
+    "url": "https://github.com/Zion-support/zion-support.github.io/actions/runs/46180613389",
+    "conclusion": "cancelled",
+    "headSha": "79b3ef9fd1e543fa7f90d983ae0882505f012c2a",
+    "completedAt": "2026-11-28T19:27:02Z"
   },
   "routes": [
     {
