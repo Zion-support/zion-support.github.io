@@ -4,13 +4,14 @@
  *
  * Single source of truth: app/data/appsNetwork.ts (deduplicated, fully
  * translated). This script emits:
- *   - the Apps Network hub in every available language
- *     (public/apps-network/index.html + public/<lang>/apps-network/index.html)
+ *   - the localized hubs from the published English hub's card destinations
+ *     (public/<lang>/apps-network/index.html)
  *   - one consistent, interlinked app page per app per language, filling any
  *     language that is still missing (existing rich pages are never overwritten)
  *   - public/apps-network-sitemap.xml covering every emitted URL
  *
  *   node --experimental-strip-types scripts/generate-apps-network-i18n.mjs
+ *   Add --hubs-only to leave app pages and the sitemap untouched.
  *
  * Idempotent and offline. public/ is the source of truth for GitHub Pages
  * (scripts/prepare-pages-out.sh copies it verbatim into the Pages artifact).
@@ -131,6 +132,27 @@ footer a{color:var(--muted)}
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const bySlug = Object.fromEntries(appsNetworkCatalog.map((a) => [a.slug, a]));
 const GROUP_ORDER = ['money', 'ops', 'govern', 'work', 'ai', 'field', 'hub'];
+const ENGLISH_FALLBACK = {
+  pt: 'Pág. em inglês',
+  es: 'Página en inglés',
+  fr: 'Page en anglais',
+  de: 'Seite auf Englisch',
+};
+
+// The English generator decides which catalog entries are published. Its
+// checked-in output also records routes served outside the static build tree.
+const englishHub = fs.readFileSync(path.join(PUBLIC, 'apps-network', 'index.html'), 'utf8');
+const catalogByHref = new Map(appsNetworkCatalog.map((app) => [app.href, app]));
+const englishHrefs = new Set(Array.from(englishHub.matchAll(/<h3><a href="([^"]+)"/g), ([, href]) => href));
+if (englishHrefs.size === 0) {
+  throw new Error('No published app cards found in the English Apps Network hub');
+}
+const publishedApps = Array.from(englishHrefs, (href) => {
+  const app = catalogByHref.get(href);
+  if (!app) throw new Error('Published app missing from the shared catalog: ' + href);
+  return app;
+});
+const publishedSlugs = new Set(publishedApps.map((app) => app.slug));
 
 function nameOf(app, lang) {
   return app[`name${lang === 'en' ? '' : lang.charAt(0).toUpperCase() + lang.slice(1)}`] || app.name;
@@ -146,7 +168,7 @@ function hrefFor(lang, href) {
   const rel = href.replace(/^\//, '').replace(/\/$/, '');
   return lang.code === 'en' ? `/${rel}/` : `/${lang.prefix}${rel}/`;
 }
-function relatedFor(app, lang, limit = 4) {
+function relatedFor(app, lang, limit = 4, hubTargets) {
   const out = [];
   for (const slug of app.related) {
     if (out.length >= limit) break;
@@ -154,7 +176,14 @@ function relatedFor(app, lang, limit = 4) {
     const target = bySlug[slug];
     if (!target) continue;
     if (out.some((r) => r.slug === slug)) continue;
-    out.push({ slug, name: nameOf(target, lang.code), href: hrefFor(lang, target.href) });
+    const hubTarget = hubTargets?.get(slug);
+    if (hubTargets && !hubTarget) continue;
+    out.push({
+      slug,
+      name: nameOf(target, lang.code),
+      href: hubTarget?.href ?? hrefFor(lang, target.href),
+      englishFallback: hubTarget?.englishFallback ?? false,
+    });
   }
   return out;
 }
@@ -174,18 +203,29 @@ function write(filePath, contents) {
   fs.writeFileSync(filePath, contents, 'utf8');
 }
 
-const totalRelated = appsNetworkCatalog.reduce((n, a) => n + relatedFor(a, LANGS[0]).length, 0);
-
-/* ── Hub, one per language ─────────────────────────────────────────────── */
-for (const lang of LANGS) {
+/* ── Localized hubs ─────────────────────────────────────────────────────── */
+const localizedLanguages = LANGS.filter((lang) => lang.code !== 'en');
+for (const lang of localizedLanguages) {
   const t = T[lang.code];
+  const targets = new Map(publishedApps.map((app) => {
+    const localizedHref = hrefFor(lang, app.href);
+    const englishFallback = !fs.existsSync(path.join(PUBLIC, localizedHref.slice(1), 'index.html'));
+    return [app.slug, { href: englishFallback ? app.href : localizedHref, englishFallback }];
+  }));
+  const related = new Map(publishedApps.map((app) => [app.slug, relatedFor(app, lang, 4, targets)]));
+  const totalRelated = Array.from(related.values()).reduce((total, links) => total + links.length, 0);
+  function hubLink(target, name) {
+    const label = target.englishFallback ? ' <small>(' + esc(ENGLISH_FALLBACK[lang.code]) + ')</small>' : '';
+    const attrs = target.englishFallback ? ' hreflang="en"' : '';
+    return '<a href="' + esc(target.href) + '"' + attrs + '>' + esc(name) + label + '</a>';
+  }
   const groups = GROUP_ORDER.map((g) => {
-    const items = appsNetworkCatalog.filter((a) => a.group === g);
+    const items = publishedApps.filter((a) => a.group === g);
     if (!items.length) return '';
     const cards = items.map((app) => {
-      const rel = relatedFor(app, lang, 4).map((r) => `<a href="${r.href}">${esc(r.name)}</a>`).join('');
+      const rel = related.get(app.slug).map((r) => hubLink(r, r.name)).join('');
       return `<div class="card">
-  <h3><a href="${hrefFor(lang, app.href)}">${esc(nameOf(app, lang.code))}</a></h3>
+  <h3>${hubLink(targets.get(app.slug), nameOf(app, lang.code))}</h3>
   <p>${esc(descOf(app, lang.code))}</p>
   ${rel ? `<div class="rel">${rel}</div>` : ''}
 </div>`;
@@ -205,20 +245,27 @@ ${cards}
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zion Apps Network — ${appsNetworkCatalog.length} ${esc(t.statApps)} · Zion Tech Group</title>
+<title>Zion Apps Network — ${publishedApps.length} ${esc(t.statApps)} · Zion Tech Group</title>
 <meta name="description" content="${esc(t.hubDescription || 'Zion Apps Network: interlinked AI, FinOps, security, operations and field-service apps. Free to try, no credit card.')}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${canonical}">
-${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefix ? pageUrl(l, '/apps-network/') : SITE}/apps-network/">`).join('\n')}
-  <link rel="alternate" hreflang="x-default" href="${SITE}/apps-network/">
+${hreflangBlock('/apps-network/')}
 <script type="application/ld+json">${JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Zion Apps Network',
   url: canonical,
   inLanguage: lang.htmlLang,
-  numberOfItems: appsNetworkCatalog.length,
-  hasPart: appsNetworkCatalog.map((a) => ({ '@type': 'SoftwareApplication', name: a.name, url: `${SITE}${a.href}` })),
+  numberOfItems: publishedApps.length,
+  hasPart: publishedApps.map((app) => {
+    const target = targets.get(app.slug);
+    return {
+      '@type': 'SoftwareApplication',
+      name: nameOf(app, lang.code),
+      url: SITE + target.href,
+      inLanguage: target.englishFallback ? 'en' : lang.htmlLang,
+    };
+  }),
 })}</script>
 <style>${css}</style>
 </head>
@@ -240,7 +287,7 @@ ${LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${l.prefi
         <a class="btn alt" href="${lang.prefix ? `/${lang.prefix}` : ''}/apps/">${esc(t.allApps)}</a>
       </div>
       <div class="stats">
-        <div class="stat"><b>${appsNetworkCatalog.length}</b><span>${esc(t.statApps)}</span></div>
+        <div class="stat"><b>${publishedApps.length}</b><span>${esc(t.statApps)}</span></div>
         <div class="stat"><b>${totalRelated}</b><span>${esc(t.statLinks)}</span></div>
         <div class="stat"><b>${GROUP_ORDER.length}</b><span>${esc(t.statCategories)}</span></div>
         <div class="stat"><b>5</b><span>${esc(t.statLanguages)}</span></div>
@@ -270,6 +317,11 @@ ${groups}
   write(out, html);
 }
 
+if (process.argv.includes('--hubs-only')) {
+  console.log('Generated ' + localizedLanguages.length + ' localized hubs');
+  process.exit(0);
+}
+
 /* ── App pages, filling any missing language ───────────────────────────── */
 let writtenPages = 0;
 let skippedPages = 0;
@@ -277,7 +329,9 @@ for (const app of appsNetworkCatalog) {
   for (const lang of LANGS) {
     const rel = path.join(lang.prefix, app.href.replace(/^\//, '').replace(/\/$/, ''), 'index.html');
     const out = path.join(PUBLIC, rel);
-    if (fs.existsSync(out)) { skippedPages++; continue; }
+    // Missing translations for published apps use the English destination.
+    // Only an authored page should replace that fallback.
+    if (fs.existsSync(out) || publishedSlugs.has(app.slug)) { skippedPages++; continue; }
     const t = T[lang.code];
     const copy = GROUP_COPY[app.group][lang.code];
     const related = relatedFor(app, lang, 6);
@@ -393,11 +447,14 @@ ${relatedCards}
 const urls = [];
 for (const app of appsNetworkCatalog) {
   for (const lang of LANGS) {
+    const href = hrefFor(lang, app.href);
+    if (lang.code !== 'en' && publishedSlugs.has(app.slug) &&
+        !fs.existsSync(path.join(PUBLIC, href.slice(1), 'index.html'))) continue;
     urls.push(`  <url><loc>${pageUrl(lang, app.href)}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
   }
 }
 for (const lang of LANGS) {
-  urls.push(`  <url><loc>${lang.prefix ? `${SITE}/${lang.prefix}` : SITE}/apps-network/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
+  urls.push(`  <url><loc>${pageUrl(lang, '/apps-network/')}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
 }
 write(
   path.join(PUBLIC, 'apps-network-sitemap.xml'),
