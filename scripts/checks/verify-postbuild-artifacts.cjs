@@ -32,4 +32,4 @@ if (!robotsContent.includes(sitemapRef)) {
   process.exit(1);
 }
 
-console.log(`postbuild artifacts ok files=${REQUIRED.length}`);
+process.stdout.write(`postbuild artifacts ok files=${REQUIRED.length}\n`);

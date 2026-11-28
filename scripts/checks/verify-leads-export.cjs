@@ -5,9 +5,7 @@ const repo = process.cwd();
 const outDir = path.join(repo, 'out');
 const statePath = path.join(repo, 'automation/reports/leads-verification-state.json');
 
-function safeName(name) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
+const ROUTE_ISSUE_LIMIT = 50;
 
 function checkRouteFiles() {
   try {
@@ -20,7 +18,7 @@ function checkRouteFiles() {
         unexported.push(name);
       }
     }
-    return { total: entries.length, unexported: Array.from(new Set(unexported)).slice(0, 50) };
+    return { total: entries.length, unexported: Array.from(new Set(unexported)).slice(0, ROUTE_ISSUE_LIMIT) };
   } catch (err) {
     return { total: 0, unexported: [err.message] };
   }
@@ -36,5 +34,4 @@ const state = {
 };
 fs.mkdirSync(path.dirname(statePath), { recursive: true });
 fs.writeFileSync(statePath, JSON.stringify(state, null, 2));
-console.log(JSON.stringify(state, null, 2));
-process.exit(0);
+process.stdout.write(`${JSON.stringify(state, null, 2)}\n`);
