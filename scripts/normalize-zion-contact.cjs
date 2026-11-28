@@ -42,7 +42,7 @@ function normalize(text, format = 'text') {
   result = result.replace(/<a\b[^>]*>/gi, tag => tag.replace(/(\bhref\s*=\s*)(["'])([^"']*)\2/gi, (all, prefix, quote, url) => prefix + quote + contactUrl(url) + quote));
   // Only visible text, never attributes such as a customer's input placeholder.
   result = result.replace(/(^|>)([^<]+)(?=<|$)/g, (all, prefix, body) => prefix + display(body));
-  return result.replace(/<!--ZION_CONTACT_PROTECTED_(\d+)-->/g, (_, index) => protectedBlocks[Number(index)]);
+  return result.replace(/<!--ZION_CONTACT_PROTECTED_(\d+)-->/g, (match, index) => protectedBlocks[Number(index)]);
 }
 function run(root) {
   const absolute = path.resolve(root);
@@ -81,5 +81,5 @@ if (require.main === module) {
   if (process.argv.length !== 3) {
     throw new Error('Usage: node scripts/normalize-zion-contact.cjs <artifact-directory>');
   }
-  console.log('Zion contact verification: ' + JSON.stringify(run(process.argv[2])));
+  process.stdout.write(`Zion contact verification: ${JSON.stringify(run(process.argv[2]))}\n`);
 }
