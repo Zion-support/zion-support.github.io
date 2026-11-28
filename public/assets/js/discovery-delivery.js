@@ -23,9 +23,9 @@ const RECOMMENDATION_KINDS={
 function recommendationKind(path){
  const language=(document.documentElement?.lang||'en').slice(0,2);
  const kinds=RECOMMENDATION_KINDS[language]||RECOMMENDATION_KINDS.en;
- if(['/automation-pilot-planner/','/apps/discovery-report-workbench.html'].includes(path)) return kinds[0];
- if(['/sla-calculator/','/roi-calc/','/finops-estimator/'].includes(path)) return kinds[1];
- if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) return kinds[2];
+ if(['/automation-pilot-planner/','/apps/discovery-report-workbench.html'].includes(path)) { return kinds[0]; }
+ if(['/sla-calculator/','/roi-calc/','/finops-estimator/'].includes(path)) { return kinds[1]; }
+ if(path==='/apps/'||path==='/apps/network.html'||path.includes('checklist')||path.includes('assessment')) { return kinds[2]; }
  return kinds[3];
 }
 const COPY={
@@ -50,15 +50,17 @@ const uncertainDeliveryCopy={
 function cleanAnswer(value,limit){return String(value||'').replace(/[\u0000-\u001f\u007f]/g,' ').trim().slice(0,limit);}
 function publicPageUrl(value,originOnly=false){try{const u=new URL(value);return /^https?:$/.test(u.protocol)?u.origin+(originOnly?'':u.pathname):'';}catch{return '';}}
 document.getElementById('dform').addEventListener('submit',async function(e){
- e.preventDefault();if(discoveryPending)return;
+ e.preventDefault();if(discoveryPending) { return; }
  const form=e.target,errors=document.getElementById('form-errors');errors.hidden=true;
- if(!form.reportValidity())return;
+ if(!form.reportValidity()) { return; }
  const raw=Object.fromEntries(new FormData(form).entries());
- if(raw._honey)return;
+ if(raw._honey) { return; }
  const f={name:cleanAnswer(raw.name,120),email:String(raw.email||'').trim(),company:cleanAnswer(raw.company,200),industry:cleanAnswer(raw.industry,120),process:cleanAnswer(raw.process,120),hours:cleanAnswer(raw.hours,30),systems:cleanAnswer(raw.systems,500),goal:cleanAnswer(raw.goal,1500),timeline:cleanAnswer(raw.timeline,40)};
  if(!f.name||f.email.length>254||!/^[^\s@,;<>"\\]+@[^\s@,;<>"\\]+\.[^\s@,;<>"\\]+$/.test(f.email)||!Object.hasOwn(APPMAP,f.process)||!Object.hasOwn(HOURVAL,f.hours)){errors.textContent=t.invalid;errors.hidden=false;return;}
  const qp=new URLSearchParams(location.search),attribution={};
- for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'])attribution[key]=cleanAnswer(qp.get(key),120);
+ for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']) {
+  attribution[key]=cleanAnswer(qp.get(key),120);
+ }
  attribution.source_url=publicPageUrl(location.href);attribution.referrer=publicPageUrl(document.referrer,true);
  const hrs=HOURVAL[f.hours],score=Math.min(100,Math.round(hrs/3)+(f.timeline==='Immediately'?30:f.timeline==='This quarter'?20:10)+(f.systems?10:0)+(f.goal?10:0));
  const savings=(hrs*45*0.4).toLocaleString(locale==='pt'?'pt-BR':locale,{style:'currency',currency:'USD',maximumFractionDigits:0});
@@ -86,11 +88,11 @@ document.getElementById('dform').addEventListener('submit',async function(e){
  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),15000);
  try{
   const r=await fetch('https://formsubmit.co/ajax/commercial@ziontechgroup.com',{method:'POST',signal:controller.signal,headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Free Discovery result — '+f.name,_cc:cc,_replyto:f.email,_captcha:'false',_template:'box',name:f.name,email:f.email,company:f.company||'—',industry:f.industry,score,...attribution,event:'discovery_submit',report_version:'2026-10-08-client-commercial',language:locale,message:summary})});
-  let j;try{j=await r.json();}catch(err){if(err.name!=='SyntaxError')throw err;uncertainReports.add(fingerprint);status.textContent=t.failed;return;}
-  if(r.ok&&(j.success===true||j.success==='true')){acceptedReports.add(fingerprint);status.textContent=t.accepted;}else{if(j.success!==false&&j.success!=='false')uncertainReports.add(fingerprint);status.textContent=t.failed;}
+  let j;try{j=await r.json();}catch(err){if(err.name!=='SyntaxError') { throw err; }uncertainReports.add(fingerprint);status.textContent=t.failed;return;}
+  if(r.ok&&(j.success===true||j.success==='true')){acceptedReports.add(fingerprint);status.textContent=t.accepted;}else{if(j.success!==false&&j.success!=='false') { uncertainReports.add(fingerprint); }status.textContent=t.failed;}
  }catch(err){uncertainReports.add(fingerprint);status.textContent=err.name==='AbortError'?t.timeout:t.offline;}
  finally{clearTimeout(timeout);discoveryPending=false;button.disabled=false;form.setAttribute('aria-busy','false');}
 });
-document.getElementById('copy-report').addEventListener('click',async function(){const txt=window.__zionDiscoveryReport||'';if(!txt)return;try{await navigator.clipboard.writeText(txt);this.textContent=t.copied;}catch{this.textContent=t.copyFail;}});
-document.getElementById('download-report').addEventListener('click',function(){const txt=window.__zionDiscoveryReport||'';if(!txt)return;const url=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='zion-discovery-report.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+document.getElementById('copy-report').addEventListener('click',async function(){const txt=window.__zionDiscoveryReport||'';if(!txt) { return; }try{await navigator.clipboard.writeText(txt);this.textContent=t.copied;}catch{this.textContent=t.copyFail;}});
+document.getElementById('download-report').addEventListener('click',function(){const txt=window.__zionDiscoveryReport||'';if(!txt) { return; }const url=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='zion-discovery-report.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 // release-marker: fair-discovery-verified-recommendations-2026-10-10
