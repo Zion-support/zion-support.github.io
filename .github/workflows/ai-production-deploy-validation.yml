@@ -103,7 +103,7 @@ jobs:
           echo "| Page | Status |" >> "$GITHUB_STEP_SUMMARY"
           echo "|------|--------|" >> "$GITHUB_STEP_SUMMARY"
           for path in $PAGES; do
-            status=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 15 "$SITE$path" 2>/dev/null || echo "000")
+            status=$(curl -sS -L --proto '=https' --proto-redir '=https' --max-redirs 5 -o /dev/null -w "%{http_code}" --max-time 15 "$SITE$path" 2>/dev/null || echo "000")
             if [ "$status" = "200" ]; then
               echo "| \`$path\` | ✅ $status |" >> "$GITHUB_STEP_SUMMARY"
             else
