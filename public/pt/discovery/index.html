@@ -253,6 +253,10 @@
       status.textContent = 'Enviando a solicitação de e-mail…';
       var controller = new AbortController();
       var timer;
+      var startedAt = Date.now();
+      var phase = 'request';
+      var httpClass = 'none';
+      var timedOut = false;
       try {
         var response = await Promise.race([
           (async function(){
@@ -262,21 +266,27 @@
               headers:{'Content-Type':'application/json','Accept':'application/json'},
               body:JSON.stringify({name:a.name,email:a.email,_cc:a.email.toLowerCase() === 'commercial@ziontechgroup.com' ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
             });
+            httpClass = r.status ? Math.floor(r.status / 100) + 'xx' : 'none';
+            phase = 'http';
             if (!r.ok) throw new Error('uncertain-http');
+            phase = 'body';
             return r.json();
           })(),
           new Promise(function(resolve, reject){
-            timer = setTimeout(function(){ controller.abort(); reject(new Error('timeout')); }, 15000);
+            timer = setTimeout(function(){ timedOut = true; controller.abort(); reject(new Error('timeout')); }, 15000);
           })
         ]);
         if (response && (response.success === true || response.success === 'true')) {
+          phase = 'accepted';
           status.textContent = 'Solicitação aceita pelo serviço de e-mail. A entrega nas caixas do cliente e do Commercial ainda não foi confirmada.';
           submissions.set(key, status.textContent);
         } else if (response && (response.success === false || response.success === 'false')) {
+          phase = 'rejected';
           status.textContent = 'O serviço recusou a solicitação. Você pode tentar novamente ou usar o envio manual.';
           submissions.delete(key);
           manual();
         } else {
+          phase = 'unrecognized-response';
           throw new Error('uncertain-response');
         }
       } catch (error) {
@@ -284,6 +294,10 @@
         manual();
       } finally {
         clearTimeout(timer);
+        // Page-local diagnostic for support. Never include the report or provider response.
+        status.setAttribute('data-request-phase', timedOut ? phase + '-timeout' : phase);
+        status.setAttribute('data-http-class', httpClass);
+        status.setAttribute('data-elapsed-ms', String(Math.max(0, Date.now() - startedAt)));
         pending = false;
         button.disabled = false;
         form.setAttribute('aria-busy', 'false');
