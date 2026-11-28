@@ -18,7 +18,7 @@
       'retail':[['AI Lead Generation Services','/ai-lead-generation/']],
       'other':[['Zion Tools and Guides Catalog','/zion-app-network/'],['Full Service Catalog','/services/']],
       'support':[['Customer Support Automation Services','/ai-powered-customer-support/'],['Observability and Incident Management Services','/ai-observability-and-incident-management/']],
-      'sla':[['Observability and Incident Management Services','/ai-observability-and-incident-management/'],['Incident Response and Review Services','/ai-incident-response/']],
+      'sla':[['Observability and Incident Management Services','/ai-observability-and-incident-management/'],['Réponse aux incidents : guide de planification','/ai-incident-response/']],
       'costs':[['FinOps Consulting','/finops-consulting/'],['Cloud Cost Optimization Overview','/apps/cloud-cost-optimizer.html']],
       'sales':[['AI Lead Generation Services','/ai-lead-generation/'],['Lead Scoring Planning Guide','/lead-score-copilot/']],
       'data':[['AI Readiness Assessment Service','/ai-readiness-assessment/'],['Manual AI Readiness Guide','/ai-readiness-framework/']]
@@ -42,7 +42,7 @@
     }
     function recommendationKind(path){
       if (/^\/(?:pt\/|es\/|fr\/|de\/)?(?:roi-calc|roi-calculator|sla-calculator)\//.test(path)) return 'Outil';
-      if (path.includes('/apps/') || path.includes('/zion-app-network/') || path.includes('/lead-score-copilot/') || path.includes('/ai-readiness-framework/')) return 'Guide ou catalogue';
+      if (path === '/ai-incident-response/' || path.includes('/apps/') || path.includes('/zion-app-network/') || path.includes('/lead-score-copilot/') || path.includes('/ai-readiness-framework/')) return 'Guide ou catalogue';
       return 'Service';
     }
     var form=document.getElementById('dq');

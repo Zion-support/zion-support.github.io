@@ -80,6 +80,13 @@ const resourceKinds = {
   fr: ['Outil', 'Guide ou catalogue', 'Service'],
   de: ['Werkzeug', 'Leitfaden oder Katalog', 'Dienstleistung'],
 };
+const incidentGuideTitles = {
+  pt: 'Resposta a incidentes: guia de planejamento',
+  en: 'Incident response: planning guide',
+  es: 'Respuesta a incidentes: guía de planificación',
+  fr: 'Réponse aux incidents : guide de planification',
+  de: 'Reaktion auf Vorfälle: Planungsleitfaden',
+};
 async function testRecommendationMatrix(markup, locale) {
   const runtime = questionnaireSource(markup);
   assert.ok(runtime, locale + ' questionnaire script');
@@ -112,7 +119,7 @@ async function testRecommendationMatrix(markup, locale) {
     other: ['/zion-app-network/', '/services/'],
   };
   const guideRoutes = new Set([
-    '/apps/cloud-cost-optimizer.html', '/ai-readiness-framework/', '/lead-score-copilot/',
+    '/apps/cloud-cost-optimizer.html', '/ai-readiness-framework/', '/lead-score-copilot/', '/ai-incident-response/',
     '/zion-app-network/', '/zion-app-network/field-visit-handoff-2026.html',
   ]);
   const expectedKind = url => url === '/roi-calculator/' ? tool :
@@ -129,7 +136,10 @@ async function testRecommendationMatrix(markup, locale) {
       assert.ok(paths.length >= 3 && paths.length <= 4, pair + ' result count');
       assert.equal(new Set(paths).size, paths.length, pair + ' repeats a URL');
       assert.deepEqual(paths, overlappingRoutes[pair] || challengeOrder[challenge].concat(sectorOrder[industry]), pair + ' order');
-      for (const [, kind, url] of screen) assert.equal(kind, expectedKind(url), pair + ' kind: ' + url);
+      for (const [, kind, url, label] of screen) {
+        assert.equal(kind, expectedKind(url), pair + ' kind: ' + url);
+        if (url === '/ai-incident-response/') assert.equal(label, incidentGuideTitles[locale], pair + ' localized planning guide');
+      }
       assert.equal(form.calls.length, 1, pair);
       const emailLines = form.calls[0].data.results.split('\n').filter(line => line.startsWith('- '));
       assert.deepEqual(emailLines, screen.map(([, kind, url, label]) =>
