@@ -12,9 +12,9 @@ interface DeploymentEstimate {
   estimatedCost: string;
 }
 
-const deploymentData: Record<string, DeploymentEstimate> = {
+const deploymentData = new Map<string, DeploymentEstimate>([
   // AI Services
-  'ai-chatbot-builder': {
+  ['ai-chatbot-builder', {
     service: 'AI Chatbot Builder',
     timeline: '2-3 weeks',
     teamSize: '2-3 people',
@@ -22,8 +22,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Website or app access', 'FAQ/knowledge base', 'Brand guidelines'],
     integrations: ['CRM system', 'Help desk', 'Analytics platform'],
     estimatedCost: '$2,500 - $5,000',
-  },
-  'ai-video-generator': {
+  }],
+  ['ai-video-generator', {
     service: 'AI Video Generator',
     timeline: '1-2 weeks',
     teamSize: '1-2 people',
@@ -31,8 +31,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Brand assets', 'Script templates', 'Voice preferences'],
     integrations: ['Content management system', 'Social media platforms'],
     estimatedCost: '$1,500 - $3,000',
-  },
-  'ai-customer-support': {
+  }],
+  ['ai-customer-support', {
     service: 'AI Customer Support Platform',
     timeline: '3-4 weeks',
     teamSize: '3-4 people',
@@ -40,8 +40,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Support ticket history', 'Knowledge base', 'Escalation workflows'],
     integrations: ['Help desk software', 'CRM', 'Email system', 'Live chat'],
     estimatedCost: '$5,000 - $10,000',
-  },
-  'ai-recruitment-platform': {
+  }],
+  ['ai-recruitment-platform', {
     service: 'AI Recruitment Platform',
     timeline: '4-6 weeks',
     teamSize: '3-5 people',
@@ -49,10 +49,10 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Job descriptions', 'Resume database', 'Interview process'],
     integrations: ['ATS system', 'HR software', 'Calendar', 'Email'],
     estimatedCost: '$8,000 - $15,000',
-  },
+  }],
   
   // Micro-SaaS
-  'micro-saas-ai-invoice-processor': {
+  ['micro-saas-ai-invoice-processor', {
     service: 'AI Invoice Processor',
     timeline: '1-2 weeks',
     teamSize: '1-2 people',
@@ -60,8 +60,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Accounting software access', 'Invoice templates', 'Approval workflows'],
     integrations: ['QuickBooks', 'Xero', 'SAP', 'Email system'],
     estimatedCost: '$1,000 - $2,500',
-  },
-  'micro-saas-ai-meeting-summarizer': {
+  }],
+  ['micro-saas-ai-meeting-summarizer', {
     service: 'AI Meeting Summarizer',
     timeline: '1 week',
     teamSize: '1 person',
@@ -69,8 +69,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Video conferencing platform', 'Calendar access'],
     integrations: ['Zoom', 'Teams', 'Google Meet', 'Calendar', 'Note-taking apps'],
     estimatedCost: '$500 - $1,500',
-  },
-  'micro-saas-crm-automation': {
+  }],
+  ['micro-saas-crm-automation', {
     service: 'AI CRM Automation',
     timeline: '2-3 weeks',
     teamSize: '2 people',
@@ -78,10 +78,10 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['CRM access', 'Sales process documentation', 'Email templates'],
     integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Email', 'Calendar'],
     estimatedCost: '$2,000 - $4,000',
-  },
+  }],
   
   // Cloud & DevOps
-  'cloud-multi-cloud-management': {
+  ['cloud-multi-cloud-management', {
     service: 'Multi-Cloud Management Platform',
     timeline: '6-8 weeks',
     teamSize: '4-6 people',
@@ -89,8 +89,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Cloud accounts', 'Infrastructure documentation', 'Security policies'],
     integrations: ['AWS', 'Azure', 'GCP', 'Monitoring tools', 'CI/CD pipelines'],
     estimatedCost: '$15,000 - $30,000',
-  },
-  'devops-ci-cd-platform': {
+  }],
+  ['devops-ci-cd-platform', {
     service: 'CI/CD Automation Platform',
     timeline: '4-6 weeks',
     teamSize: '3-4 people',
@@ -98,10 +98,10 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Code repositories', 'Test suites', 'Deployment environments'],
     integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes'],
     estimatedCost: '$8,000 - $15,000',
-  },
+  }],
   
   // Security
-  'security-zero-trust-architecture': {
+  ['security-zero-trust-architecture', {
     service: 'Zero Trust Security Architecture',
     timeline: '8-12 weeks',
     teamSize: '5-8 people',
@@ -109,8 +109,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Network diagrams', 'User directory', 'Security policies'],
     integrations: ['Identity provider', 'Firewall', 'VPN', 'SIEM', 'Endpoint protection'],
     estimatedCost: '$25,000 - $50,000',
-  },
-  'ai-powered-cybersecurity-monitor': {
+  }],
+  ['ai-powered-cybersecurity-monitor', {
     service: 'AI Cybersecurity Monitor',
     timeline: '3-4 weeks',
     teamSize: '2-3 people',
@@ -118,10 +118,10 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Network access', 'Security logs', 'Alert thresholds'],
     integrations: ['SIEM', 'Firewall', 'Endpoint protection', 'Email security'],
     estimatedCost: '$5,000 - $10,000',
-  },
+  }],
   
   // Data & Analytics
-  'data-real-time-analytics': {
+  ['data-real-time-analytics', {
     service: 'Real-Time Analytics Platform',
     timeline: '4-6 weeks',
     teamSize: '3-4 people',
@@ -129,8 +129,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Data sources', 'KPI definitions', 'Dashboard requirements'],
     integrations: ['Databases', 'APIs', 'Data warehouses', 'BI tools'],
     estimatedCost: '$8,000 - $15,000',
-  },
-  'data-machine-learning-platform': {
+  }],
+  ['data-machine-learning-platform', {
     service: 'Machine Learning Platform',
     timeline: '6-10 weeks',
     teamSize: '4-6 people',
@@ -138,10 +138,10 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Training data', 'ML use cases', 'Infrastructure requirements'],
     integrations: ['Data lakes', 'Feature stores', 'Model registries', 'Monitoring'],
     estimatedCost: '$15,000 - $30,000',
-  },
+  }],
   
   // Automation
-  'automation-workflow-orchestrator': {
+  ['automation-workflow-orchestrator', {
     service: 'Workflow Orchestration Platform',
     timeline: '3-5 weeks',
     teamSize: '2-4 people',
@@ -149,8 +149,8 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Process documentation', 'Business rules', 'Integration endpoints'],
     integrations: ['APIs', 'Databases', 'SaaS applications', 'Legacy systems'],
     estimatedCost: '$5,000 - $12,000',
-  },
-  'automation-rpa-platform': {
+  }],
+  ['automation-rpa-platform', {
     service: 'RPA Automation Platform',
     timeline: '4-8 weeks',
     teamSize: '3-5 people',
@@ -158,16 +158,17 @@ const deploymentData: Record<string, DeploymentEstimate> = {
     prerequisites: ['Process documentation', 'Application access', 'Test environments'],
     integrations: ['Desktop applications', 'Web applications', 'Databases', 'APIs'],
     estimatedCost: '$10,000 - $25,000',
-  },
-};
+  }],
+]);
 
+// eslint-disable-next-line @typescript-eslint/naming-convention -- React hooks require a PascalCase component name.
 export default function DeploymentCalculator() {
   const [selectedService, setSelectedService] = useState<string>('');
   const [estimate, setEstimate] = useState<DeploymentEstimate | null>(null);
 
   const handleServiceSelect = (serviceId: string) => {
     setSelectedService(serviceId);
-    setEstimate(deploymentData[serviceId] || null);
+    setEstimate(deploymentData.get(serviceId) ?? null);
   };
 
   const getComplexityColor = (complexity: string) => {
