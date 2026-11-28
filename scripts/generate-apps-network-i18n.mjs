@@ -284,7 +284,7 @@ ${hreflangBlock('/apps-network/')}
       <p class="lede">${esc(t.hubLede)}</p>
       <div class="cta-row">
         <a class="btn" href="/discovery/">${esc(t.ctaPrimary)}</a>
-        <a class="btn alt" href="${lang.prefix ? `/${lang.prefix}` : ''}/apps/">${esc(t.allApps)}</a>
+        <a class="btn alt" href="${hrefFor(lang, 'apps')}">${esc(t.allApps)}</a>
       </div>
       <div class="stats">
         <div class="stat"><b>${publishedApps.length}</b><span>${esc(t.statApps)}</span></div>
