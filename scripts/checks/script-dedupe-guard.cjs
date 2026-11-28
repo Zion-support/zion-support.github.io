@@ -13,7 +13,9 @@ function readComments(text) {
   const lines = text.split(/\r?\n/);
   for (const line of lines) {
     const trimmed = line.trim();
-    if (trimmed.startsWith('//')) comments.add(trimmed);
+    if (trimmed.startsWith('//')) {
+      comments.add(trimmed);
+    }
   }
   return comments;
 }
@@ -38,7 +40,9 @@ for (const [name, command] of Object.entries(scripts)) {
   const keyLine = packageText
     .split(/\r?\n/)
     .find((line) => line.trim().startsWith(quoted));
-  if (!keyLine) continue;
+  if (!keyLine) {
+    continue;
+  }
 
   if ((command.includes('bash ') || command.includes('bash\t') || command.startsWith('bash')) && !command.includes('node scripts/') && !command.includes('node scripts\\')) {
     if (!fs.existsSync(path.join(repo, 'scripts', ...command.replace(/^bash\s+/, '').split('/')))) {
@@ -93,12 +97,18 @@ if (missingFound) {
     const oldLine = currentPackageText
       .split(/\r?\n/)
       .find((line) => line.trimStart().startsWith(quoted));
-    if (!oldLine) continue;
+    if (!oldLine) {
+      continue;
+    }
 
     const indent = oldLine.slice(0, oldLine.indexOf(quoted));
     const newLine = `${indent}${quoted}: "${fallbackCommand}"`;
 
-    if (oldLine.trimEnd() === newLine) continue;
+    if (oldLine.trimEnd() === newLine) {
+
+      continue;
+
+    }
     currentPackageText = currentPackageText.replace(oldLine, newLine);
     modified = true;
     fixedCount++;
@@ -118,7 +128,9 @@ if (missingFound) {
       item.reason === 'bash script not found'
         ? (cmd.includes('bash') && !cmd.startsWith('echo '))
         : cmd.includes('node scripts/');
-    if (stillBad) remaining.push(item);
+    if (stillBad) {
+      remaining.push(item);
+    }
   }
 
   const state = {
