@@ -2,13 +2,19 @@ const fs = require('fs');
 const path = require('path');
 
 function rmDirIfExists(dir) {
-  if (!fs.existsSync(dir)) return;
+  if (!fs.existsSync(dir)) {
+    return;
+  }
   const walk = (p) => {
     const entries = fs.readdirSync(p, { withFileTypes: true });
     for (const e of entries) {
       const full = path.join(p, e.name);
-      if (e.isDirectory()) { walk(full); fs.rmdirSync(full); }
-      else fs.unlinkSync(full);
+      if (e.isDirectory()) {
+        walk(full);
+        fs.rmdirSync(full);
+      } else {
+        fs.unlinkSync(full);
+      }
     }
   };
   walk(dir);
