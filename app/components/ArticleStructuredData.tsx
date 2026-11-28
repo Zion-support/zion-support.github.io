@@ -7,9 +7,11 @@ const BASE_URL = 'https://ziontechgroup.com';
 interface ArticleStructuredDataProps {
   headline: string;
   description: string;
-  datePublished: string;
+  datePublished?: string;
   slug: string;
   author?: string;
+  authorType?: 'Person' | 'Organization';
+  publisher?: string;
 }
 
 export default function ArticleStructuredData({
@@ -18,22 +20,23 @@ export default function ArticleStructuredData({
   datePublished,
   slug,
   author = 'Zion Tech Group',
+  authorType = 'Organization',
+  publisher = author,
 }: ArticleStructuredDataProps) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline,
     description,
-    datePublished,
-    dateModified: datePublished,
+    ...(datePublished ? { datePublished, dateModified: datePublished } : {}),
     author: {
-      '@type': 'Organization',
+      '@type': authorType,
       name: author,
-      url: BASE_URL,
+      ...(authorType === 'Organization' ? { url: BASE_URL } : {}),
     },
     publisher: {
       '@type': 'Organization',
-      name: author,
+      name: publisher,
       logo: {
         '@type': 'ImageObject',
         url: `${BASE_URL}/icon.svg`,

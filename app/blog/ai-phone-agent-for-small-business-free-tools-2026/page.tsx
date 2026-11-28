@@ -21,12 +21,13 @@ export default function AIPhoneAgentSmallBusinessPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       <ArticleStructuredData
-        title="AI Phone Agent for Small Business"
+        headline="AI Phone Agent for Small Business"
         description="AI phone agent solutions for small business: free tools, practical setup steps, and real use cases for support, scheduling, and intake automation."
-        url="https://ziontechgroup.com/blog/ai-phone-agent-for-small-business-free-tools-2026"
+        slug="ai-phone-agent-for-small-business-free-tools-2026"
         datePublished="2026-07-07"
-        authorName="Kleber Garcia Alcatrão"
-        publisherName="Zion Tech Group"
+        author="Kleber Garcia Alcatrão"
+        authorType="Person"
+        publisher="Zion Tech Group"
       />
       <SiteBreadcrumbs
         items={[

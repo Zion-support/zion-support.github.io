@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo, useCallback, useEffect } from "react";
-import { ChevronDownIcon, XMarkIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { ChevronDown as ChevronDownIcon, X as XMarkIcon, Moon as MoonIcon, Sun as SunIcon } from "lucide-react";
 import { useDarkMode } from "./useDarkMode";
 import FilterPanel from "./FilterPanel";
 import ServiceCard from "./ServiceCard";

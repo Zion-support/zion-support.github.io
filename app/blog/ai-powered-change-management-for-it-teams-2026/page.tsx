@@ -13,10 +13,10 @@ export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
       <ArticleStructuredData
-        title="AI-Powered Change Management for IT Teams 2026"
+        headline="AI-Powered Change Management for IT Teams 2026"
         description="Practical AI-powered change management playbook for IT teams and MSPs in 2026. Reduce rollout risk with structured automation and communication workflows."
-        canonical="https://ziontechgroup.com/blog/ai-powered-change-management-for-it-teams-2026"
-        publishDate="2026-07-08"
+        slug="ai-powered-change-management-for-it-teams-2026"
+        datePublished="2026-07-08"
       />
       <SiteBreadcrumbs
         items={[
