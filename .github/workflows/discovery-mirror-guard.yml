@@ -39,6 +39,12 @@ on:
       - '.github/workflows/discovery-mirror-guard.yml'
   workflow_dispatch:
 
+# Keep only the newest run for a pull request. Main pushes and manual runs
+# each retain their own validation.
+concurrency:
+  group: discovery-mirror-${{ github.event_name }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 permissions:
   contents: read
 
