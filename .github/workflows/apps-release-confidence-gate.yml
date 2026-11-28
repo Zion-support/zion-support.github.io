@@ -83,6 +83,8 @@ jobs:
               {file:'static-deploy.yml', jobNames:['deploy / publish','deploy'], steps:['Deploy canonical artifact','Deploy Pages artifact','Run actions/deploy-pages@v4']},
             ];
             const deploys = [];
+            let deploymentEvidenceError = null;
+            try {
             for (const publisher of publishers) {
               const runs = (await runsFor(publisher.file, 30))
                 .filter(r => r.status === 'completed' && r.conclusion === 'success');
@@ -138,9 +140,26 @@ jobs:
                 }
               }
             }
-            if (!deploys.length) {
-              core.setOutput('status', 'FAIL');
-              core.setFailed('No successful executed Pages deployment found in the two publisher histories');
+            } catch (error) {
+              deploymentEvidenceError = String(error?.message || error);
+            }
+            if (deploymentEvidenceError || !deploys.length) {
+              // Never silently fall back to an older publisher or omit the report.
+              const report={
+                schema:'zion.apps.release-confidence.v1',
+                generated_at_utc:new Date().toISOString(),
+                status:'FAIL',
+                failure_kind:deploymentEvidenceError ? 'DEPLOYMENT_EVIDENCE_UNVERIFIED' : 'DEPLOYMENT_EVIDENCE_MISSING',
+                reason:deploymentEvidenceError || 'No successful executed Pages deployment was verified',
+                latest_successful_deploy:null,
+                rollback_review:{candidate_sha:null,automatic_rollback_allowed:false},
+                signals:{}
+              };
+              fs.mkdirSync('automation/reports',{recursive:true});
+              fs.writeFileSync('automation/reports/apps-release-confidence.json',JSON.stringify(report,null,2)+'\n');
+              core.setOutput('status','FAIL');
+              core.setOutput('report',JSON.stringify(report));
+              core.setFailed('Deployment evidence missing or unverified: '+report.reason);
               return;
             }
             deploys.sort((a,b) => Date.parse(b.evidence.completed_at) - Date.parse(a.evidence.completed_at));
@@ -168,14 +187,19 @@ jobs:
               // A skipped run has no executed health evidence (for example, an
               // ignored deploy completion). Keep cancelled runs conservative:
               // cancellation can coexist with a failed job.
-              const completed = runs.filter(r => r.status === 'completed' && r.conclusion !== 'skipped');
-              const active = runs.filter(r => ['queued','pending','in_progress','waiting','requested'].includes(r.status));
+              // Do not treat a PR run, skipped step, or an observation that began
+              // before the executed deployment as evidence of its recovery.
+              const eligible = r => r.head_branch === 'main' && r.event !== 'pull_request';
+              const ordered = runs.filter(eligible).sort((a,b)=>
+                Date.parse(b.created_at)-Date.parse(a.created_at));
+              const completed = ordered.filter(r => r.status === 'completed' && r.conclusion !== 'skipped');
+              const active = ordered.filter(r => ['queued','pending','in_progress','waiting','requested'].includes(r.status));
               let chosen = null;
 
               if (def.afterDeploy) {
-                chosen = completed.find(r => Date.parse(r.updated_at || r.created_at) >= deployAt - 60000) || null;
+                chosen = completed.find(r => Number.isFinite(Date.parse(r.created_at)) && Date.parse(r.created_at) >= deployAt) || null;
                 if (!chosen) {
-                  const activeAfterDeploy = active.find(r => Date.parse(r.updated_at || r.created_at) >= deployAt - 60000) || null;
+                  const activeAfterDeploy = active.find(r => Number.isFinite(Date.parse(r.created_at)) && Date.parse(r.created_at) >= deployAt) || null;
                   if (activeAfterDeploy) {
                     signals[key] = {
                       state:'PENDING',
@@ -230,11 +254,46 @@ jobs:
               }
 
               const ok = chosen.conclusion === 'success';
+              let state = ok ? 'PASS' : 'FAIL';
+              let reason = ok ? 'executed validator completed successfully' : 'validator run failed; inspect its log/report';
+              if (key === 'drift' && !ok) {
+                // Only a comparison that actually ran can support a drift claim.
+                try {
+                const driftJobs = await jobsFor(chosen.id);
+                const compareJobs = driftJobs.filter(j => j.name === 'compare');
+                if (compareJobs.length !== 1 || !Array.isArray(compareJobs[0].steps)) {
+                  state='VALIDATOR_ERROR';
+                  reason='drift job/steps evidence missing';
+                } else {
+                  const steps = compareJobs[0].steps;
+                  const rebuild = steps.find(s=>s.name==='Rebuild exact Pages artifact used by production deploy');
+                  const compare = steps.find(s=>s.name==='Compare production bodies with deployed artifact');
+                  const classified = steps.find(s=>s.name==='Classify unexpected comparison failure');
+                  if (!compare || compare.conclusion !== 'failure') {
+                    state='VALIDATOR_ERROR';
+                    reason='comparison did not execute and fail; check resolver, checkout and rebuild';
+                  } else if (!rebuild || rebuild.conclusion !== 'success') {
+                    state='VALIDATOR_ERROR';
+                    reason='artifact rebuild was not verified';
+                  } else if (!classified || classified.conclusion !== 'success') {
+                    state='VALIDATOR_ERROR';
+                    reason='complete route-level comparison report was not verified';
+                  } else {
+                    state='COMPARISON_FAILED';
+                    reason='comparison generated a complete route-level mismatch report';
+                  }
+                }
+                } catch (error) {
+                  state='VALIDATOR_ERROR';
+                  reason='could not read comparison job evidence: '+String(error?.message || error);
+                }
+              }
               signals[key] = {
-                state: ok ? 'PASS' : 'FAIL',
+                state, reason,
                 run_id: chosen.id,
                 conclusion: chosen.conclusion,
                 head_sha: chosen.head_sha,
+                created_at: chosen.created_at,
                 html_url: chosen.html_url,
                 updated_at: chosen.updated_at
               };
@@ -260,7 +319,8 @@ jobs:
                 compare_url:context.serverUrl+'/'+owner+'/'+repo+'/compare/'+deploy.head_sha+'...main',
                 operator_note:'Review current incident evidence and changed commits before any revert; never auto-merge or auto-rollback.'
               },
-              signals
+              signals,
+              operator_note:'PASS means checked evidence for the selected release, not an independent guarantee of user-facing availability.'
             };
 
             fs.mkdirSync('automation/reports', {recursive:true});
