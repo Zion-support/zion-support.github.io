@@ -54,7 +54,9 @@ const EXTRA = [
 ];
 
 function publicFileFor(urlPath) {
-  if (urlPath === '/') return path.join(PUBLIC, 'index.html');
+  if (urlPath === '/') {
+    return path.join(PUBLIC, 'index.html');
+  }
   return path.join(PUBLIC, urlPath.replace(/^\//, ''), 'index.html');
 }
 
@@ -71,9 +73,13 @@ function hashedServiceSlug(name) {
 }
 
 function add(pages, seen, urlPath, priority, changefreq) {
-  if (seen.has(urlPath)) return;
+  if (seen.has(urlPath)) {
+    return;
+  }
   const file = publicFileFor(urlPath);
-  if (!fs.existsSync(file)) return;
+  if (!fs.existsSync(file)) {
+    return;
+  }
   seen.add(urlPath);
   pages.push({
     loc: urlPath === '/' ? `${SITE}/` : `${SITE}${urlPath}`,
@@ -89,19 +95,25 @@ function collect() {
 
   add(pages, seen, '/', '1.0', 'daily');
   for (const p of CORE) {
-    if (p === '/') continue;
+    if (p === '/') {
+      continue;
+    }
     add(pages, seen, p, '0.8', 'weekly');
   }
 
   const blogDir = path.join(PUBLIC, 'blog');
   if (fs.existsSync(blogDir)) {
     for (const entry of fs.readdirSync(blogDir, { withFileTypes: true })) {
-      if (!entry.isDirectory()) continue;
+      if (!entry.isDirectory()) {
+        continue;
+      }
       add(pages, seen, `/blog/${entry.name}/`, '0.6', 'weekly');
     }
   }
 
-  for (const p of EXTRA) add(pages, seen, p, '0.5', 'weekly');
+  for (const p of EXTRA) {
+    add(pages, seen, p, '0.5', 'weekly');
+  }
 
   pages.sort((a, b) => a.loc.localeCompare(b.loc));
   return pages;
@@ -134,7 +146,9 @@ function buildIndex() {
 }
 
 function writeBoth(dir, pages) {
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
   fs.writeFileSync(path.join(dir, 'sitemap-0.xml'), buildUrlset(pages));
   fs.writeFileSync(path.join(dir, 'sitemap.xml'), buildIndex());
 }
@@ -144,7 +158,9 @@ function assertRequired(pages) {
   const missing = [];
   for (const p of CORE) {
     const loc = p === '/' ? `${SITE}/` : `${SITE}${p}`;
-    if (!locs.has(loc)) missing.push(p);
+    if (!locs.has(loc)) {
+      missing.push(p);
+    }
   }
   if (missing.length) {
     throw new Error(`sitemap-0 missing required public pages: ${missing.join(', ')}`);
@@ -173,12 +189,16 @@ function main() {
   assertRequired(pages);
   writeBoth(PUBLIC, pages);
   const outDir = path.join(ROOT, 'out');
-  if (fs.existsSync(outDir)) writeBoth(outDir, pages);
+  if (fs.existsSync(outDir)) {
+    writeBoth(outDir, pages);
+  }
   console.log(`sitemap-0.xml: ${pages.length} commercial urls`);
   console.log('sitemap.xml: sitemapindex -> /sitemap-0.xml, /apps/apps-sitemap.xml');
   return pages;
 }
 
-if (require.main === module) main();
+if (require.main === module) {
+  main();
+}
 
 module.exports = { collect, writeBoth, main, CORE };
