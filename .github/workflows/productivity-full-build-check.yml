@@ -32,9 +32,8 @@ jobs:
         run: python3 scripts/assert-no-private-ops.py out
       - name: Validate every semantic scope on the unchanged canonical artifact
         run: node scripts/verify-productivity-publication.cjs out
-      - name: Fetch catalog source (bytes checked before staging)
-        # Match the catalog blob pinned in scripts/prepare-productivity-qa.cjs.
-        run: curl --fail --silent --show-error --location --max-time 30 https://raw.githubusercontent.com/Zion-support/zion-app-network/8264ed7260285180706f7358057be0d802b5dd18/CATALOG-PRODUCTIVITY-REVIEW.md -o _productivity-catalog.md
+      - name: Fetch pinned catalog source (bytes checked before staging)
+        run: curl --fail --silent --show-error --location --max-time 30 https://raw.githubusercontent.com/Zion-support/zion-app-network/632cf44285d3841a4738e628f2497eb8e552fc53/CATALOG-PRODUCTIVITY-REVIEW.md -o _productivity-catalog.md
       - name: Test scoped artifact staging
         run: node scripts/test-productivity-qa.cjs _productivity-catalog.md
       - name: Validate final exact-head artifact
