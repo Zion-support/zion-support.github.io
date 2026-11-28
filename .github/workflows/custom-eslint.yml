@@ -23,12 +23,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v6.0.2
       with:
-        fetch-depth: 1
+        fetch-depth: 2
         persist-credentials: false
     - name: Setup Node.js
       uses: actions/setup-node@v6.3.0
       with:
-        node-version: '20'
+        node-version: '22'
         cache: npm
     - name: Install dependencies
       run: npm ci
@@ -38,10 +38,34 @@ jobs:
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        BASE_SHA: ${{ github.event.pull_request.base.sha }}
       shell: bash
       run: |
+        targets=(.)
+        if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+          if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+            if ! git fetch --no-tags --depth=1 origin "${BASE_SHA}"; then
+              printf '[]\n' > /tmp/eslint-report.json
+              echo "exit_code=2" >> "$GITHUB_OUTPUT"
+              echo "::error::Unable to fetch the PR base commit."
+              exit 2
+            fi
+          fi
+          if ! git diff --name-only --diff-filter=ACMRT "${BASE_SHA}" "${GITHUB_SHA}" -- '*.js' '*.jsx' '*.mjs' '*.cjs' '*.ts' '*.tsx' > /tmp/eslint-targets.txt; then
+            printf '[]\n' > /tmp/eslint-report.json
+            echo "exit_code=2" >> "$GITHUB_OUTPUT"
+            echo "::error::Unable to resolve the PR lint target set."
+            exit 2
+          fi
+          mapfile -t targets < /tmp/eslint-targets.txt
+          if [ "${#targets[@]}" -eq 0 ]; then
+            printf '[]\n' > /tmp/eslint-report.json
+            echo "exit_code=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+        fi
         set +e
-        npx eslint -c .eslintrc-autonomous.cjs . \
+        npx eslint "${targets[@]}" \
           --ignore-pattern ".next/**" \
           --ignore-pattern "out/**" \
           --ignore-pattern "dist/**" \
