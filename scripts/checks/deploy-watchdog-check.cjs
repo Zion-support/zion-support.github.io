@@ -10,16 +10,19 @@ if (fs.existsSync(buildStatePath)) {
   try {
     const bs = JSON.parse(fs.readFileSync(buildStatePath, 'utf8'));
     const cls = bs.exitCode === 0 ? 'likely_postbuild_or_pages_packaging' : 'likely_next_build_failure';
-    console.log(`build state exitCode=${bs.exitCode ?? 'unknown'} durationMs=${bs.durationMs ?? 'unknown'} classification=${cls}`);
-    if (bs.artifacts) console.log(`build artifacts=${JSON.stringify(bs.artifacts)}`);
+    process.stdout.write(`build state exitCode=${bs.exitCode ?? 'unknown'} durationMs=${bs.durationMs ?? 'unknown'} classification=${cls}\n`);
+    if (bs.artifacts) {
+      process.stdout.write(`build artifacts=${JSON.stringify(bs.artifacts)}\n`);
+    }
   } catch (e) {
-    console.log('build state unreadable:', String(e.message || e).split('\n')[0]);
+    const message = String(e.message || e).split('\n')[0];
+    process.stdout.write(`build state unreadable: ${message}\n`);
   }
 }
 
 if (!fs.existsSync(reportPath)) {
-  console.log('no deploy watchdog report yet');
-  process.exit(0);
+  process.stdout.write('no deploy watchdog report yet\n');
+  return;
 }
 
 const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
@@ -57,4 +60,4 @@ if (withTiming.length) {
   };
 }
 
-console.log(`deploy watchdog report=${JSON.stringify(summary)}`);
+process.stdout.write(`deploy watchdog report=${JSON.stringify(summary)}\n`);
