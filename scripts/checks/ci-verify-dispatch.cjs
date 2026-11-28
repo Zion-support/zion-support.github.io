@@ -7,10 +7,7 @@ const STATE_DIR = path.join(REPO, 'automation', 'reports');
 const VERIFY_STATE = path.join(STATE_DIR, 'build-and-verify-latest.json');
 const SITEMAP_STATE = path.join(STATE_DIR, 'sitemap-validate-latest.json');
 const DISPATCH_STATE = path.join(STATE_DIR, 'ci-dispatch-latest.json');
-
-function exists(p) {
-  try { return fs.existsSync(p); } catch { return false; }
-}
+const ERROR_TAIL_LINES = 20;
 function nowIso() {
   return new Date().toISOString();
 }
@@ -23,7 +20,7 @@ function run(label, cmd) {
     const out = execSync(cmd, { cwd: REPO, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
     return { ok: true, stdout: out || '' };
   } catch (e) {
-    const tail = [e.stdout, e.stderr].filter(Boolean).join('\n').split('\n').slice(-20).join('\n');
+    const tail = [e.stdout, e.stderr].filter(Boolean).join('\n').split('\n').slice(-ERROR_TAIL_LINES).join('\n');
     return { ok: false, error: tail || e.message };
   }
 }
@@ -53,8 +50,8 @@ function main() {
   };
 
   writeState(DISPATCH_STATE, dispatch);
-  console.log(JSON.stringify(dispatch, null, 2));
-  process.exit(dispatch.summary === 'pass' ? 0 : 2);
+  process.stdout.write(`${JSON.stringify(dispatch, null, 2)}\n`);
+  process.exitCode = dispatch.summary === 'pass' ? 0 : 2;
 }
 
 try { main(); } catch (e) { console.error(e); process.exit(1); }

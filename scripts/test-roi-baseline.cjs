@@ -38,7 +38,9 @@ class Element {
   setAttribute(name, value) { this.attributes[name] = value; }
   removeAttribute(name) {
     delete this.attributes[name];
-    if (name === 'data-error') delete this.dataset.error;
+    if (name === 'data-error') {
+      delete this.dataset.error;
+    }
   }
 }
 
@@ -51,12 +53,16 @@ function exerciseRuntime(config, locale) {
   const button = {
     get disabled() { return disabled; },
     set disabled(value) {
-      if (value === false) assert.equal(typeof events.submit, 'function', 'Submit interception must precede enabling');
+      if (value === false) {
+        assert.equal(typeof events.submit, 'function', 'Submit interception must precede enabling');
+      }
       disabled = value;
     }
   };
   const form = { dataset: { kind: 'roi' }, addEventListener(name, callback) {
-    if (name === 'submit') assert.equal(button.disabled, true, 'Form starts disabled');
+    if (name === 'submit') {
+      assert.equal(button.disabled, true, 'Form starts disabled');
+    }
     events[name] = callback;
   } };
   const elements = {
@@ -154,7 +160,9 @@ try {
     assert.equal((html.match(/id="ops-form"/g) || []).length, 1);
     assert.equal((html.match(/type="number"/g) || []).length, 2);
     assert(html.includes('<button id="roi-calculate" type="submit" disabled>'), 'JavaScript-disabled and fail-load fallback stays disabled');
-    for (const input of html.match(/<input\b[^>]*>/g) || []) assert(!/\bname\s*=/i.test(input), 'Inputs are not successful native form controls');
+    for (const input of html.match(/<input\b[^>]*>/g) || []) {
+      assert(!/\bname\s*=/i.test(input), 'Inputs are not successful native form controls');
+    }
     assert(!/field-service-evidence-guide|Em breve|Coming soon|Starter\s*\$|Growth\s*\$/i.test(html));
     const config = JSON.parse(html.match(/<script id="ops-copy" type="application\/json">([\s\S]*?)<\/script>/)[1]);
     assert.equal(config.locale, common[locale].locale);
@@ -163,7 +171,9 @@ try {
     exerciseRuntime(config, locale);
   }
   renderer.run(output);
-  for (const [file, bytes] of firstPass) assert.equal(fs.readFileSync(file, 'utf8'), bytes, 'Deterministic repeated rendering');
+  for (const [file, bytes] of firstPass) {
+    assert.equal(fs.readFileSync(file, 'utf8'), bytes, 'Deterministic repeated rendering');
+  }
   assert.equal(fs.readFileSync(unrelated, 'utf8'), 'preserve unrelated calculator');
   assert.equal(fs.readFileSync(path.join(output, 'assets/js/operational-tools.js'), 'utf8'), script);
   assert(!/fetch\s*\(|XMLHttpRequest|localStorage|sessionStorage|sendBeacon/.test(script), 'No transmission or browser storage');

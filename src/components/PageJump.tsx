@@ -40,7 +40,9 @@ export default function PageJump() {
   // Close on Escape
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && open) setOpen(false);
+      if (e.key === 'Escape' && open) {
+        setOpen(false);
+      }
     };
     document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
@@ -48,7 +50,9 @@ export default function PageJump() {
 
   // Click outside to close
   useEffect(() => {
-    if (!open) return;
+    if (!open) {
+      return;
+    }
 
     const handleClickOutside = (e: MouseEvent) => {
       if (

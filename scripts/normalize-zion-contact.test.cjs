@@ -7,7 +7,16 @@ test('updates visible Zion contacts and complete commercial links',()=>{
  assert.equal(normalize(before,'html'),'<a href="https://wa.me/5511976140076?text=Discovery">+55 11 97614-0076</a><a href="tel:+5511976140076">Call</a><p>+55 11 97614-0076</p>');
 });
 test('preserves exact and longer IDs, numeric prices, technical routes and dial-in data',()=>{
- for(const value of ['{"account_id":"1302464095000"}','{"account_id":"13024640950","price":13024640950}','{"gateway":"https://gateway.test/13024640950","dial_in":"+1 302 464 0950"}','const credential = "13024640950";','"https://gateway.test/tel:+13024640950"']) assert.equal(normalize(value),value);
+ const examples = [
+  '{"account_id":"1302464095000"}',
+  '{"account_id":"13024640950","price":13024640950}',
+  '{"gateway":"https://gateway.test/13024640950","dial_in":"+1 302 464 0950"}',
+  'const credential = "13024640950";',
+  '"https://gateway.test/tel:+13024640950"',
+ ];
+ for (const value of examples) {
+  assert.equal(normalize(value), value);
+ }
 });
 test('preserves customer input examples and technical dial-in text',()=>{
  const value='<input placeholder="+1 (302) 464-0950" value="13024640950"><p>Dial-in: +1 302 464 0950.</p><code>+13024640950</code><textarea>+1 302 464 0950</textarea>';

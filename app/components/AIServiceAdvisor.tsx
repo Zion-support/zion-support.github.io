@@ -1,20 +1,39 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 interface Message { role: 'user'|'assistant'; content: string; timestamp?: Date; }
+const RESPONSE_DELAY_MS = 600;
 const GREETINGS = ["Hi! I'm the Zion Tech Group AI Service Advisor. 👋","Tell me about your business needs — I'll match you with perfect services.","Try: 'I need AI for healthcare', 'cloud migration help', 'cybersecurity audit', etc"];
 function matchServices(q: string) {
   const text = q.toLowerCase();
   const cats: string[] = [];
-  if (/\b(ai|artificial intelligence|machine learning|ml|chatbot|nlp|predictive|deep learning|neural|gpt|llm|generative|computer vision|recommendation)\b/.test(text)) cats.push('ai');
-  if (/\b(cloud|aws|azure|gcp|kubernetes|docker|container|serverless|scal|migration|hosting|infrastructure)\b/.test(text)) cats.push('cloud');
-  if (/\b(security|cyber|firewall|vulnerability|penetration|compliance|hipaa|gdpr|encryption|threat|protect|audit|zero trust|soc|siem)\b/.test(text)) cats.push('security');
-  if (/\b(data|analytics|bi|dashboard|visualization|etl|pipeline|warehouse|lake|reporting|insight|quality|observability|cdp)\b/.test(text)) cats.push('data');
-  if (/\b(automation|workflow|bot|rpa|process|integration|no.?code|low.?code|citizen)\b/.test(text)) cats.push('automation');
-  if (/\b(it |server|network|database|backup|disaster recovery|hardware|help desk|managed service|outsourcing)\b/.test(text)) cats.push('it');
-  if (cats.length === 0) cats.push('ai','security','cloud');
-  const SVC: Record<string, string[]> = {ai:['🧠 Advanced AI & Enterprise Intelligence','📄 AI Document Understanding','🎙️ AI Voice Agent','🛡️ AI Content Moderation'],it:['🖥️ Full IT Department Outsourcing','🔄 Disaster Recovery as a Service','🌐 Hybrid Cloud Network','🔍 SIEM & Security Operations'],cloud:['☁️ Multi-Cloud Architecture','☸️ Kubernetes Platform Engineering','🏠 Data Lakehouse Architecture'],security:['🔒 Enterprise Cybersecurity SOC','🎯 Attack Surface Management','🛡️ Red Team Operations','🔐 SaaS Security Posture'],data:['📊 Analytics & BI Platform','✅ Data Quality Engineering','👤 Customer Data Platform','📦 Feature Store Platform'],automation:['🧩 Citizen Developer Platform','🔄 Intelligent Document Workflow','⚡ Workflow Automation','🤖 Bot Development'],};
+  if (/\b(ai|artificial intelligence|machine learning|ml|chatbot|nlp|predictive|deep learning|neural|gpt|llm|generative|computer vision|recommendation)\b/.test(text)) {
+    cats.push('ai');
+  }
+  if (/\b(cloud|aws|azure|gcp|kubernetes|docker|container|serverless|scal|migration|hosting|infrastructure)\b/.test(text)) {
+    cats.push('cloud');
+  }
+  if (/\b(security|cyber|firewall|vulnerability|penetration|compliance|hipaa|gdpr|encryption|threat|protect|audit|zero trust|soc|siem)\b/.test(text)) {
+    cats.push('security');
+  }
+  if (/\b(data|analytics|bi|dashboard|visualization|etl|pipeline|warehouse|lake|reporting|insight|quality|observability|cdp)\b/.test(text)) {
+    cats.push('data');
+  }
+  if (/\b(automation|workflow|bot|rpa|process|integration|no.?code|low.?code|citizen)\b/.test(text)) {
+    cats.push('automation');
+  }
+  if (/\b(it |server|network|database|backup|disaster recovery|hardware|help desk|managed service|outsourcing)\b/.test(text)) {
+    cats.push('it');
+  }
+  if (cats.length === 0) {
+    cats.push('ai','security','cloud');
+  }
+  const servicesByCategory: Record<string, string[]> = {ai:['🧠 Advanced AI & Enterprise Intelligence','📄 AI Document Understanding','🎙️ AI Voice Agent','🛡️ AI Content Moderation'],it:['🖥️ Full IT Department Outsourcing','🔄 Disaster Recovery as a Service','🌐 Hybrid Cloud Network','🔍 SIEM & Security Operations'],cloud:['☁️ Multi-Cloud Architecture','☸️ Kubernetes Platform Engineering','🏠 Data Lakehouse Architecture'],security:['🔒 Enterprise Cybersecurity SOC','🎯 Attack Surface Management','🛡️ Red Team Operations','🔐 SaaS Security Posture'],data:['📊 Analytics & BI Platform','✅ Data Quality Engineering','👤 Customer Data Platform','📦 Feature Store Platform'],automation:['🧩 Citizen Developer Platform','🔄 Intelligent Document Workflow','⚡ Workflow Automation','🤖 Bot Development'],};
   const res: string[] = [];
-  for (const c of cats.slice(0,2)) { if (SVC[c]) res.push(...SVC[c].slice(0,2)); }
+  for (const category of cats.slice(0, 2)) {
+    if (servicesByCategory[category]) {
+      res.push(...servicesByCategory[category].slice(0, 2));
+    }
+  }
   return [...new Set(res)].slice(0,4);
 }
 export default function AIServiceAdvisor() {
@@ -40,21 +59,25 @@ export default function AIServiceAdvisor() {
   }, [open]);
 
   const handleSend = () => {
-    if (!input.trim()) return;
+    if (!input.trim()) {
+      return;
+    }
     const u: Message = {role:'user',content:input.trim()};
     setMsgs(p=>[...p,u]); setInput(''); setIsTyping(true);
     setTimeout(() => {
       const svcs = matchServices(u.content);
       let r = svcs.length ? `Great question! Based on your needs:\n\n${svcs.map(s=>`${s}`).join('\n')}\n\nWould you like:\n• 📞 Free consultation?\n• 📧 Detailed proposal?\n• 💬 Learn more?\n\nCall: +1 302 464 0950` : "I'd love to help! Tell me more about what you need:\n\n• AI / Machine Learning\n• Cloud migration\n• Cybersecurity\n• Data analytics\n• Automation\n• IT services\n\nOr call: +1 302 464 0950";
       setMsgs(p=>[...p,{role:'assistant',content:r}]); setIsTyping(false);
-    }, 600+Math.random()*600);
+    }, RESPONSE_DELAY_MS + Math.random() * RESPONSE_DELAY_MS);
   };
   const onKey = (e:React.KeyboardEvent) => { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();handleSend();} };
-  if (!open) return (
-    <button onClick={()=>setOpen(true)} style={{position:'fixed',bottom:24,right:24,zIndex:9999}} className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-5 py-3 shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-semibold text-sm">
-      <span className="text-lg">🤖</span><span className="hidden sm:inline">AI Service Advisor</span>
-    </button>
-  );
+  if (!open) {
+    return (
+      <button onClick={()=>setOpen(true)} style={{position:'fixed',bottom:24,right:24,zIndex:9999}} className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-5 py-3 shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-semibold text-sm">
+        <span className="text-lg">🤖</span><span className="hidden sm:inline">AI Service Advisor</span>
+      </button>
+    );
+  }
   return (
     <div style={{position:'fixed',bottom:24,right:24,zIndex:9999}} className="w-[360px] max-w-[calc(100vw-2rem)] h-[480px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden">
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-3 flex items-center justify-between flex-shrink-0">

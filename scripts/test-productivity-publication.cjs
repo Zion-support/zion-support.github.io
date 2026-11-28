@@ -44,9 +44,15 @@ for (const mutation of ['modify', 'add', 'remove']) {
   test('rejects a semantic validator that would ' + mutation + ' published bytes', t => {
     const output = fixture(t);
     const result = verify(output, [['mutation', directory => {
-      if (mutation === 'modify') fs.appendFileSync(path.join(directory, 'index.html'), 'changed');
-      if (mutation === 'add') fs.writeFileSync(path.join(directory, 'extra.html'), 'unexpected');
-      if (mutation === 'remove') fs.unlinkSync(path.join(directory, 'index.html'));
+      if (mutation === 'modify') {
+        fs.appendFileSync(path.join(directory, 'index.html'), 'changed');
+      }
+      if (mutation === 'add') {
+        fs.writeFileSync(path.join(directory, 'extra.html'), 'unexpected');
+      }
+      if (mutation === 'remove') {
+        fs.unlinkSync(path.join(directory, 'index.html'));
+      }
     }]]);
     assert.equal(result.ok, false);
     assert.equal(result.results.at(-1).name, 'read-only-artifact');

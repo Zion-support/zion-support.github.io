@@ -17,7 +17,9 @@ function checkLegacyAlias(h){
  assert.equal(refresh[0][1],'0;url='+target,'Legacy FinOps opens the calculator');
  assert(h.includes('rel="canonical" href="'+origin+target+'"'),'Legacy FinOps canonical calculator');
  assert(h.includes('href="'+target+'"'),'Legacy FinOps usable fallback link');
- for(const locale of L)assert(h.includes('href="'+route(locale)+'"'),'Legacy FinOps language destination '+locale);
+ for(const locale of L) {
+  assert(h.includes('href="'+route(locale)+'"'),'Legacy FinOps language destination '+locale);
+ }
  assert(!/finops-consulting|<script\b|<form\b/i.test(h),'Legacy FinOps has no service detour or duplicate runtime');
 }
 function checkPage(h,l,guide){
@@ -29,21 +31,29 @@ function checkPage(h,l,guide){
  assert.equal((h.match(/<h1\b/g)||[]).length,1,u+' one h1');
  assert(h.includes('href="/'+l+'/discovery/#dq"'),u+' matching-language Discovery form');
  assert(!h.includes('(Português)'),u+' no cross-language fallback label');
- for(const k of L)assert(h.includes('hreflang="'+copy[k].lang+'" href="'+origin+route(k,guide)+'"'),u+' alternate '+k);
+ for(const k of L) {
+  assert(h.includes('hreflang="'+copy[k].lang+'" href="'+origin+route(k,guide)+'"'),u+' alternate '+k);
+ }
  assert.equal((h.match(/rel="alternate"/g)||[]).length,6,u+' six alternates');
  if(guide){
-  for(const step of c.steps)assert(h.includes(esc(step)),u+' complete translated steps');
+  for(const step of c.steps) {
+   assert(h.includes(esc(step)),u+' complete translated steps');
+  }
  }else{
   assert.equal((h.match(/<form\b/g)||[]).length,1,u+' working calculator form');
   assert(h.includes('id="finops-scenario-form"'),u+' form identifier');
-  for(const id of ['baseline','reduction','recurring','implementation','months'])assert(h.includes('id="'+id+'"'),u+' input '+id);
+  for(const id of ['baseline','reduction','recurring','implementation','months']) {
+   assert(h.includes('id="'+id+'"'),u+' input '+id);
+  }
   assert(h.includes('id="finops-scenario-result"'),u+' result container');
   assert(h.includes('src="/assets/js/finops-scenario.js"'),u+' calculator script');
   const embedded=h.match(/<script type="application\/json" id="finops-scenario-copy">([\s\S]*?)<\/script>/);
   assert(embedded,u+' localized runtime data');
   assert.deepEqual(JSON.parse(embedded[1]),c,u+' complete runtime translation');
  }
- for(const key of ['limits','method'])assert(h.includes(esc(c[key])),u+' '+key);
+ for(const key of ['limits','method']) {
+  assert(h.includes(esc(c[key])),u+' '+key);
+ }
 }
 function verify(output){
  const dir=path.resolve(output),read=u=>fs.readFileSync(file(dir,u),'utf8');
@@ -56,7 +66,9 @@ function verify(output){
   alias.replace('content="0;url='+route('en')+'"','content="0;url=/finops-estimator/"'),
   alias.replace('<html lang="en"','<html lang="pt-BR"'),
   alias.replaceAll('href="'+route('en')+'"','href="/missing-calculator/"')
- ])assert.throws(()=>checkLegacyAlias(bad));
+ ]) {
+  assert.throws(()=>checkLegacyAlias(bad));
+ }
  for(const l of L){
   for(const guide of [false,true]){capture(route(l,guide));checkPage(read(route(l,guide)),l,guide);}
   for(const u of ['/'+l+'/',...['roi-calc','sla-calculator','ai-governance-checklist'].map(s=>prefix(l)+s+'/'),prefix(l)+'apps/network-learning-paths.html']){
@@ -76,9 +88,15 @@ function verify(output){
   good.replace('id="baseline"','id="missing-baseline"'),
   good.replace('src="/assets/js/finops-scenario.js"','src="/missing.js"'),
   good.replace('<html lang="en"','<html lang="pt-BR"')
- ])assert.throws(()=>checkPage(bad,'en',false));
- for(const [f,hash] of before)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'),hash,'Validation changed '+f);
+ ]) {
+  assert.throws(()=>checkPage(bad,'en',false));
+ }
+ for(const [f,hash] of before) {
+  assert.equal(crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'),hash,'Validation changed '+f);
+ }
  console.log('PASS: 10 real FinOps pages, legacy calculator alias, 25 localized promotions, runtime, manifest, 8 negative cases; all artifact bytes preserved.');
 }
 module.exports={verify,checkPage,checkLegacyAlias};
-if(require.main===module)verify(process.argv[2]||path.join(root,'out'));
+if(require.main===module) {
+ verify(process.argv[2]||path.join(root,'out'));
+}

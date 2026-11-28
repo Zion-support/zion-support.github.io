@@ -134,7 +134,9 @@ const math = sandbox.module.exports;
 assert.equal(math.roi(40, 45).monthly, 1800);
 assert.equal(math.roi(40, 45).yearly, 21600);
 assert.equal(math.roi(0, 0).yearly, 0);
-for (const bad of [-1, Infinity, NaN]) assert.throws(() => math.roi(bad, 45));
+for (const bad of [-1, Infinity, NaN]) {
+  assert.throws(() => math.roi(bad, 45));
+}
 const sla = math.sla(99.9, 30, 1000, 5, 1);
 assert(Math.abs(sla.allowed - 0.72) < 1e-9);
 assert(Math.abs(sla.excess - 0.28) < 1e-9);
@@ -158,7 +160,11 @@ for (const locale of locales) {
       textContent: '',
       replaceChildren() { this.textContent = ''; },
       append() {},
-      removeAttribute(name) { if (name === 'data-error') delete metrics.error; }
+      removeAttribute(name) {
+        if (name === 'data-error') {
+          delete metrics.error;
+        }
+      }
     };
     const values = {hours:'40', rate:'45', u:'99.9', d:'30', f:'1000', p:'5', a:'1'};
     const govscore = {textContent: ''};
@@ -172,10 +178,18 @@ for (const locale of locales) {
     };
     const document = {
       getElementById(id) {
-        if (id === 'ops-copy') return {textContent: JSON.stringify(copy[locale])};
-        if (id === 'ops-form') return form;
-        if (id === 'ops-result') return result;
-        if (id === 'govscore') return govscore;
+        if (id === 'ops-copy') {
+          return {textContent: JSON.stringify(copy[locale])};
+        }
+        if (id === 'ops-form') {
+          return form;
+        }
+        if (id === 'ops-result') {
+          return result;
+        }
+        if (id === 'govscore') {
+          return govscore;
+        }
         return {value: values[id]};
       },
       createElement: () => ({textContent: '', append() {}})
@@ -188,8 +202,11 @@ for (const locale of locales) {
       assert.equal(result.textContent, copy[locale].outputs[6] + ': 3 / 10', 'Governance result card shows the localized count');
       events.change();
     } else {
-      if (kind === 'roi') assert.equal(initial.monthly, 1800);
-      else assert(Math.abs(initial.total - 14) < 1e-8);
+      if (kind === 'roi') {
+        assert.equal(initial.monthly, 1800);
+      } else {
+        assert(Math.abs(initial.total - 14) < 1e-8);
+      }
       events.input();
       assert.equal(metrics.metrics, undefined, 'Stale metrics removed on input');
       assert.equal(result.textContent, copy[locale].recalculate, 'Localized recalculation prompt');
@@ -228,14 +245,18 @@ try {
   write(path.join(out, 'apps/network-publication-coverage.json'), JSON.stringify({source: 'fixture-sentinel', groups: [unrelatedCoverage, existingCoverage]}));
   for (const locale of locales) {
     write(disk(out, home(locale)), '<html lang="' + copy[locale].lang + '"><body><main>' + original + '</main></body></html>');
-    for (const slug of slugs) write(disk(out, prefix(locale) + slug + '/'), '<h1>Tools</h1><p>Coming soon.</p>' + finopsPromotion(locale));
+    for (const slug of slugs) {
+      write(disk(out, prefix(locale) + slug + '/'), '<h1>Tools</h1><p>Coming soon.</p>' + finopsPromotion(locale));
+    }
   }
   for (let run = 0; run < 2; run++) {
     cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000});
     verifyArtifact(out);
     assert.equal(fs.readFileSync(disk(out, '/'), 'utf8'), rootEnglish, 'Root English homepage is unchanged');
     for (const locale of locales) {
-      for (const slug of slugs) assert(fs.readFileSync(disk(out, prefix(locale) + slug + '/'), 'utf8').includes(finopsPromotion(locale)), 'Reviewed FinOps fragment preserved byte-for-byte');
+      for (const slug of slugs) {
+        assert(fs.readFileSync(disk(out, prefix(locale) + slug + '/'), 'utf8').includes(finopsPromotion(locale)), 'Reviewed FinOps fragment preserved byte-for-byte');
+      }
     }
   }
   // A calculator retaining all operational controls must still fail if the
@@ -257,11 +278,13 @@ try {
   const unrelatedFinops = '/apps/finops-scenario-estimator.html';
   write(disk(out, unrelatedFinops), '<main>Preserve this independent calculator.</main><script>const sentinel = true;</script>');
   const untouchedFinops = fs.readFileSync(disk(out, unrelatedFinops), 'utf8');
-  for (const locale of locales) for (const slug of slugs) {
-    const route = prefix(locale) + slug + '/';
-    const html = fs.readFileSync(disk(out, route), 'utf8').replace(finopsPromotion(locale), '');
-    write(disk(out, route), html);
-    repairedTools.set(route, {protected: protectedParts(html)});
+  for (const locale of locales) {
+    for (const slug of slugs) {
+      const route = prefix(locale) + slug + '/';
+      const html = fs.readFileSync(disk(out, route), 'utf8').replace(finopsPromotion(locale), '');
+      write(disk(out, route), html);
+      repairedTools.set(route, {protected: protectedParts(html)});
+    }
   }
   assert.throws(() => verifyArtifact(out), /One FinOps promotion/);
   for (let run = 0; run < 2; run++) {
@@ -271,13 +294,20 @@ try {
     for (const [route, before] of repairedTools) {
       const html = fs.readFileSync(disk(out, route), 'utf8');
       assert.deepEqual(protectedParts(html), before.protected, 'Tool forms and scripts preserved during crosslink repair');
-      if (run) assert.equal(html, before.repaired, 'Repeated promotion repair is byte-stable');
-      else before.repaired = html;
+      if (run) {
+        assert.equal(html, before.repaired, 'Repeated promotion repair is byte-stable');
+      } else {
+        before.repaired = html;
+      }
     }
-    for (const [route, html] of savedHomes) assert.equal(fs.readFileSync(disk(out, route), 'utf8'), html, 'Tool-only repair preserves homepages');
+    for (const [route, html] of savedHomes) {
+      assert.equal(fs.readFileSync(disk(out, route), 'utf8'), html, 'Tool-only repair preserves homepages');
+    }
     assert.equal(fs.readFileSync(disk(out, unrelatedFinops), 'utf8'), untouchedFinops, 'Tool-only repair preserves independent calculator');
   }
-  for (const locale of locales) assert(fs.readFileSync(disk(out, home(locale)), 'utf8').includes(original), 'Existing homepage form preserved');
+  for (const locale of locales) {
+    assert(fs.readFileSync(disk(out, home(locale)), 'utf8').includes(original), 'Existing homepage form preserved');
+  }
   const coverage = JSON.parse(fs.readFileSync(path.join(out, 'apps/network-publication-coverage.json'), 'utf8'));
   assert.equal(coverage.groups.length, 5, 'Four generated page families plus the untouched unrelated row');
   assert.equal(coverage.source, 'fixture-sentinel', 'Unrelated report metadata preserved');
@@ -317,7 +347,9 @@ try {
   const owned = /<!--operational-tools:start-->[\s\S]*?<!--operational-tools:end-->/g;
   const protectedHomepage = html => html.match(/<(form|script)\b[\s\S]*?<\/\1\s*>/gi) || [];
   const firstHomepageRender = new Map();
-  for (const [locale, fixture] of homepageSources) write(disk(out, home(locale)), fixture.html);
+  for (const [locale, fixture] of homepageSources) {
+    write(disk(out, home(locale)), fixture.html);
+  }
   for (let run = 0; run < 2; run++) {
     cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000});
     verifyArtifact(out);
@@ -332,8 +364,11 @@ try {
       const closing = /<\/main\s*>/i.test(fixture.html) ? /<\/main\s*>/i : /<\/body\s*>/i;
       assert(closing.test(fixture.html), 'Real fixture has a content container ' + locale);
       assert(new RegExp('<!--operational-tools:end-->' + closing.source, 'i').test(html), 'Promotion is inside the existing container ' + locale);
-      if (run) assert.equal(html, firstHomepageRender.get(locale), 'Real homepage render is byte-stable ' + locale);
-      else firstHomepageRender.set(locale, html);
+      if (run) {
+        assert.equal(html, firstHomepageRender.get(locale), 'Real homepage render is byte-stable ' + locale);
+      } else {
+        firstHomepageRender.set(locale, html);
+      }
     }
   }
   // Support normal HTML case/whitespace variants without weakening the gate.
@@ -353,7 +388,9 @@ try {
   write(homeFile, malformed);
   assert.throws(() => cp.execFileSync(process.execPath, [renderer, out], {cwd: root, stdio: 'pipe', timeout: 20000}), /Missing homepage content container en/);
   assert.equal(fs.readFileSync(homeFile, 'utf8'), malformed, 'Missing-container failure leaves that homepage untouched');
-  for (const fixture of homepageSources.values()) assert.equal(fs.readFileSync(fixture.source, 'utf8'), fixture.html);
+  for (const fixture of homepageSources.values()) {
+    assert.equal(fs.readFileSync(fixture.source, 'utf8'), fixture.html);
+  }
   console.log('PASS: formula boundaries, five-locale result invalidation, scoped governance controls, stale-placeholder replacement, 20-page artifact acceptance, accurate locale inventory, actual five-homepage preservation and idempotency, body-only/uppercase containers, missing-container rejection and no network/storage.');
 } finally {
   fs.rmSync(root, {recursive: true, force: true});

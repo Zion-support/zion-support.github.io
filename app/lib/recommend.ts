@@ -15,15 +15,17 @@ export function recommendServices(params: {
   const { budget, needs, excludeIds = [] } = params;
 
   // Budget tier mapping for scoring
-  const budgetTiers: Record<string, { min: number; max: number; weight: number }> = {
-    'Under $1,000': { min: 0, max: 1000, weight: 1 },
-    '$1,000–$5,000': { min: 1000, max: 5000, weight: 1 },
-    '$5,000–$20,000': { min: 5000, max: 20000, weight: 1 },
-    '$20,000–$100,000': { min: 20000, max: 100000, weight: 1 },
-    'Over $100,000': { min: 100000, max: Infinity, weight: 1 },
-  };
+  const budgetTiers = Object.fromEntries([
+    ['Under $1,000', { min: 0, max: 1000, weight: 1 }],
+    ['$1,000–$5,000', { min: 1000, max: 5000, weight: 1 }],
+    ['$5,000–$20,000', { min: 5000, max: 20000, weight: 1 }],
+    ['$20,000–$100,000', { min: 20000, max: 100000, weight: 1 }],
+    ['Over $100,000', { min: 100000, max: Infinity, weight: 1 }],
+  ]);
 
   const budgetTier = budgetTiers[budget] || { min: 0, max: Infinity, weight: 1 };
+
+  const perfectBudgetFitBonus = 15;
 
   // Normalize needs for matching
   const normalizedNeeds = needs.map((n) => n.toLowerCase().split(' '));
@@ -60,9 +62,8 @@ export function recommendServices(params: {
       const priceKeys = Object.keys(service.pricing);
       if (priceKeys.length > 0) {
         const lowestPrice = extractPrice(service.pricing[priceKeys[0] as keyof typeof service.pricing] ?? '0');
-        const highestPrice = extractPrice(service.pricing[priceKeys[priceKeys.length - 1] as keyof typeof service.pricing] ?? '0');
         if (lowestPrice <= budgetTier.max && lowestPrice >= budgetTier.min) {
-          score += 15; // Perfect budget fit
+          score += perfectBudgetFitBonus;
         } else if (lowestPrice <= budgetTier.max * 2) {
           score += 5; // Within range
         } else if (lowestPrice > budgetTier.max * 2) {
@@ -71,8 +72,12 @@ export function recommendServices(params: {
       }
 
       // Description length bonus (more detailed = higher quality listing)
-      if (service.description.length > 100) score += 2;
-      if (service.features.length >= 6) score += 3;
+      if (service.description.length > 100) {
+        score += 2;
+      }
+      if (service.features.length >= 6) {
+        score += 3;
+      }
 
       return { service, score };
     });
@@ -86,7 +91,9 @@ export function recommendServices(params: {
   const subcategories = new Set<string>();
 
   for (const item of scored) {
-    if (selected.length >= 8) break;
+    if (selected.length >= 8) {
+      break;
+    }
     const diversityBonus = !categories.has(item.service.category) ? 3 : (!subcategories.has(item.service.category) ? 1 : 0);
     if (diversityBonus > 0 || selected.length < 4) {
       selected.push(item.service);
@@ -98,7 +105,9 @@ export function recommendServices(params: {
   // Fill remaining slots from top scored if needed
   if (selected.length < 8) {
     for (const item of scored) {
-      if (selected.length >= 8) break;
+      if (selected.length >= 8) {
+        break;
+      }
       if (!selected.find((s) => s.id === item.service.id)) {
         selected.push(item.service);
       }
@@ -110,7 +119,9 @@ export function recommendServices(params: {
 
 /** Helper to extract numeric price from string like "$999/mo" */
 function extractPrice(priceStr: unknown): number {
-  if (typeof priceStr !== 'string') return 0;
+  if (typeof priceStr !== 'string') {
+    return 0;
+  }
   const match = priceStr.replace(/,/g, '').match(/[\d.]+/);
   return match ? parseFloat(match[0]) : 0;
 }

@@ -26,14 +26,14 @@ const GROUPS: { key: AppsNetworkApp['group']; label: string; href: string }[] = 
 
 type AppCardData = Omit<AppsNetworkApp, 'related'> & { readonly related?: readonly string[] };
 
-function AppCard({ app }: { app: AppCardData }) {
+function renderAppCard(app: AppCardData) {
   const related = (app.related ?? appsNetworkBySlug[app.slug]?.related ?? [])
     .map((slug) => appsNetworkCatalog.find((a) => a.slug === slug))
     .filter(Boolean)
     .slice(0, 3) as AppsNetworkApp[];
 
   return (
-    <article className="rounded-xl border border-slate-800 bg-slate-900/50 p-5 hover:border-purple-500/40 transition-colors">
+    <article key={app.slug} className="rounded-xl border border-slate-800 bg-slate-900/50 p-5 hover:border-purple-500/40 transition-colors">
       <p className="text-[10px] uppercase tracking-widest text-purple-300/80 font-semibold mb-2">{app.group}</p>
       <h3 className="text-lg font-semibold text-white mb-2">
         <Link href={app.href} className="hover:text-purple-300 transition-colors">
@@ -55,7 +55,7 @@ function AppCard({ app }: { app: AppCardData }) {
   );
 }
 
-export default function AppsNetworkPage() {
+export default function Page() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
       <section className="relative overflow-hidden border-b border-purple-500/20 bg-gradient-to-b from-slate-950 via-purple-950/25 to-slate-950">
@@ -84,7 +84,7 @@ export default function AppsNetworkPage() {
               href="/discovery/"
               className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-2 text-sm font-semibold text-white"
             >
-              Discovery $99
+              Free online Discovery
             </Link>
           </div>
         </div>
@@ -96,7 +96,9 @@ export default function AppsNetworkPage() {
         <div className="space-y-10">
           {GROUPS.map((g) => {
             const apps = appsNetworkCatalog.filter((a) => a.group === g.key);
-            if (apps.length === 0) return null;
+            if (apps.length === 0) {
+              return null;
+            }
             return (
               <div key={g.key} id={g.key} className="scroll-mt-24">
                 <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
@@ -128,9 +130,7 @@ export default function AppsNetworkPage() {
             Homepage highlights with related links so you never dead-end inside the network.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {homepageFeaturedApps.map((app) => (
-              <AppCard key={app.slug} app={app} />
-            ))}
+            {homepageFeaturedApps.map(renderAppCard)}
           </div>
         </div>
       </section>
@@ -179,19 +179,17 @@ export default function AppsNetworkPage() {
       <section className="border-t border-slate-800">
         <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {appsNetworkCatalog.map((app) => (
-              <AppCard key={app.slug} app={app} />
-            ))}
+            {appsNetworkCatalog.map(renderAppCard)}
           </div>
           <div className="mt-10 rounded-xl border border-purple-500/30 bg-gradient-to-br from-purple-950/40 to-slate-900 p-6">
             <h3 className="text-xl font-semibold text-white">Need these capabilities in production?</h3>
             <p className="text-slate-400 text-sm mt-2 max-w-2xl">
-              Start with a $99 Discovery — one process, one report, one 30-minute session — then
-              Consulting, Starter, or Growth.
+              Start with the free online Discovery for recommendations on one process. Then compare
+              Consulting, Starter, or Growth if you need help implementing.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">
-                Book Discovery →
+                Start free Discovery →
               </Link>
               <Link href="/en/plans/" className="text-slate-400 hover:text-white">
                 Official plans

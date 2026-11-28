@@ -4,8 +4,11 @@ const path = require('path');
 function walk(dir, acc = []) {
   for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, ent.name);
-    if (ent.isDirectory()) walk(p, acc);
-    else if (ent.name.endsWith('.html')) acc.push(p);
+    if (ent.isDirectory()) {
+      walk(p, acc);
+    } else if (ent.name.endsWith('.html')) {
+      acc.push(p);
+    }
   }
   return acc;
 }
@@ -30,8 +33,8 @@ for (const f of files) {
   }
 }
 
-console.log('html_files', files.length);
-console.log('internal_links', internal.size);
+process.stdout.write(`html_files ${files.length}\n`);
+process.stdout.write(`internal_links ${internal.size}\n`);
 for (const l of [
   '/',
   '/services',
@@ -41,5 +44,6 @@ for (const l of [
   '/tools/',
   '/blog/'
 ]) {
-  console.log('check', l, '->', internal.has(l) ? 'ok' : 'MISSING');
+  const status = internal.has(l) ? 'ok' : 'MISSING';
+  process.stdout.write(`check ${l} -> ${status}\n`);
 }

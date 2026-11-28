@@ -29,7 +29,9 @@ export default function ServiceSpotlight({ services }: { services: FeaturedServi
   }, [services.length]);
 
   useEffect(() => {
-    if (paused || services.length <= 1) return;
+    if (paused || services.length <= 1) {
+      return;
+    }
     const id = setInterval(next, INTERVAL_MS);
     return () => clearInterval(id);
   }, [next, paused, services.length]);
@@ -41,7 +43,9 @@ export default function ServiceSpotlight({ services }: { services: FeaturedServi
     }
   }, [services.length]);
 
-  if (!services.length) return null;
+  if (!services.length) {
+    return null;
+  }
   const current = services[idx];
 
   const catColors: Record<string,string> = {

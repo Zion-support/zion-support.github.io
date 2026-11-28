@@ -60,8 +60,10 @@ function preflight(out) {
     assert(fs.existsSync(guide), 'Existing verification guide ' + locale);
   }
   const root = path.join(out, 'index.html');
-  if (fs.existsSync(root)) assert.equal(htmlLanguage(fs.readFileSync(root, 'utf8')), 'en',
-    'Root homepage remains English; Portuguese uses /pt/');
+  if (fs.existsSync(root)) {
+    assert.equal(htmlLanguage(fs.readFileSync(root, 'utf8')), 'en',
+      'Root homepage remains English; Portuguese uses /pt/');
+  }
   return inventoryPlan(out);
 }
 
@@ -80,17 +82,21 @@ function run(out = 'out') {
   require('./render-legacy-three-locales.cjs').run(out);
   require('./render-productivity-incident-locales.cjs').run(out);
   require('./render-productivity-workflow-links.cjs').run(out);
-  for (const locale of Object.keys(qa.C)) assert.deepEqual(
-    qa.protectedParts(fs.readFileSync(qa.disk(out, qa.home(locale)), 'utf8')),
-    before[locale], 'Homepage forms/scripts preserved');
-  if (rootBefore !== null) assert.equal(fs.readFileSync(root, 'utf8'), rootBefore,
-    'Root English homepage must not receive Portuguese content');
+  for (const locale of Object.keys(qa.C)) {
+    assert.deepEqual(
+      qa.protectedParts(fs.readFileSync(qa.disk(out, qa.home(locale)), 'utf8')),
+      before[locale], 'Homepage forms/scripts preserved');
+  }
+  if (rootBefore !== null) {
+    assert.equal(fs.readFileSync(root, 'utf8'), rootBefore,
+      'Root English homepage must not receive Portuguese content');
+  }
   return qa.verify(out);
 }
 
 module.exports = {preflight, inventoryPlan, run};
 if (require.main === module) {
   const result = run(process.argv[2] || 'out');
-  console.log('PASS reconciled productivity sequence: ' + result.pages.length + ' pages / ' +
-    result.links + ' owned links; not whole-network or browser certification.');
+  process.stdout.write('PASS reconciled productivity sequence: ' + result.pages.length + ' pages / ' +
+    result.links + ' owned links; not whole-network or browser certification.\n');
 }

@@ -95,8 +95,8 @@ function main() {
   const pages = checkPages(CANDIDATE_PAGES.filter(exists));
   const state = buildState(presence, pages);
   fs.writeFileSync(statePath, JSON.stringify(state, null, 2));
-  console.log(JSON.stringify(state, null, 2));
-  process.exit(state.pass ? 0 : 1);
+  process.stdout.write(`${JSON.stringify(state, null, 2)}\n`);
+  process.exitCode = state.pass ? 0 : 1;
 }
 
 try { main(); } catch (e) { console.error(e); process.exit(1); }

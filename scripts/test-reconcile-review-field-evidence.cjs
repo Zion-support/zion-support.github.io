@@ -29,8 +29,12 @@ function setup() {
     put(root, GUIDE(l), guide(l));
     put(root, CATALOG(l), html(LANG[l]));
     put(root, MAP(l), html(LANG[l]));
-    if (l !== 'en') put(root, '/' + l + '/', html(LANG[l], 'Existing', '<script>const unchanged = true;</script>'));
-    if (l !== 'en' && l !== 'pt') put(root, '/' + l + '/discovery/', html(LANG[l]));
+    if (l !== 'en') {
+      put(root, '/' + l + '/', html(LANG[l], 'Existing', '<script>const unchanged = true;</script>'));
+    }
+    if (l !== 'en' && l !== 'pt') {
+      put(root, '/' + l + '/discovery/', html(LANG[l]));
+    }
   }
   put(root, '/', html('en', 'Existing', '<form id="old-form"><input name="old"></form><script>const unchanged = true;</script>').replace('<html lang="en">','<html lang="en" data-homepage="recovered-2026-03-19" data-published="2026-09-05T14:03Z">'));
   put(root, '/en/', html('en'));
@@ -46,8 +50,12 @@ function snapshot(root) {
   function recurse(dir) {
     for (const item of fs.readdirSync(dir, {withFileTypes:true})) {
       const full = path.join(dir, item.name);
-      if (item.isDirectory()) recurse(full);
-      else result.push([path.relative(root, full), crypto.createHash('sha256').update(fs.readFileSync(full)).digest('hex')]);
+      if (item.isDirectory()) {
+        recurse(full);
+      }
+      else {
+        result.push([path.relative(root, full), crypto.createHash('sha256').update(fs.readFileSync(full)).digest('hex')]);
+      }
     }
   }
   recurse(root);
@@ -63,10 +71,20 @@ test('real assembly review: complete guide aliases, reciprocal links, no form mu
     assert.equal(report.homepages.length,6);
     assert(report.blockers.some(line=>line.includes('/en/discovery/')));
     assert(report.blockers.some(line=>line.includes('/fr/discovery/')));
-    for (const l of LOCALES.filter(x=>x!=='en')) assert.equal(get(root,'/'+l+'/apps/field-service-evidence-guide.html'), get(root,GUIDE(l)));
-    for (const [route, parts] of originals) assert.deepEqual(protectedParts(get(root,route)),parts,'Protected original changed: '+route);
-    for (const route of ['/','/en/','/pt/','/es/','/fr/','/de/']) assert.equal((get(root,route).match(/<!--field-evidence-locales:start-->/g)||[]).length,1);
-    for (const url of ['/roi-calc/', '/sla-calculator/', '/automation-pilot-planner/']) for (const l of LOCALES) assert(get(root,url).includes('href="'+GUIDE(l)+'"'));
+    for (const l of LOCALES.filter(x=>x!=='en')) {
+      assert.equal(get(root,'/'+l+'/apps/field-service-evidence-guide.html'), get(root,GUIDE(l)));
+    }
+    for (const [route, parts] of originals) {
+      assert.deepEqual(protectedParts(get(root,route)),parts,'Protected original changed: '+route);
+    }
+    for (const route of ['/','/en/','/pt/','/es/','/fr/','/de/']) {
+      assert.equal((get(root,route).match(/<!--field-evidence-locales:start-->/g)||[]).length,1);
+    }
+    for (const url of ['/roi-calc/', '/sla-calculator/', '/automation-pilot-planner/']) {
+      for (const l of LOCALES) {
+        assert(get(root,url).includes('href="'+GUIDE(l)+'"'));
+      }
+    }
     const first = snapshot(root);
     assert.deepEqual(run(root).blockers,report.blockers);
     assert.deepEqual(snapshot(root),first,'Review transform is not byte-idempotent');

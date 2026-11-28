@@ -1971,11 +1971,15 @@ export const appsNetworkBySlug = Object.fromEntries(
 
 export function relatedApps(slug: string, limit = 4): AppsNetworkApp[] {
   const app = appsNetworkBySlug[slug];
-  if (!app) return appsNetworkCatalog.slice(0, limit);
+  if (!app) {
+    return appsNetworkCatalog.slice(0, limit);
+  }
   const fromRelated = app.related
     .map((s) => appsNetworkBySlug[s])
     .filter(Boolean) as AppsNetworkApp[];
-  if (fromRelated.length >= limit) return fromRelated.slice(0, limit);
+  if (fromRelated.length >= limit) {
+    return fromRelated.slice(0, limit);
+  }
   const fillers = appsNetworkCatalog.filter(
     (a) => a.slug !== slug && !fromRelated.some((r) => r.slug === a.slug)
   );

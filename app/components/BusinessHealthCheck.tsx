@@ -199,10 +199,15 @@ export default function BusinessHealthCheck() {
         const percentage = (avgScore / 5) * 100;
 
         let status: HealthScore['status'];
-        if (percentage >= 80) status = 'excellent';
-        else if (percentage >= 60) status = 'good';
-        else if (percentage >= 40) status = 'fair';
-        else status = 'poor';
+        if (percentage >= 80) {
+          status = 'excellent';
+        } else if (percentage >= 60) {
+          status = 'good';
+        } else if (percentage >= 40) {
+          status = 'fair';
+        } else {
+          status = 'poor';
+        }
 
         const recommendations =
           percentage < 80 ? serviceRecommendations[category] : [];
@@ -240,16 +245,24 @@ export default function BusinessHealthCheck() {
   };
 
   const getOverallScore = () => {
-    if (healthScores.length === 0) return 0;
+    if (healthScores.length === 0) {
+      return 0;
+    }
     const total = healthScores.reduce((sum, s) => sum + s.score, 0);
     return Math.round(total / healthScores.length);
   };
 
   const getOverallStatus = (): HealthScore['status'] => {
     const score = getOverallScore();
-    if (score >= 80) return 'excellent';
-    if (score >= 60) return 'good';
-    if (score >= 40) return 'fair';
+    if (score >= 80) {
+      return 'excellent';
+    }
+    if (score >= 60) {
+      return 'good';
+    }
+    if (score >= 40) {
+      return 'fair';
+    }
     return 'poor';
   };
 

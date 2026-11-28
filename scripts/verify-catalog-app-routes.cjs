@@ -11,7 +11,7 @@ const catalogs = ['apps/index.html', ...['pt', 'es', 'fr', 'de'].map(locale => l
 
 function links(html) {
   return [...html.matchAll(/<a\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)]
-    .map(match => (match[1] ?? match[2] ?? match[3]).replace(/&amp;/gi, '&').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))));
+    .map(match => (match[1] ?? match[2] ?? match[3]).replace(/&amp;/gi, '&').replace(/&#(\d+);/g, (entity, codePoint) => String.fromCodePoint(Number(codePoint))));
 }
 
 function verify(output = 'out') {
@@ -35,14 +35,20 @@ function verify(output = 'out') {
     assert(fs.existsSync(file) && fs.statSync(file).isFile(), 'Missing catalog: ' + catalog);
     for (const href of links(fs.readFileSync(file, 'utf8'))) {
       const url = new URL(href, origin + '/' + catalog.replace(/index\.html$/, ''));
-      if (!['http:', 'https:'].includes(url.protocol) || url.host !== 'ziontechgroup.com') continue;
-      if (!/^\/(?:pt\/|es\/|fr\/|de\/)?apps(?:\/|$)/.test(url.pathname)) continue;
+      if (!['http:', 'https:'].includes(url.protocol) || url.host !== 'ziontechgroup.com') {
+        continue;
+      }
+      if (!/^\/(?:pt\/|es\/|fr\/|de\/)?apps(?:\/|$)/.test(url.pathname)) {
+        continue;
+      }
       check(url.pathname, catalog);
     }
   }
   // The released guides and homepages also link these families. A catalog-only
   // scan would miss their disappearance, so retain the complete staging contract.
-  for (const route of requiredRoutes) check('/' + route.path, 'Required guide');
+  for (const route of requiredRoutes) {
+    check('/' + route.path, 'Required guide');
+  }
   assert.equal(missing.length, 0, 'Missing catalog app routes in final Pages artifact:\n' + missing.join('\n'));
   return {catalogs: catalogs.length, routes: checked.size};
 }
@@ -50,5 +56,5 @@ function verify(output = 'out') {
 module.exports = {catalogs, links, verify};
 if (require.main === module) {
   const result = verify(process.argv[2] || 'out');
-  console.log('PASS catalog app routes and required guides: ' + result.routes + ' unique destinations; ' + result.catalogs + ' catalogs.');
+  process.stdout.write('PASS catalog app routes and required guides: ' + result.routes + ' unique destinations; ' + result.catalogs + ' catalogs.\n');
 }
