@@ -7,7 +7,7 @@
 <fieldset class="q"><legend>4. Quand souhaitez-vous des résultats ?</legend><label><input type="radio" name="speed" value="days" required>Quelques jours</label><label><input type="radio" name="speed" value="weeks">Quelques semaines</label><label><input type="radio" name="speed" value="quarter">Ce trimestre</label></fieldset>
 <fieldset class="q"><legend>5. Utilisez-vous déjà des outils d’IA ?</legend><label><input type="radio" name="aiuse" value="none" required>Pas encore</label><label><input type="radio" name="aiuse" value="some">Quelques-uns</label><label><input type="radio" name="aiuse" value="many">Beaucoup</label></fieldset>
 <fieldset class="q"><legend>6. Quel résultat est prioritaire ?</legend><label><input type="radio" name="outcome" value="save-time" required>Gagner du temps</label><label><input type="radio" name="outcome" value="cut-costs">Réduire les coûts</label><label><input type="radio" name="outcome" value="grow-revenue">Augmenter le chiffre d’affaires</label><label><input type="radio" name="outcome" value="reduce-risk">Réduire les risques</label></fieldset>
-<fieldset class="q"><legend>7. Quel mode de déploiement préférez-vous ?</legend><label><input type="radio" name="deploy" value="saas" required>SaaS</label><label><input type="radio" name="deploy" value="cloud">Notre cloud</label><label><input type="radio" name="deploy" value="onprem">Sur site / hybride</label></fieldset><fieldset class="q"><legend>Où envoyer votre récapitulatif ?</legend><label>Votre nom<input type="text" name="name" autocomplete="name" maxlength="160" required></label><label>Courriel professionnel<input type="email" name="email" autocomplete="email" maxlength="254" required></label><p>L’envoi transmet votre nom, courriel, réponses et recommandations à FormSubmit afin de demander des copies pour vous et commercial@ziontechgroup.com. L’acceptation par le service ne confirme pas la réception dans les boîtes de messagerie.</p></fieldset><button class="btn" type="submit" disabled>Voir les recommandations et demander le courriel</button></form><div id="dq-results" hidden></div>
+<fieldset class="q"><legend>7. Quel mode de déploiement préférez-vous ?</legend><label><input type="radio" name="deploy" value="saas" required>SaaS</label><label><input type="radio" name="deploy" value="cloud">Notre cloud</label><label><input type="radio" name="deploy" value="onprem">Sur site / hybride</label></fieldset><fieldset class="q"><legend>Où envoyer votre récapitulatif ?</legend><label for="dq-name">Votre nom<input id="dq-name" type="text" name="name" autocomplete="name" maxlength="160" required></label><label for="dq-email">Courriel pour recevoir le récapitulatif<input id="dq-email" type="email" name="email" autocomplete="email" maxlength="254" required></label><p>L’envoi transmet votre nom, courriel, réponses et recommandations à FormSubmit afin de demander des copies pour vous et commercial@ziontechgroup.com. L’acceptation par le service ne confirme pas la réception dans les boîtes de messagerie.</p></fieldset><button class="btn" type="submit" disabled>Voir les recommandations et demander le courriel</button></form><div id="dq-results" hidden></div>
 <script>
   (function(){
     var MAP={
@@ -69,8 +69,11 @@
       var status = document.getElementById('dq-mail-status');
       var fallback = document.getElementById('dq-fallback');
       var key = summary;
+      var commercial = 'commercial@ziontechgroup.com';
+      var isCommercial = a.email.toLowerCase() === commercial;
       function manual(){
-        var href='mailto:'+encodeURIComponent(a.email)+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
+        var fallbackCc = isCommercial ? '' : 'cc='+commercial+'&';
+        var href='mailto:'+encodeURIComponent(a.email)+'?'+fallbackCc+'subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
         fallback.innerHTML='<a class="btn alt" href="'+esc(href)+'">Envoyer ces résultats manuellement</a>';
       }
       if (submissions.has(key)) {
@@ -93,7 +96,7 @@
               method:'POST',
               signal:controller.signal,
               headers:{'Content-Type':'application/json','Accept':'application/json'},
-              body:JSON.stringify({name:a.name,email:a.email,_cc:a.email.toLowerCase() === 'commercial@ziontechgroup.com' ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
+              body:JSON.stringify({name:a.name,email:a.email,_cc:isCommercial ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
             });
             if (!r.ok) throw new Error('uncertain-http');
             return r.json();

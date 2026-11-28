@@ -7,7 +7,7 @@
 <fieldset class="q"><legend>4. When would you like results?</legend><label><input type="radio" name="speed" value="days" required>Days</label><label><input type="radio" name="speed" value="weeks">Weeks</label><label><input type="radio" name="speed" value="quarter">This quarter</label></fieldset>
 <fieldset class="q"><legend>5. Do you already use AI tools?</legend><label><input type="radio" name="aiuse" value="none" required>Not yet</label><label><input type="radio" name="aiuse" value="some">Some</label><label><input type="radio" name="aiuse" value="many">Many</label></fieldset>
 <fieldset class="q"><legend>6. What is the priority outcome?</legend><label><input type="radio" name="outcome" value="save-time" required>Save time</label><label><input type="radio" name="outcome" value="cut-costs">Reduce costs</label><label><input type="radio" name="outcome" value="grow-revenue">Grow revenue</label><label><input type="radio" name="outcome" value="reduce-risk">Reduce risk</label></fieldset>
-<fieldset class="q"><legend>7. Which deployment approach do you prefer?</legend><label><input type="radio" name="deploy" value="saas" required>SaaS</label><label><input type="radio" name="deploy" value="cloud">Our cloud</label><label><input type="radio" name="deploy" value="onprem">On-premises / hybrid</label></fieldset><fieldset class="q"><legend>Where should we send your summary?</legend><label>Your name<input type="text" name="name" autocomplete="name" maxlength="160" required></label><label>Work email<input type="email" name="email" autocomplete="email" maxlength="254" required></label><p>Submitting sends your name, email, answers and recommendations to FormSubmit to request copies for you and commercial@ziontechgroup.com. Acceptance by the email service does not confirm inbox delivery.</p></fieldset><button class="btn" type="submit" disabled>See recommendations and request an email</button></form><div id="dq-results" hidden></div>
+<fieldset class="q"><legend>7. Which deployment approach do you prefer?</legend><label><input type="radio" name="deploy" value="saas" required>SaaS</label><label><input type="radio" name="deploy" value="cloud">Our cloud</label><label><input type="radio" name="deploy" value="onprem">On-premises / hybrid</label></fieldset><fieldset class="q"><legend>Where should we send your summary?</legend><label for="dq-name">Your name<input id="dq-name" type="text" name="name" autocomplete="name" maxlength="160" required></label><label for="dq-email">Work email<input id="dq-email" type="email" name="email" autocomplete="email" maxlength="254" required></label><p>Submitting sends your name, email, answers and recommendations to FormSubmit to request copies for you and commercial@ziontechgroup.com. Acceptance by the email service does not confirm inbox delivery.</p></fieldset><button class="btn" type="submit" disabled>See recommendations and request an email</button></form><div id="dq-results" hidden></div>
 <script>
   (function(){
     var MAP={
@@ -69,8 +69,11 @@
       var status = document.getElementById('dq-mail-status');
       var fallback = document.getElementById('dq-fallback');
       var key = summary;
+      var commercial = 'commercial@ziontechgroup.com';
+      var isCommercial = a.email.toLowerCase() === commercial;
       function manual(){
-        var href='mailto:'+encodeURIComponent(a.email)+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
+        var fallbackCc = isCommercial ? '' : 'cc='+commercial+'&';
+        var href='mailto:'+encodeURIComponent(a.email)+'?'+fallbackCc+'subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
         fallback.innerHTML='<a class="btn alt" href="'+esc(href)+'">Send these results manually</a>';
       }
       if (submissions.has(key)) {
@@ -93,7 +96,7 @@
               method:'POST',
               signal:controller.signal,
               headers:{'Content-Type':'application/json','Accept':'application/json'},
-              body:JSON.stringify({name:a.name,email:a.email,_cc:a.email.toLowerCase() === 'commercial@ziontechgroup.com' ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
+              body:JSON.stringify({name:a.name,email:a.email,_cc:isCommercial ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
             });
             if (!r.ok) throw new Error('uncertain-http');
             return r.json();
