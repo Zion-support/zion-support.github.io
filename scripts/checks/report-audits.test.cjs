@@ -88,7 +88,9 @@ test('size CLI fails on a real budget breach and still produces both artifacts',
   put(root, 'automation/reports/large.bin', Buffer.alloc(1025));
   const result = spawnSync(process.execPath, [path.resolve(__dirname, '../../automation/report-size-budget-guard.cjs')], { cwd: root, env: { ...process.env, REPORT_SIZE_MAX_FILE_KB: '1' }, encoding: 'utf8' });
   assert.equal(result.status, 1);
-  for (const ext of ['json', 'md']) assert.ok(fs.statSync(path.join(root, `automation/reports/report-size-budget-guard-latest.${ext}`)).size > 0);
+  for (const ext of ['json', 'md']) {
+    assert.ok(fs.statSync(path.join(root, `automation/reports/report-size-budget-guard-latest.${ext}`)).size > 0);
+  }
 });
 
 test('adoption audit reads run blocks without executing or disclosing commands', t => {
