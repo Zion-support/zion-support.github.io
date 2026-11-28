@@ -4,8 +4,11 @@ const path = require('path');
 function walk(dir, acc = []) {
   for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, ent.name);
-    if (ent.isDirectory()) walk(p, acc);
-    else if (ent.name.endsWith('.html')) acc.push(p);
+    if (ent.isDirectory()) {
+      walk(p, acc);
+    } else if (ent.name.endsWith('.html')) {
+      acc.push(p);
+    }
   }
   return acc;
 }
