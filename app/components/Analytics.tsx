@@ -1,1 +1,1 @@
-export default function Analytics() { return null; }
+export default function analytics() { return null; }
