@@ -16,8 +16,9 @@ function snapshot(output) {
     for (const entry of fs.readdirSync(directory, {withFileTypes: true}).sort((a, b) => a.name.localeCompare(b.name))) {
       const file = path.join(directory, entry.name);
       assert(!entry.isSymbolicLink(), 'Publication links are not allowed: ' + path.relative(root, file));
-      if (entry.isDirectory()) walk(file);
-      else {
+      if (entry.isDirectory()) {
+        walk(file);
+      } else {
         assert(entry.isFile(), 'Publication entry must be a regular file');
         files.set(path.relative(root, file), crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'));
       }
