@@ -1,7 +1,7 @@
 'use strict';
 // Offline source-anchor and owned-navigation QA. Never deploys or submits forms.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),nav=require('./productivity-qa-contract.cjs');
-const CATALOG_BLOB='6b24c2ec76cd237c1f1797e4872366e4b411d338';
+const CATALOG_BLOB='44e056a4a55854ba8c8069c3d10f3e116a4a5249';
 const origin='https://ziontechgroup.com';
 const blob=b=>crypto.createHash('sha1').update('blob '+b.length+'\0').update(b).digest('hex');
 const digest=b=>crypto.createHash('sha256').update(b).digest('hex');
