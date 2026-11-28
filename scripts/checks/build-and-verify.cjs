@@ -74,7 +74,9 @@ function tryBuild() {
     console.log('artifact remediation completed');
     return true;
   }
-  if (artifactsOk) return true;
+  if (artifactsOk) {
+    return true;
+  }
 
   console.warn('local remediation incomplete — manual deploy may be required');
   return false;
@@ -86,7 +88,9 @@ function detectBuildError() {
     path.join(repo, 'logs', 'build_deploy.log'),
   ];
   for (const p of candidates) {
-    if (!exists(p)) continue;
+    if (!exists(p)) {
+      continue;
+    }
     try {
       const raw = fs.readFileSync(p, 'utf8');
       if (/\bworker exited\b|\bexit code:\s*1\b|\bENOMEM\b|\bOOM\b/i.test(raw)) {
