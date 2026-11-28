@@ -69,8 +69,11 @@
       var status = document.getElementById('dq-mail-status');
       var fallback = document.getElementById('dq-fallback');
       var key = summary;
+      var commercial = 'commercial@ziontechgroup.com';
+      var isCommercial = a.email.toLowerCase() === commercial;
       function manual(){
-        var href='mailto:'+encodeURIComponent(a.email)+'?cc=commercial@ziontechgroup.com&subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
+        var fallbackCc = isCommercial ? '' : 'cc='+commercial+'&';
+        var href='mailto:'+encodeURIComponent(a.email)+'?'+fallbackCc+'subject='+encodeURIComponent('Free AI Discovery results')+'&body='+encodeURIComponent(summary);
         fallback.innerHTML='<a class="btn alt" href="'+esc(href)+'">Envoyer ces résultats manuellement</a>';
       }
       if (submissions.has(key)) {
@@ -93,7 +96,7 @@
               method:'POST',
               signal:controller.signal,
               headers:{'Content-Type':'application/json','Accept':'application/json'},
-              body:JSON.stringify({name:a.name,email:a.email,_cc:a.email.toLowerCase() === 'commercial@ziontechgroup.com' ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
+              body:JSON.stringify({name:a.name,email:a.email,_cc:isCommercial ? '' : a.email,_replyto:a.email,_subject:'Free AI Discovery — '+a.name,results:summary})
             });
             if (!r.ok) throw new Error('uncertain-http');
             return r.json();
