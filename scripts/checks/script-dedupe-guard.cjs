@@ -105,9 +105,7 @@ if (missingFound) {
     const newLine = `${indent}${quoted}: "${fallbackCommand}"`;
 
     if (oldLine.trimEnd() === newLine) {
-
       continue;
-
     }
     currentPackageText = currentPackageText.replace(oldLine, newLine);
     modified = true;
