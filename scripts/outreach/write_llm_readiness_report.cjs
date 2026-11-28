@@ -31,9 +31,15 @@ async function main() {
     active: hasZion || hasOpenRouter || hasGroq || hasGemini,
   };
 
-  await fs.mkdir(path.dirname(REPORT_PATH), { recursive: true });
-  await fs.writeFile(REPORT_PATH, JSON.stringify(report, null, 2), 'utf8');
-  console.log(JSON.stringify(report, null, 2));
+  const reportJson = JSON.stringify(report, null, 2);
+  try {
+    await fs.mkdir(path.dirname(REPORT_PATH), { recursive: true });
+    await fs.writeFile(REPORT_PATH, reportJson, 'utf8');
+    process.stdout.write(`${reportJson}\n`);
+  } catch (error) {
+    console.error('FATAL', error);
+    process.exit(1);
+  }
 }
 
 main().catch((err) => {
